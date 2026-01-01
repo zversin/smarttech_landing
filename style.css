@@ -213,6 +213,59 @@ body {
     background: white;
 }
 
+/* Секция Партнеры */
+.partners {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.partner-logo {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.partner-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.partner-card > p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.partner-description {
+    font-size: 0.95rem !important;
+    color: #6b7280 !important;
+    line-height: 1.6;
+    font-weight: 400 !important;
+}
+
 /* Секция О нас */
 .about {
     padding: 5rem 0;
