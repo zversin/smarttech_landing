@@ -164,8 +164,16 @@ body {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--dark-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
 .features-grid {
@@ -197,6 +205,12 @@ body {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--dark-color);
+}
+
+/* Секция Проекты */
+.projects {
+    padding: 5rem 0;
+    background: white;
 }
 
 /* Секция О нас */
