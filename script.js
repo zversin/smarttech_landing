@@ -78,3 +78,66 @@ contactForm.addEventListener('submit', (e) => {
     alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
     contactForm.reset();
 });
+
+// Модальное окно для фотографий
+const modal = document.getElementById('photoModal');
+const modalImg = document.getElementById('modalImg');
+const modalCaption = document.getElementById('modalCaption');
+const closeBtn = document.querySelector('.modal-close');
+const prevBtn = document.querySelector('.modal-prev');
+const nextBtn = document.querySelector('.modal-next');
+
+let currentImages = [];
+let currentIndex = 0;
+
+// Открытие модального окна при клике на фото
+document.querySelectorAll('.gallery-img').forEach((img, index, images) => {
+    img.addEventListener('click', function() {
+        modal.style.display = 'block';
+        modalImg.src = this.src;
+        modalCaption.textContent = this.alt;
+        
+        // Получаем все изображения в текущей галерее
+        const gallery = this.closest('.photo-gallery');
+        currentImages = Array.from(gallery.querySelectorAll('.gallery-img'));
+        currentIndex = currentImages.indexOf(this);
+    });
+});
+
+// Закрытие модального окна
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+
+// Закрытие при клике вне изображения
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
+});
+
+// Навигация по фотографиям
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    modalImg.src = currentImages[currentIndex].src;
+    modalCaption.textContent = currentImages[currentIndex].alt;
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    modalImg.src = currentImages[currentIndex].src;
+    modalCaption.textContent = currentImages[currentIndex].alt;
+});
+
+// Закрытие по клавише Escape, навигация стрелками
+document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'block') {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+        } else if (e.key === 'ArrowLeft') {
+            prevBtn.click();
+        } else if (e.key === 'ArrowRight') {
+            nextBtn.click();
+        }
+    }
+});
