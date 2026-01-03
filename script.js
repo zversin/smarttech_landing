@@ -40,9 +40,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.boxShadow = '0 12px 30px rgba(15, 23, 42, 0.12)';
     } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        navbar.style.boxShadow = '0 6px 20px rgba(15, 23, 42, 0.08)';
     }
     
     lastScroll = currentScroll;
@@ -66,17 +66,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.feature-card').forEach(card => {
     card.style.opacity = '0';
     observer.observe(card);
-});
-
-// Обработка формы
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Здесь можно добавить отправку данных
-    alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
-    contactForm.reset();
 });
 
 // Слайдеры для галерей
