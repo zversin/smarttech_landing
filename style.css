@@ -560,14 +560,136 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+
+    /* Галереи на планшетах */
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .gallery-img {
+        height: 280px;
+    }
+
+    /* Модальное окно на планшетах */
+    .modal-content {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    .modal-nav {
+        font-size: 30px;
+        padding: 12px 16px;
+    }
+
+    .modal-prev {
+        left: 10px;
+    }
+
+    .modal-next {
+        right: 10px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+    }
+
+    /* Партнеры */
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-title {
+        font-size: 1.6rem;
+    }
 }
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Галереи на мобильных */
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-img {
+        height: 250px;
+    }
+
+    /* Модальное окно на мобильных */
+    .modal {
+        padding-top: 20px;
+    }
+
+    .modal-content {
+        max-width: 98%;
+        max-height: 75vh;
+    }
+
+    .modal-nav {
+        font-size: 24px;
+        padding: 10px 12px;
+    }
+
+    .modal-prev {
+        left: 5px;
+    }
+
+    .modal-next {
+        right: 5px;
+    }
+
+    .modal-close {
+        top: 5px;
+        right: 10px;
+        font-size: 35px;
+    }
+
+    .modal-caption {
+        font-size: 1rem;
+        padding: 15px 10px;
+        width: 95%;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 0;
     }
 }
