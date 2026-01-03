@@ -329,15 +329,25 @@ body {
     color: var(--primary-color);
 }
 
+.photo-slider {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
 .photo-gallery {
     display: flex;
     flex-wrap: nowrap;
     gap: 1rem;
-    margin-top: 1.2rem;
     overflow-x: auto;
     padding-bottom: 0.4rem;
     scrollbar-width: thin;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .gallery-img {
@@ -351,11 +361,38 @@ body {
     transition: var(--transition);
     cursor: pointer;
     padding: 6px;
+    scroll-snap-align: start;
 }
 
 .gallery-img:hover {
     transform: scale(1.02);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.slider-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    background: white;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    flex: 0 0 auto;
+}
+
+.slider-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.slider-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+    background: white;
+    color: var(--primary-color);
 }
 
 
@@ -673,6 +710,12 @@ body {
         height: 170px;
     }
 
+    .slider-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
     /* Модальное окно на планшетах */
     .modal-content {
         max-width: 95%;
@@ -766,6 +809,12 @@ body {
         flex-basis: 170px;
         width: 170px;
         height: 150px;
+    }
+
+    .slider-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
 
     /* Модальное окно на мобильных */

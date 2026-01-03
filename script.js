@@ -79,6 +79,46 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
+// Слайдеры для галерей
+document.querySelectorAll('.photo-slider').forEach((slider) => {
+    const track = slider.querySelector('.photo-gallery');
+    const prev = slider.querySelector('.slider-btn.prev');
+    const next = slider.querySelector('.slider-btn.next');
+
+    if (!track || !prev || !next) {
+        return;
+    }
+
+    const getStep = () => {
+        const first = track.querySelector('.gallery-img');
+        if (!first) {
+            return track.clientWidth;
+        }
+        const styles = window.getComputedStyle(track);
+        const gapValue = parseFloat(styles.gap || styles.columnGap || '0');
+        const gap = Number.isNaN(gapValue) ? 0 : gapValue;
+        return first.getBoundingClientRect().width + gap;
+    };
+
+    const updateButtons = () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        prev.disabled = track.scrollLeft <= 0;
+        next.disabled = track.scrollLeft >= maxScroll - 1;
+    };
+
+    prev.addEventListener('click', () => {
+        track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    });
+
+    next.addEventListener('click', () => {
+        track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    });
+
+    track.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+});
+
 // Модальное окно для фотографий
 const modal = document.getElementById('photoModal');
 const modalImg = document.getElementById('modalImg');
