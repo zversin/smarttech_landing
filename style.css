@@ -336,14 +336,6 @@ body {
     margin-top: 1.2rem;
 }
 
-.photo-gallery .gallery-hidden {
-    display: none;
-}
-
-.photo-gallery.is-expanded .gallery-hidden {
-    display: block;
-}
-
 .gallery-img {
     width: 100%;
     height: 240px;
@@ -361,24 +353,6 @@ body {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
-.gallery-toggle {
-    display: table;
-    margin: 1rem auto 0;
-    padding: 0.7rem 1.4rem;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--primary-color);
-    background: transparent;
-    color: var(--primary-color);
-    font-family: inherit;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.gallery-toggle:hover {
-    background: var(--primary-color);
-    color: white;
-}
 
 /* Модальное окно */
 .modal {

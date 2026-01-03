@@ -79,21 +79,6 @@ contactForm.addEventListener('submit', (e) => {
     contactForm.reset();
 });
 
-// Переключатель показа всех фото в кейсе
-document.querySelectorAll('.gallery-toggle').forEach((button) => {
-    button.addEventListener('click', () => {
-        const galleryId = button.getAttribute('aria-controls');
-        const gallery = galleryId ? document.getElementById(galleryId) : button.previousElementSibling;
-        if (!gallery) {
-            return;
-        }
-
-        const isExpanded = gallery.classList.toggle('is-expanded');
-        button.setAttribute('aria-expanded', isExpanded);
-        button.textContent = isExpanded ? 'Скрыть фото' : 'Показать все фото';
-    });
-});
-
 // Модальное окно для фотографий
 const modal = document.getElementById('photoModal');
 const modalImg = document.getElementById('modalImg');
@@ -114,10 +99,7 @@ document.querySelectorAll('.gallery-img').forEach((img, index, images) => {
         
         // Получаем все изображения в текущей галерее
         const gallery = this.closest('.photo-gallery');
-        const isExpanded = gallery.classList.contains('is-expanded');
-        currentImages = Array.from(gallery.querySelectorAll('.gallery-img')).filter((item) => {
-            return isExpanded || !item.classList.contains('gallery-hidden');
-        });
+        currentImages = Array.from(gallery.querySelectorAll('.gallery-img'));
         currentIndex = currentImages.indexOf(this);
     });
 });
