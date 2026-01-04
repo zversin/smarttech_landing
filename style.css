@@ -380,6 +380,52 @@ body {
     margin-right: auto;
 }
 
+.process {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.process-step {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(15, 118, 110, 0.08);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(15, 118, 110, 0.12);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.process-step h3 {
+    margin-bottom: 0.6rem;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.process-step p {
+    color: var(--text-color);
+}
+
+
 .equipment-info {
     background: var(--light-color);
     padding: 1.5rem 2rem;
@@ -410,15 +456,25 @@ body {
 }
 
 .equipment-info li:before {
-    content: "✓";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
-    font-weight: bold;
+    top: 0.9rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--primary-color);
+    transform: translateY(-50%);
 }
 
 .equipment-info strong {
     color: var(--primary-color);
+}
+
+.equipment-divider {
+    height: 1px;
+    background: rgba(15, 118, 110, 0.12);
+    margin: 1rem 0;
 }
 
 .photo-slider {
@@ -772,6 +828,29 @@ body {
     gap: 0.4rem;
 }
 
+.floating-wa {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    border-radius: 999px;
+    background: #25d366;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
+    z-index: 1200;
+    transition: var(--transition);
+}
+
+.floating-wa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 28px rgba(15, 23, 42, 0.28);
+}
+
 /* Футер */
 .footer {
     background: var(--dark-color);
@@ -941,6 +1020,10 @@ body {
     .contact-actions {
         justify-content: center;
     }
+    .floating-wa {
+        display: inline-flex;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -1078,4 +1161,11 @@ body {
         width: 100%;
         text-align: center;
     }
+    .floating-wa {
+        right: 14px;
+        bottom: 14px;
+        padding: 0.65rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
 }
