@@ -127,6 +127,23 @@ body {
     opacity: 0.9;
 }
 
+.hero-trust {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.hero-trust span {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+}
+
 .hero::before,
 .hero::after {
     content: "";
@@ -784,6 +801,10 @@ body {
         font-size: 1.2rem;
     }
 
+    .hero-trust {
+        justify-content: center;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
@@ -869,6 +890,10 @@ body {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .hero-trust span {
+        font-size: 0.8rem;
     }
 
     .section-title {
