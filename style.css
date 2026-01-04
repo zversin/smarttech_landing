@@ -6,11 +6,11 @@
 }
 
 :root {
-    --primary-color: #0f766e;
-    --secondary-color: #f59e0b;
-    --dark-color: #0f172a;
-    --light-color: #f8fafc;
-    --text-color: #1f2937;
+    --primary-color: #c9a86a;
+    --secondary-color: #e2c08a;
+    --dark-color: #0b1117;
+    --light-color: #f6efe5;
+    --text-color: #1f2933;
     --border-radius: 12px;
     --transition: all 0.3s ease;
     --font-body: "Manrope", sans-serif;
@@ -22,7 +22,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
-    background: #f1f5f9;
+    background: #f3ece2;
 }
 
 .container {
@@ -36,10 +36,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(248, 250, 252, 0.95);
+    background: rgba(246, 239, 229, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
-    border-bottom: 1px solid rgba(15, 118, 110, 0.12);
+    border-bottom: 1px solid rgba(201, 168, 106, 0.22);
     z-index: 1000;
     padding: 1rem 0;
 }
@@ -97,7 +97,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #0f172a 0%, #0f766e 55%, #f59e0b 130%);
+    background: linear-gradient(135deg, #0b1117 0%, #111827 55%, #2a2118 130%);
     color: white;
     padding-top: 80px;
     position: relative;
@@ -153,7 +153,7 @@ body {
     border-radius: 50%;
     filter: blur(30px);
     opacity: 0.35;
-    background: radial-gradient(circle, rgba(245, 158, 11, 0.8), transparent 60%);
+    background: radial-gradient(circle, rgba(201, 168, 106, 0.7), transparent 60%);
 }
 
 .hero::before {
@@ -164,7 +164,7 @@ body {
 .hero::after {
     bottom: -180px;
     left: -120px;
-    background: radial-gradient(circle, rgba(15, 118, 110, 0.9), transparent 65%);
+    background: radial-gradient(circle, rgba(111, 92, 63, 0.9), transparent 65%);
 }
 
 .hero-buttons {
@@ -188,13 +188,13 @@ body {
 
 .btn-primary {
     background: var(--primary-color);
-    color: white;
+    color: var(--dark-color);
     border-color: var(--primary-color);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(15, 118, 110, 0.35);
+    box-shadow: 0 12px 25px rgba(201, 168, 106, 0.35);
 }
 
 .btn-secondary {
@@ -205,7 +205,7 @@ body {
 
 .btn-secondary:hover {
     background: var(--primary-color);
-    color: white;
+    color: var(--dark-color);
 }
 
 .hero .btn-secondary {
@@ -257,7 +257,7 @@ body {
     text-align: center;
     transition: var(--transition);
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(15, 118, 110, 0.08);
+    border: 1px solid rgba(201, 168, 106, 0.08);
 }
 
 .feature-card:hover {
@@ -274,7 +274,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
-    background: rgba(15, 118, 110, 0.12);
+    background: rgba(201, 168, 106, 0.12);
     color: var(--primary-color);
 }
 
@@ -288,7 +288,7 @@ body {
 /* Секция Возможности */
 .capabilities {
     padding: 5rem 0;
-    background: linear-gradient(135deg, #0f172a 0%, #0f766e 100%);
+    background: linear-gradient(135deg, #0b1117 0%, #161c24 60%, #2a2118 120%);
     color: white;
 }
 
@@ -396,7 +396,7 @@ body {
     background: white;
     padding: 2rem;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(15, 118, 110, 0.08);
+    border: 1px solid rgba(201, 168, 106, 0.08);
     box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
 }
 
@@ -407,7 +407,7 @@ body {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: rgba(15, 118, 110, 0.12);
+    background: rgba(201, 168, 106, 0.12);
     color: var(--primary-color);
     font-weight: 700;
     font-family: var(--font-heading);
@@ -434,7 +434,7 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid rgba(15, 118, 110, 0.08);
+    border: 1px solid rgba(201, 168, 106, 0.08);
 }
 
 .equipment-info p {
@@ -473,7 +473,7 @@ body {
 
 .equipment-divider {
     height: 1px;
-    background: rgba(15, 118, 110, 0.12);
+    background: rgba(201, 168, 106, 0.12);
     margin: 1rem 0;
 }
 
@@ -576,7 +576,7 @@ body {
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    border: 1px solid rgba(15, 118, 110, 0.55);
+    border: 1px solid rgba(201, 168, 106, 0.55);
     background: transparent;
     padding: 0;
     cursor: pointer;
@@ -699,7 +699,7 @@ body {
     text-align: center;
     transition: var(--transition);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-    border: 1px solid rgba(15, 118, 110, 0.08);
+    border: 1px solid rgba(201, 168, 106, 0.08);
 }
 
 .partner-card:hover {
@@ -718,7 +718,7 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     font-family: var(--font-heading);
-    background: rgba(15, 118, 110, 0.12);
+    background: rgba(201, 168, 106, 0.12);
     color: var(--primary-color);
 }
 
@@ -794,7 +794,7 @@ body {
     margin: 0 auto;
     background: white;
     border-radius: var(--border-radius);
-    border: 1px solid rgba(15, 118, 110, 0.12);
+    border: 1px solid rgba(201, 168, 106, 0.12);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
     padding: 2.5rem;
     display: grid;
