@@ -69,6 +69,9 @@ document.querySelectorAll('.feature-card').forEach(card => {
 });
 
 // Слайдеры для галерей
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const autoScrollDelay = 5000;
+
 document.querySelectorAll('.photo-slider').forEach((slider) => {
     const track = slider.querySelector('.photo-gallery');
     const prev = slider.querySelector('.slider-btn.prev');
@@ -77,6 +80,10 @@ document.querySelectorAll('.photo-slider').forEach((slider) => {
     if (!track || !prev || !next) {
         return;
     }
+
+    const slides = Array.from(track.querySelectorAll('.gallery-img'));
+    const dots = [];
+    let autoTimer = null;
 
     const getStep = () => {
         const first = track.querySelector('.gallery-img');
@@ -89,26 +96,122 @@ document.querySelectorAll('.photo-slider').forEach((slider) => {
         return first.getBoundingClientRect().width + gap;
     };
 
+    const getCurrentIndex = () => {
+        if (!slides.length) {
+            return 0;
+        }
+        const step = getStep();
+        if (!step) {
+            return 0;
+        }
+        return Math.min(slides.length - 1, Math.max(0, Math.round(track.scrollLeft / step)));
+    };
+
     const updateButtons = () => {
         const maxScroll = track.scrollWidth - track.clientWidth;
         prev.disabled = track.scrollLeft <= 0;
         next.disabled = track.scrollLeft >= maxScroll - 1;
     };
 
+    const updateDots = () => {
+        if (!dots.length) {
+            return;
+        }
+        const currentIndex = getCurrentIndex();
+        dots.forEach((dot, index) => {
+            const isActive = index === currentIndex;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+    };
+
+    const updateUI = () => {
+        updateButtons();
+        updateDots();
+    };
+
+    const scrollToIndex = (index) => {
+        const step = getStep();
+        track.scrollTo({ left: step * index, behavior: 'smooth' });
+    };
+
+    const stopAuto = () => {
+        if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
+        }
+    };
+
+    const startAuto = () => {
+        if (prefersReducedMotion || slides.length < 2) {
+            return;
+        }
+        stopAuto();
+        autoTimer = setInterval(() => {
+            const step = getStep();
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            if (track.scrollLeft >= maxScroll - step * 0.5) {
+                track.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                track.scrollBy({ left: step, behavior: 'smooth' });
+            }
+        }, autoScrollDelay);
+    };
+
+    if (slides.length > 1) {
+        const dotsContainer = document.createElement('div');
+        dotsContainer.className = 'slider-dots';
+        dotsContainer.setAttribute('role', 'tablist');
+        dotsContainer.setAttribute('aria-label', 'Фото объекта');
+
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'slider-dot';
+            dot.setAttribute('aria-label', `Фото ${index + 1}`);
+            dot.addEventListener('click', () => {
+                stopAuto();
+                scrollToIndex(index);
+                startAuto();
+            });
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        });
+
+        slider.insertAdjacentElement('afterend', dotsContainer);
+
+        dotsContainer.addEventListener('mouseenter', stopAuto);
+        dotsContainer.addEventListener('mouseleave', startAuto);
+        dotsContainer.addEventListener('focusin', stopAuto);
+        dotsContainer.addEventListener('focusout', startAuto);
+    }
+
     prev.addEventListener('click', () => {
+        stopAuto();
         track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        startAuto();
     });
 
     next.addEventListener('click', () => {
+        stopAuto();
         track.scrollBy({ left: getStep(), behavior: 'smooth' });
+        startAuto();
     });
 
-    track.addEventListener('scroll', updateButtons, { passive: true });
-    window.addEventListener('resize', updateButtons);
-    updateButtons();
-});
+    track.addEventListener('scroll', updateUI, { passive: true });
+    window.addEventListener('resize', updateUI);
 
-// Модальное окно для фотографий
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+    slider.addEventListener('focusin', stopAuto);
+    slider.addEventListener('focusout', startAuto);
+
+    track.addEventListener('touchstart', stopAuto, { passive: true });
+    track.addEventListener('touchend', startAuto);
+
+    updateUI();
+    startAuto();
+});
 const modal = document.getElementById('photoModal');
 const modalImg = document.getElementById('modalImg');
 const modalCaption = document.getElementById('modalCaption');

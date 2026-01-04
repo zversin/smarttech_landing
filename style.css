@@ -442,6 +442,28 @@ body {
     min-width: 0;
 }
 
+.gallery-item {
+    position: relative;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.gallery-item[data-label]::after {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background: rgba(15, 23, 42, 0.78);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    z-index: 2;
+}
+
 .gallery-img {
     flex: 0 0 240px;
     width: 240px;
@@ -485,6 +507,35 @@ body {
     cursor: default;
     background: white;
     color: var(--primary-color);
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+    margin-top: 0.6rem;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(15, 118, 110, 0.55);
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.slider-dot.is-active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.slider-dot:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
 }
 
 
@@ -840,6 +891,15 @@ body {
         font-size: 1rem;
     }
 
+    .slider-dots {
+        gap: 0.35rem;
+    }
+
+    .slider-dot {
+        width: 7px;
+        height: 7px;
+    }
+
     /* Модальное окно на планшетах */
     .modal-content {
         max-width: 95%;
@@ -951,6 +1011,16 @@ body {
         width: 28px;
         height: 28px;
         font-size: 0.9rem;
+    }
+
+    .slider-dots {
+        gap: 0.3rem;
+        margin-top: 0.5rem;
+    }
+
+    .slider-dot {
+        width: 6px;
+        height: 6px;
     }
 
     /* Модальное окно на мобильных */
