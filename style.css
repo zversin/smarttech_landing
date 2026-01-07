@@ -9,8 +9,11 @@
     --primary-color: #c9a86a;
     --secondary-color: #e2c08a;
     --dark-color: #0b1117;
-    --light-color: #f6efe5;
-    --text-color: #1f2933;
+    --light-color: #f7f1e8;
+    --surface-color: #fff9f2;
+    --surface-muted: #ebe0d1;
+    --text-color: #2c241c;
+    --text-muted: #7a6c5d;
     --border-radius: 12px;
     --transition: all 0.3s ease;
     --font-body: "Manrope", sans-serif;
@@ -22,7 +25,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
-    background: #f3ece2;
+    background: var(--light-color);
 }
 
 .container {
@@ -36,7 +39,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(246, 239, 229, 0.95);
+    background: rgba(247, 241, 232, 0.96);
     backdrop-filter: blur(10px);
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
     border-bottom: 1px solid rgba(201, 168, 106, 0.22);
@@ -214,7 +217,7 @@ body {
 }
 
 .hero .btn-secondary:hover {
-    background: white;
+    background: var(--light-color);
     color: var(--primary-color);
 }
 
@@ -251,7 +254,7 @@ body {
 }
 
 .feature-card {
-    background: white;
+    background: var(--surface-color);
     padding: 2rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -347,13 +350,13 @@ body {
 /* Секция Проекты */
 .projects {
     padding: 5rem 0;
-    background: white;
+    background: var(--light-color);
 }
 
 .project-item {
     margin-bottom: 4rem;
     padding-bottom: 3rem;
-    border-bottom: 2px solid var(--light-color);
+    border-bottom: 1px solid var(--surface-muted);
 }
 
 .project-item:last-child {
@@ -393,7 +396,7 @@ body {
 }
 
 .process-step {
-    background: white;
+    background: var(--surface-color);
     padding: 2rem;
     border-radius: var(--border-radius);
     border: 1px solid rgba(201, 168, 106, 0.08);
@@ -427,7 +430,7 @@ body {
 
 
 .equipment-info {
-    background: var(--light-color);
+    background: var(--surface-color);
     padding: 1.5rem 2rem;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -525,7 +528,7 @@ body {
     width: 240px;
     height: 200px;
     object-fit: contain;
-    background: #f5f5f5;
+    background: var(--surface-color);
     border-radius: var(--border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
@@ -544,7 +547,7 @@ body {
     height: 36px;
     border-radius: 50%;
     border: 1px solid var(--primary-color);
-    background: white;
+    background: var(--surface-color);
     color: var(--primary-color);
     font-size: 1.1rem;
     font-weight: 700;
@@ -561,7 +564,7 @@ body {
 .slider-btn:disabled {
     opacity: 0.4;
     cursor: default;
-    background: white;
+    background: var(--surface-color);
     color: var(--primary-color);
 }
 
@@ -627,7 +630,7 @@ body {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: var(--light-color);
     font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
@@ -637,7 +640,7 @@ body {
 
 .modal-close:hover,
 .modal-close:focus {
-    color: #bbb;
+    color: var(--secondary-color);
 }
 
 .modal-caption {
@@ -646,7 +649,7 @@ body {
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: rgba(247, 241, 232, 0.85);
     padding: 20px;
     font-size: 1.2rem;
 }
@@ -693,7 +696,7 @@ body {
 }
 
 .partner-card {
-    background: white;
+    background: var(--surface-color);
     padding: 2.5rem;
     border-radius: var(--border-radius);
     text-align: center;
@@ -738,7 +741,7 @@ body {
 
 .partner-description {
     font-size: 0.95rem !important;
-    color: #6b7280 !important;
+    color: var(--text-muted) !important;
     line-height: 1.6;
     font-weight: 400 !important;
 }
@@ -792,7 +795,7 @@ body {
 .contact-card {
     max-width: 860px;
     margin: 0 auto;
-    background: white;
+    background: var(--surface-color);
     border-radius: var(--border-radius);
     border: 1px solid rgba(201, 168, 106, 0.12);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
@@ -818,7 +821,7 @@ body {
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    color: #64748b;
+    color: var(--text-muted);
     font-size: 0.95rem;
 }
 
@@ -837,8 +840,9 @@ body {
     justify-content: center;
     padding: 0.75rem 1.1rem;
     border-radius: 999px;
-    background: #25d366;
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-color);
+    border: 1px solid rgba(201, 168, 106, 0.45);
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
@@ -849,6 +853,8 @@ body {
 .floating-wa:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 28px rgba(15, 23, 42, 0.28);
+    background: var(--secondary-color);
+    color: var(--dark-color);
 }
 
 /* Футер */
@@ -884,7 +890,8 @@ body {
 }
 
 .social-links a:hover {
-    background: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
     color: var(--dark-color);
 }
 
@@ -911,7 +918,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background: white;
+        background: var(--surface-color);
         width: 100%;
         text-align: center;
         transition: var(--transition);
