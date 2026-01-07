@@ -889,6 +889,13 @@ body {
     transition: var(--transition);
 }
 
+.social-links svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
+}
+
 .social-links a:hover {
     background: var(--primary-color);
     border-color: var(--primary-color);
