@@ -107,6 +107,29 @@ body {
     overflow: hidden;
 }
 
+.page-hero {
+    min-height: auto;
+    padding: 140px 0 80px;
+}
+
+.page-hero .hero-content {
+    text-align: left;
+}
+
+.page-hero .hero-buttons {
+    justify-content: flex-start;
+}
+
+.page-hero .hero-title {
+    font-size: 3rem;
+}
+
+.page-hero .hero-subtitle {
+    max-width: 760px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .hero-content {
     text-align: center;
     animation: fadeInUp 1s ease;
@@ -345,6 +368,66 @@ body {
 .capability-item p {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
+}
+
+/* Отрасли и города */
+.industries,
+.cities {
+    padding: 5rem 0;
+    background: var(--light-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    border: 1px solid rgba(201, 168, 106, 0.12);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    display: block;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201, 168, 106, 0.35);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+.info-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    color: var(--dark-color);
+    font-family: var(--font-heading);
+}
+
+.info-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Внутренние страницы */
+.page-section {
+    padding: 4.5rem 0;
+    background: var(--light-color);
+}
+
+.page-section .section-title {
+    text-align: left;
+}
+
+.page-section .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Секция Проекты */
@@ -949,6 +1032,23 @@ body {
 
     .hero-trust {
         justify-content: center;
+    }
+
+    .page-hero {
+        padding: 120px 0 70px;
+    }
+
+    .page-hero .hero-content {
+        text-align: center;
+    }
+
+    .page-hero .hero-buttons {
+        justify-content: center;
+    }
+
+    .page-hero .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .about-content {

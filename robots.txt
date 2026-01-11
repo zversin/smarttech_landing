@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://smarttech.asia/sitemap.xml
