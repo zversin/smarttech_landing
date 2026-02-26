@@ -335,7 +335,7 @@ const i18n = {
     },
     en: {
         metaTitle: 'SmartTech - Tailored IT Solutions',
-        metaDescription: 'SmartTech delivers tailored IT solutions in Kazakhstan: integrations, automation, analytics. Astana.',
+        metaDescription: 'SmartTech delivers tailored IT solutions worldwide: integrations, automation, analytics.',
         ui: {
             sliderPrev: 'Scroll left',
             sliderNext: 'Scroll right',
@@ -360,7 +360,7 @@ const i18n = {
             heroBtnConsult: 'Book Consultation',
             heroBtnCases: 'View Cases',
             heroTrust1: 'Astana',
-            heroTrust2: 'Operating Across Kazakhstan',
+            heroTrust2: 'We modernize access systems while preserving existing infrastructure wherever feasible, based on technical assessment.',
             heroTrust3: 'Contract and Support',
 
             featuresTitle: 'How We Can Help',
@@ -453,7 +453,7 @@ const i18n = {
             contactBtnIg: 'Instagram',
             contactMeta1: 'WhatsApp: +77087262237',
             contactMeta2: 'Instagram: @smarttechastana',
-            contactMeta3: 'Astana • operating across Kazakhstan',
+            contactMeta3: 'Astana • serving clients worldwide',
 
             footerRights: '© 2026 SmartTech. All rights reserved.',
             footerPartners: 'Partners: KazUTB | TRC Event Agency | Kitchen Premium',
