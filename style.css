@@ -393,6 +393,15 @@ h3 {
     color: var(--text-muted);
 }
 
+.card-media {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 178, 211, 0.24);
+    margin-bottom: 0.7rem;
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+}
+
 .card ul {
     margin: 0.65rem 0 0;
     padding-left: 1.05rem;
@@ -613,6 +622,21 @@ h3 {
 .sidebar-card p {
     margin: 0.35rem 0;
     color: var(--text-muted);
+}
+
+.sidebar-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.35rem;
+    margin: 0.5rem 0 0.65rem;
+}
+
+.sidebar-gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 178, 211, 0.28);
 }
 
 .badge {
