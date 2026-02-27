@@ -20,6 +20,8 @@ International-facing SmartTech website positioned as an engineering-driven syste
 - `/capabilities/integration-engineering/`
 - `/case-studies/`
 - `/case-studies/kazutb/`
+- `/case-studies/sports-complex/`
+- `/case-studies/dormitory/`
 - `/company/`
 - `/contact/`
 - `/ru/` and `/kz/` (non-English access pages)
