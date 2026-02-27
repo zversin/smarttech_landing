@@ -1,392 +1,277 @@
-﻿<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SmartTech - IT-решения под задачу в Казахстане: интеграции, автоматизация, аналитика. Астана.">
-    <title>SmartTech - IT-решения под задачу</title>
+    <title>SmartTech | Access Control & Face Recognition Integration</title>
+    <meta name="description" content="SmartTech delivers end-to-end access control and face recognition integration projects for universities, enterprises, and complex facilities.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#081018">
+    <link rel="canonical" href="https://smarttech.asia/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SmartTech">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="SmartTech | Access Control & Face Recognition Integration">
+    <meta property="og:description" content="Engineering-driven systems integration across hardware, software, databases, and custom logic.">
+    <meta property="og:url" content="https://smarttech.asia/">
+    <meta property="og:image" content="https://smarttech.asia/photos/1/IMG20260103124824-1600.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SmartTech | Access Control & Face Recognition Integration">
+    <meta name="twitter:description" content="End-to-end integration projects for access control, face recognition, and attendance reporting.">
+    <meta name="twitter:image" content="https://smarttech.asia/photos/1/IMG20260103124824-1600.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="/style.css?v=20">
+    <script src="/script.js?v=20" defer></script>
 </head>
-<body>
-    <!-- Навигация -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">SmartTech</div>
-            <ul class="nav-menu">
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#features">Решения</a></li>
-                <li><a href="#capabilities">Возможности</a></li>
-                <li><a href="#projects">Кейсы</a></li>
-                <li><a href="#process">Как работаем</a></li>
-                <li><a href="#about">О компании</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <div class="nav-controls">
-                <div class="lang-switcher" role="group" aria-label="Language switcher">
-                    <button type="button" class="lang-btn is-active" data-lang="ru">RU</button>
-                    <button type="button" class="lang-btn" data-lang="kz">KZ</button>
-                    <button type="button" class="lang-btn" data-lang="en">EN</button>
-                </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+<body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="/">Smart<span>Tech</span></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav class="site-nav" id="site-nav" data-nav-menu aria-label="Primary navigation">
+                <a data-nav-key="solutions" href="/#solutions">Solutions</a>
+                <a data-nav-key="industries" href="/#industries">Industries</a>
+                <a data-nav-key="capabilities" href="/capabilities/integration-engineering/">Capabilities</a>
+                <a data-nav-key="case-studies" href="/case-studies/">Case Studies</a>
+                <a data-nav-key="company" href="/company/">Company</a>
+                <a data-nav-key="contact" href="/contact/">Contact</a>
+            </nav>
+            <div class="lang-switch" aria-label="Language switcher">
+                <a class="is-active" href="/" lang="en">EN</a>
+                <a href="/ru/" lang="ru">RU</a>
+                <a href="/kz/" lang="kk">KZ</a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- Главная секция -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">SmartTech - IT-решения под задачу</h1>
-                <p class="hero-subtitle">Запишитесь на консультацию - разберем ситуацию и дадим план внедрения.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Записаться на консультацию</a>
-                    <a href="#projects" class="btn btn-secondary">Смотреть кейсы</a>
-                </div>
-                <div class="hero-trust">
-                    <span>Астана</span>
-                    <span>Работаем по Казахстану</span>
-                    <span>Договор и сопровождение</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция решений -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Чем можем помочь</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🚪</div>
-                    <h3>Интеграция IT-систем</h3>
-                    <p>Связываем оборудование, ПО и базы данных в единый контур.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Развитие инфраструктуры</h3>
-                    <p>Сохраняем то, что работает, и добавляем новые функции.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Учет и отчеты</h3>
-                    <p>Строим учет, отчеты и дашборды под ваши процессы.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Автоматизация процессов</h3>
-                    <p>Автоматизируем учет, доступ, уведомления и согласования.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция Возможности систем -->
-    <section id="capabilities" class="capabilities">
-        <div class="container">
-            <h2 class="section-title">Возможности наших решений</h2>
-            <p class="section-subtitle">Что дает IT-интеграция и автоматизация вашей организации</p>
-            
-            <div class="capabilities-grid">
-                <div class="capability-item">
-                    <div class="capability-icon">⏱️</div>
-                    <h3>Сохранение инвестиций</h3>
-                    <p>Используем действующее оборудование и ПО, расширяем функциональность и добавляем новые модули.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">📈</div>
-                    <h3>Миграция данных</h3>
-                    <p>Автоматически переносим фото, пользователей и историю из старых систем, чтобы не собирать базу заново.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">🔗</div>
-                    <h3>Отчеты для руководства</h3>
-                    <p>Учет посещаемости с привязкой к расписанию, отчеты и контроль ключевых показателей.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">👤</div>
-                    <h3>Связка с бизнес-системами</h3>
-                    <p>Интеграция с 1С, SAP, HR/ERP, МФЦ и внешними сервисами через API и шлюзы.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">🚨</div>
-                    <h3>Безопасность и контроль</h3>
-                    <p>Разграничение доступа по зонам и времени, уведомления о нарушениях и полный журнал событий.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">📱</div>
-                    <h3>Удаленное управление</h3>
-                    <p>Управление правами и пользователями из любой точки, сопровождение и развитие решения.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция Кейсы -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Кейсы</h2>
-            <p class="section-subtitle">Примеры IT-задач, где мы сохранили инфраструктуру и добавили новые возможности</p>
-            
-            <!-- Кейс 1: корпуса 1-3 -->
-            <div class="project-item">
-                <h3 class="project-title">КазУТБ: корпуса 1-3</h3>
-                <p class="project-description">Модернизация без замены: сохранили Perco и добавили Face ID с аналитикой по расписанию.</p>
-                <div class="equipment-info">
-                    <p><strong>Что сделали:</strong></p>
-                    <ul>
-                        <li>Сохранили Perco KT-02.9 и Perco Web, доработали турникеты под Face ID.</li>
-                        <li>Установили по 2 Face ID на каждый турникет и синхронизировали базу.</li>
-                        <li>Настроили отчеты по посещаемости преподавателей и студентов.</li>
-                    </ul>
-                    <div class="equipment-divider"></div>
-                    <p><strong>Результат:</strong></p>
-                    <ul>
-                        <li>Увеличили парк турникетов с 7 до 10 без замены системы.</li>
-                        <li>Единая отчетность по посещаемости в разрезе расписания.</li>
-                    </ul>
-                </div>
-                <div class="photo-slider">
-                    <button type="button" class="slider-btn prev" aria-label="Прокрутить влево">&lt;</button>
-                    <div class="photo-gallery">
-                        <div class="gallery-item" data-label="Корпус 1">
-                            <img src="photos/1/IMG20260103124824-1600.jpg" srcset="photos/1/IMG20260103124824-800.jpg 800w, photos/1/IMG20260103124824-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 1 - фото 1" class="gallery-img">
+    <main class="page-main" id="main-content">
+        <section class="hero">
+            <div class="container hero-grid">
+                <article class="hero-copy">
+                    <div class="eyebrow">Engineering-Driven Integration</div>
+                    <h1>Access Control &amp; Face Recognition Integration for Complex Environments</h1>
+                    <p class="lead">SmartTech delivers end-to-end projects from technical discovery and system design to deployment, data integration, custom access logic, and long-term support. We integrate hardware, databases, and business workflows in one delivery track.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="/contact/">Request a consultation</a>
+                        <a class="btn btn-secondary" href="/case-studies/">View case studies</a>
+                        <a class="btn btn-ghost" href="https://wa.me/77087262237" target="_blank" rel="noopener">WhatsApp</a>
+                    </div>
+                    <div class="hero-metrics" aria-label="Delivery highlights">
+                        <div class="metric">
+                            <strong>15,000+ users</strong>
+                            <span>Replace with actual</span>
                         </div>
-                        <div class="gallery-item" data-label="Корпус 1">
-                            <img src="photos/1/IMG20260103124840-1600.jpg" srcset="photos/1/IMG20260103124840-800.jpg 800w, photos/1/IMG20260103124840-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 1 - фото 2" class="gallery-img">
+                        <div class="metric">
+                            <strong>28 terminals</strong>
+                            <span>Replace with actual</span>
                         </div>
-                        <div class="gallery-item" data-label="Корпус 1">
-                            <img src="photos/1/IMG20260103124850-1600.jpg" srcset="photos/1/IMG20260103124850-800.jpg 800w, photos/1/IMG20260103124850-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 1 - фото 3" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 2">
-                            <img src="photos/2/IMG20260103125203-1600.jpg" srcset="photos/2/IMG20260103125203-800.jpg 800w, photos/2/IMG20260103125203-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 2 - фото 1" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 2">
-                            <img src="photos/2/IMG20260103125304-1600.jpg" srcset="photos/2/IMG20260103125304-800.jpg 800w, photos/2/IMG20260103125304-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 2 - фото 2" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 2">
-                            <img src="photos/2/IMG20260103125319-1600.jpg" srcset="photos/2/IMG20260103125319-800.jpg 800w, photos/2/IMG20260103125319-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 2 - фото 3" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 3">
-                            <img src="photos/3/IMG20260103122910-1600.jpg" srcset="photos/3/IMG20260103122910-800.jpg 800w, photos/3/IMG20260103122910-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 3 - фото 1" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 3">
-                            <img src="photos/3/IMG20260103122913-1600.jpg" srcset="photos/3/IMG20260103122913-800.jpg 800w, photos/3/IMG20260103122913-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 3 - фото 2" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 3">
-                            <img src="photos/3/IMG20260103122940-1600.jpg" srcset="photos/3/IMG20260103122940-800.jpg 800w, photos/3/IMG20260103122940-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 3 - фото 3" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 3">
-                            <img src="photos/3/IMG20260103122954-1600.jpg" srcset="photos/3/IMG20260103122954-800.jpg 800w, photos/3/IMG20260103122954-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 3 - фото 4" class="gallery-img">
-                        </div>
-                        <div class="gallery-item" data-label="Корпус 3">
-                            <img src="photos/3/IMG20260103123017-1600.jpg" srcset="photos/3/IMG20260103123017-800.jpg 800w, photos/3/IMG20260103123017-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Корпус 3 - фото 5" class="gallery-img">
+                        <div class="metric">
+                            <strong>99.9% uptime</strong>
+                            <span>Target SLA placeholder</span>
                         </div>
                     </div>
-                    <button type="button" class="slider-btn next" aria-label="Прокрутить вправо">&gt;</button>
+                </article>
+                <aside class="hero-panel" aria-label="Why SmartTech">
+                    <h2>Why international teams choose SmartTech</h2>
+                    <ul class="panel-list">
+                        <li>
+                            <strong>One team for hardware + software + data</strong>
+                            <span>Turnstiles, controllers, biometric terminals, APIs, and database integration delivered together.</span>
+                        </li>
+                        <li>
+                            <strong>Vendor-compatible architecture</strong>
+                            <span>Hikvision, ZKTeco, Suprema, and existing field infrastructure.</span>
+                        </li>
+                        <li>
+                            <strong>Custom logic for real operations</strong>
+                            <span>Schedules, role rules, attendance policies, multi-site governance, and audit trails.</span>
+                        </li>
+                        <li>
+                            <strong>Security-minded delivery</strong>
+                            <span>On-prem or hybrid deployment, controlled access, and data residency options.</span>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section" id="solutions">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Solutions</h2>
+                    <p>Integration programs built around your environment, compliance constraints, and operating model.</p>
+                </div>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Access Control Integration</h3>
+                        <p>Turnstiles, door controllers, rule engines, and site-level governance in a single architecture.</p>
+                        <a class="card-link" href="/solutions/access-control/">Explore solution</a>
+                    </article>
+                    <article class="card">
+                        <h3>Face Recognition Integration</h3>
+                        <p>Terminal strategy, enrollment governance, and identity workflows integrated into your access model.</p>
+                        <a class="card-link" href="/solutions/face-recognition/">Explore solution</a>
+                    </article>
+                    <article class="card">
+                        <h3>Attendance Analytics</h3>
+                        <p>Schedule-aware reporting, HR exports, and dashboards built from integrated attendance events.</p>
+                        <a class="card-link" href="/solutions/attendance-analytics/">Explore solution</a>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- Спортзал -->
-            <div class="project-item">
-                <h3 class="project-title">🏃 Спортивный комплекс</h3>
-                <p class="project-description">Новый объект: запустили доступ и перенесли фото из Perco Web в Hik Central.</p>
-                <div class="equipment-info">
-                    <p><strong>Что сделали:</strong></p>
-                    <ul>
-                        <li>Развернули контур доступа в спортивном комплексе.</li>
-                        <li>Перенесли фото и базу пользователей из Perco Web в Hik Central.</li>
-                        <li>Настроили права доступа и учет посещений.</li>
-                    </ul>
-                    <div class="equipment-divider"></div>
-                    <p><strong>Результат:</strong></p>
-                    <ul>
-                        <li>Запуск без повторного сбора фото и данных.</li>
-                        <li>Готовый контур контроля доступа с первого дня.</li>
-                    </ul>
+        <section class="section alt" id="industries">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Industries</h2>
+                    <p>Operationally tuned solutions for organizations with complex access and attendance requirements.</p>
                 </div>
-                <div class="photo-slider">
-                    <button type="button" class="slider-btn prev" aria-label="Прокрутить влево">&lt;</button>
-                    <div class="photo-gallery">
-                        <img src="photos/gym/IMG20260103123639-1600.jpg" srcset="photos/gym/IMG20260103123639-800.jpg 800w, photos/gym/IMG20260103123639-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Спортзал - фото 1" class="gallery-img">
-                        <img src="photos/gym/IMG20260103123656-1600.jpg" srcset="photos/gym/IMG20260103123656-800.jpg 800w, photos/gym/IMG20260103123656-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Спортзал - фото 2" class="gallery-img">
-                        <img src="photos/gym/IMG20260103123707-1600.jpg" srcset="photos/gym/IMG20260103123707-800.jpg 800w, photos/gym/IMG20260103123707-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Спортзал - фото 3" class="gallery-img">
+                <div class="cards two">
+                    <article class="card">
+                        <h3>Universities &amp; Campuses</h3>
+                        <p>Student attendance, staff access, schedule-linked reporting, and scalable campus governance.</p>
+                        <a class="card-link" href="/industries/universities/">See industry profile</a>
+                    </article>
+                    <article class="card">
+                        <h3>Enterprise &amp; Multi-Site Operations</h3>
+                        <p>Workforce attendance, policy enforcement, visitor flows, and compliance-ready reporting.</p>
+                        <a class="card-link" href="/industries/enterprise/">See industry profile</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>How we deliver</h2>
+                    <p>Structured execution from discovery to post go-live support.</p>
+                </div>
+                <div class="delivery" role="list" aria-label="Delivery stages">
+                    <article class="delivery-step" role="listitem">
+                        <span class="step-index">Step 01</span>
+                        <h3>Discovery</h3>
+                        <p>Process mapping, constraints, risk model, and baseline system audit.</p>
+                    </article>
+                    <article class="delivery-step" role="listitem">
+                        <span class="step-index">Step 02</span>
+                        <h3>Design</h3>
+                        <p>Target architecture, integration contracts, security controls, migration plan.</p>
+                    </article>
+                    <article class="delivery-step" role="listitem">
+                        <span class="step-index">Step 03</span>
+                        <h3>Deployment</h3>
+                        <p>Hardware rollout, controller setup, network segmentation, and commissioning.</p>
+                    </article>
+                    <article class="delivery-step" role="listitem">
+                        <span class="step-index">Step 04</span>
+                        <h3>Integration</h3>
+                        <p>API/database connectors, custom logic, event validation, and reporting workflows.</p>
+                    </article>
+                    <article class="delivery-step" role="listitem">
+                        <span class="step-index">Step 05</span>
+                        <h3>Support</h3>
+                        <p>Operational handover, monitoring playbooks, and controlled change delivery.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Integration compatibility</h2>
+                    <p>We work with existing infrastructure and major ecosystem vendors to avoid unnecessary replacement programs.</p>
+                </div>
+                <div class="vendor-grid">
+                    <article class="vendor-item">
+                        <strong>Biometric &amp; access vendors</strong>
+                        <span>Hikvision, ZKTeco, Suprema, and comparable enterprise-grade devices.</span>
+                    </article>
+                    <article class="vendor-item">
+                        <strong>Field infrastructure</strong>
+                        <span>Turnstiles, controllers, badge readers, and mixed-generation hardware.</span>
+                    </article>
+                    <article class="vendor-item">
+                        <strong>Data &amp; business systems</strong>
+                        <span>SQL databases, HR/ERP exports, schedule systems, and custom APIs.</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Security &amp; reliability practices</h2>
+                    <p>Operational security is designed into delivery, not added after go-live.</p>
+                </div>
+                <div class="security-grid">
+                    <article class="security-item">
+                        <h3>On-prem and hybrid deployment models</h3>
+                        <p>Architecture options based on policy, latency, and residency requirements.</p>
+                    </article>
+                    <article class="security-item">
+                        <h3>Controlled data handling</h3>
+                        <p>Role-based access, traceable data operations, and defined retention controls.</p>
+                    </article>
+                    <article class="security-item">
+                        <h3>Audit-ready event history</h3>
+                        <p>Event logs and reporting paths designed for operational and compliance review.</p>
+                    </article>
+                    <article class="security-item">
+                        <h3>Scalable support model</h3>
+                        <p>Runbooks, ownership boundaries, and staged change procedures for stable operations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="kazutb-teaser">
+            <div class="container">
+                <article class="case-teaser">
+                    <div>
+                        <div class="eyebrow">Featured Case Study</div>
+                        <h2>KazUTB Campus Integration</h2>
+                        <p>Complex modernization with retained turnstile assets, biometric expansion, and schedule-aware attendance reporting across multiple buildings.</p>
                     </div>
-                    <button type="button" class="slider-btn next" aria-label="Прокрутить вправо">&gt;</button>
-                </div>
+                    <a class="btn btn-primary" href="/case-studies/kazutb/">Read the case</a>
+                </article>
             </div>
+        </section>
+    </main>
 
-            <!-- Общежитие -->
-            <div class="project-item">
-                <h3 class="project-title">🏠 Общежитие</h3>
-                <p class="project-description">Новый объект с миграцией данных и интеграцией с Z5R Web для учета в МФЦ.</p>
-                <div class="equipment-info">
-                    <p><strong>Что сделали:</strong></p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <section class="footer-col" aria-label="About SmartTech">
+                    <p class="footer-title">SmartTech</p>
+                    <p>Engineering-driven integration company delivering access control, face recognition, and data integration programs.</p>
+                </section>
+                <section class="footer-col" aria-label="Navigation links">
+                    <p class="footer-title">Navigate</p>
                     <ul>
-                        <li>Развернули новый контур доступа в общежитии.</li>
-                        <li>Автоматически перенесли фото и данные пользователей.</li>
-                        <li>Интегрировали турникеты с Z5R Web для учета в МФЦ.</li>
+                        <li><a href="/solutions/access-control/">Solutions</a></li>
+                        <li><a href="/industries/universities/">Industries</a></li>
+                        <li><a href="/capabilities/integration-engineering/">Capabilities</a></li>
+                        <li><a href="/case-studies/">Case Studies</a></li>
                     </ul>
-                    <div class="equipment-divider"></div>
-                    <p><strong>Результат:</strong></p>
-                    <ul>
-                        <li>Учет и отчеты доступны в МФЦ без ручного ввода.</li>
-                        <li>База пользователей перенесена без потери данных.</li>
-                    </ul>
-                </div>
-                <div class="photo-slider">
-                    <button type="button" class="slider-btn prev" aria-label="Прокрутить влево">&lt;</button>
-                    <div class="photo-gallery">
-                        <img src="photos/dorm/IMG20260103123928-1600.jpg" srcset="photos/dorm/IMG20260103123928-800.jpg 800w, photos/dorm/IMG20260103123928-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Общежитие - фото 1" class="gallery-img">
-                        <img src="photos/dorm/IMG20260103123940-1600.jpg" srcset="photos/dorm/IMG20260103123940-800.jpg 800w, photos/dorm/IMG20260103123940-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Общежитие - фото 2" class="gallery-img">
-                        <img src="photos/dorm/IMG20260103123955-1600.jpg" srcset="photos/dorm/IMG20260103123955-800.jpg 800w, photos/dorm/IMG20260103123955-1600.jpg 1600w" sizes="(min-width: 1024px) 240px, (min-width: 768px) 200px, 170px" loading="lazy" decoding="async" alt="Общежитие - фото 3" class="gallery-img">
-                    </div>
-                    <button type="button" class="slider-btn next" aria-label="Прокрутить вправо">&gt;</button>
-                </div>
+                </section>
+                <section class="footer-col" aria-label="Contact details">
+                    <p class="footer-title">Contact</p>
+                    <p>Email: <a href="mailto:info@smarttech.asia">info@smarttech.asia</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/77087262237" target="_blank" rel="noopener">+7 708 726 2237</a></p>
+                    <p>Instagram: <a href="https://instagram.com/smarttechastana" target="_blank" rel="noopener">@smarttechastana</a></p>
+                    <p>Location: Astana, Kazakhstan</p>
+                </section>
             </div>
-        </div>
-    </section>
-
-
-    <!-- Секция Как работаем -->
-    <section id="process" class="process">
-        <div class="container">
-            <h2 class="section-title">Как работаем</h2>
-            <p class="section-subtitle">Прозрачно и по этапам - от аудита до сопровождения</p>
-            <div class="process-grid">
-                <div class="process-step">
-                    <span class="step-number">01</span>
-                    <h3>Аудит и постановка задачи</h3>
-                    <p>Разбираем процессы, фиксируем требования и риски.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">02</span>
-                    <h3>Проект и согласование</h3>
-                    <p>Готовим решение, смету, план интеграции и сроки.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">03</span>
-                    <h3>Внедрение и сопровождение</h3>
-                    <p>Запускаем, обучаем команду и берем на поддержку.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция О нас -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">О компании SmartTech</h2>
-                    <p>Мы делаем IT-проекты в Астане и по всему Казахстану: интеграции, автоматизация, аналитика и развитие существующих систем. Начинаем с аудита и предлагаем решения, которые не требуют выбрасывать то, что уже работает.</p>
-                    <p>Опыт в системах контроля доступа - лишь часть нашей экспертизы. Мы связываем оборудование и ПО, переносим данные и выстраиваем отчетность для руководства.</p>
-                    <p>Работаем официально по договору: фиксируем требования, согласовываем архитектуру, запускаем пилот и сопровождаем решение после внедрения.</p>
-                    <a href="#contact" class="btn btn-primary">Обсудить проект</a>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <span>Команда SmartTech</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция Партнеры -->
-    <section id="partners" class="partners">
-        <div class="container">
-            <h2 class="section-title">Наши партнеры</h2>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">🎓</div>
-                    <h3>КазУТБ</h3>
-                    <p>Казахстанский университет технологий и бизнеса</p>
-                    <p class="partner-description">Партнер в сфере образования. Реализуем IT-проекты по интеграции, аналитике и развитию инфраструктуры.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">🎪</div>
-                    <h3>TRC Event Agency</h3>
-                    <p>Ивент-агентство полного цикла</p>
-                    <p class="partner-description">Партнер в организации мероприятий. Совместные проекты по автоматизации доступа и процессам безопасности.</p>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">KP</div>
-                    <h3>Kitchen Premium</h3>
-                    <p>Студия кухонь и интерьеров</p>
-                    <p class="partner-description">Партнер по цифровым процессам и интеграции IT-решений для сервиса и продаж.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Секция контактов -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Консультация и план работ</h2>
-            <p class="contact-subtitle">Напишите в WhatsApp или Instagram - ответим быстро и предложим план действий.</p>
-            <div class="contact-card">
-                <div class="contact-card-text">
-                    <h3>Опишите проект</h3>
-                    <p>Сформируем решение под ваш процесс, сроки и бюджет.</p>
-                </div>
-                <div class="contact-actions">
-                    <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="btn btn-primary" aria-label="WhatsApp">Написать в WhatsApp</a>
-                    <a href="https://instagram.com/smarttechastana" target="_blank" rel="noopener" class="btn btn-secondary" aria-label="Instagram">Instagram</a>
-                </div>
-                <div class="contact-meta">
-                    <span>WhatsApp: +77087262237</span>
-                    <span>Instagram: @smarttechastana</span>
-                    <span>Астана • работаем по Казахстану</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 SmartTech. Все права защищены.</p>
-            <p>Партнеры: КазУТБ | TRC Event Agency | Kitchen Premium</p>
-            <div class="social-links">
-                <a href="https://wa.me/77087262237" target="_blank" rel="noopener" aria-label="WhatsApp">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.149-.198.297-.768.967-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.457.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.67-1.611-.916-2.206-.242-.579-.487-.5-.67-.51-.173-.008-.372-.01-.571-.01-.198 0-.521.074-.794.372-.273.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.379l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.886 9.893-9.886 2.64.001 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.887 6.99c-.003 5.45-4.439 9.885-9.885 9.885m8.413-18.297a11.815 11.815 0 0 0-8.41-3.49C5.515-.002.196 5.315.194 11.854a11.82 11.82 0 0 0 1.554 5.93L0 24l6.275-1.646a11.83 11.83 0 0 0 5.768 1.47h.005c6.54 0 11.86-5.318 11.862-11.856a11.82 11.82 0 0 0-3.448-8.48"/>
-                    </svg>
-                </a>
-                <a href="https://instagram.com/smarttechastana" target="_blank" rel="noopener" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M7.5 2C4.462 2 2 4.462 2 7.5v9C2 19.538 4.462 22 7.5 22h9c3.038 0 5.5-2.462 5.5-5.5v-9C22 4.462 19.538 2 16.5 2h-9zm0 2h9C18.43 4 20 5.57 20 7.5v9c0 1.93-1.57 3.5-3.5 3.5h-9C5.57 20 4 18.43 4 16.5v-9C4 5.57 5.57 4 7.5 4zm9.25 1.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zm-4.75 1.5A4.5 4.5 0 1 0 16.5 12a4.505 4.505 0 0 0-4.5-4.5zm0 2A2.5 2.5 0 1 1 9.5 12a2.503 2.503 0 0 1 2.5-2.5z"/>
-                    </svg>
-                </a>
-            </div>
+            <div class="footer-bottom">&copy; 2026 SmartTech. Integration engineering services.</div>
         </div>
     </footer>
-
-
-    <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="floating-wa" aria-label="Написать в WhatsApp">WhatsApp</a>
-
-    <!-- Модальное окно для фотографий -->
-    <div id="photoModal" class="modal">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="modalImg">
-        <div class="modal-caption" id="modalCaption"></div>
-        <button class="modal-nav modal-prev">&#10094;</button>
-        <button class="modal-nav modal-next">&#10095;</button>
-    </div>
-
-    <script src="script.js?v=8"></script>
 </body>
 </html>
-
