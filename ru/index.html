@@ -10,22 +10,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css?v=20">
-    <script src="/script.js?v=20" defer></script>
+    <link rel="stylesheet" href="/style.css?v=22">
+    <script src="/script.js?v=21" defer></script>
 </head>
 <body data-page="home">
     <a class="skip-link" href="#main-content">Перейти к содержимому</a>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="/">Smart<span>Tech</span></a>
+            <a class="brand" href="/ru/">Smart<span>Tech</span></a>
             <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">Меню</button>
             <nav class="site-nav" id="site-nav" data-nav-menu aria-label="Основная навигация">
-                <a href="/#solutions">Solutions</a>
-                <a href="/#industries">Industries</a>
-                <a href="/capabilities/integration-engineering/">Capabilities</a>
-                <a href="/case-studies/">Case Studies</a>
-                <a href="/company/">Company</a>
-                <a href="/contact/">Contact</a>
+                <a href="/ru/#main-content">Главная</a>
+                <a href="/ru/#why">Подход</a>
+                <a href="/ru/#cases">Кейсы</a>
+                <a href="/ru/#contact">Контакты</a>
+                <a href="/">EN Site</a>
             </nav>
             <div class="lang-switch" aria-label="Language switcher">
                 <a href="/" lang="en">EN</a>
@@ -41,7 +40,7 @@
                 <article class="hero-copy">
                     <div class="eyebrow">Инженерная интеграция</div>
                     <h1>Интеграция СКУД и распознавания лиц для сложных объектов</h1>
-                    <p class="lead">SmartTech реализует проекты полного цикла: аудит, проектирование, внедрение, интеграция оборудования и баз данных, сопровождение.</p>
+                    <p class="lead">SmartTech реализует проекты полного цикла: аудит, проектирование, внедрение, интеграция оборудования и баз данных, настройка логики доступа и сопровождение.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="/contact/">Запросить консультацию</a>
                         <a class="btn btn-secondary" href="/case-studies/">Смотреть кейсы</a>
@@ -49,15 +48,46 @@
                     </div>
                 </article>
                 <aside class="hero-panel">
-                    <h2>RU-версия</h2>
-                    <p class="lead" style="margin-bottom:0.7rem;">Основная версия сайта поддерживается на английском языке.</p>
-                    <p><a class="btn btn-secondary" href="/">Open English version</a></p>
+                    <h2>Русская навигация</h2>
+                    <ul class="panel-list">
+                        <li><strong>RU-страница без переадресации</strong><span>Логотип и меню остаются в `/ru/`.</span></li>
+                        <li><strong>Подробные кейсы</strong><span>КазУТБ, спортзал и общежитие доступны в разделе кейсов.</span></li>
+                        <li><strong>Основная рабочая версия</strong><span>Полный международный контент поддерживается в EN-версии.</span></li>
+                    </ul>
                 </aside>
+            </div>
+        </section>
+
+        <section class="section" id="why">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Чем мы отличаемся</h2>
+                    <p>Одна команда отвечает за оборудование, интеграции, базы данных и операционную логику.</p>
+                </div>
+                <div class="cards">
+                    <article class="card"><h3>Hardware + Software + Data</h3><p>Интегрируем турникеты, терминалы, API и отчеты в единую схему.</p></article>
+                    <article class="card"><h3>Vendor Compatibility</h3><p>Работаем с Hikvision, ZKTeco, Suprema и существующей инфраструктурой.</p></article>
+                    <article class="card"><h3>Security-first Delivery</h3><p>On-prem/hybrid сценарии, разграничение доступа, аудит действий.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt" id="cases">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Кейсы</h2>
+                    <p>Ваши проекты доступны с детальными страницами и фотогалереями.</p>
+                </div>
+                <div class="cards">
+                    <article class="card"><h3>KazUTB</h3><p>Многокорпусная интеграция с биометрией и отчетностью.</p><a class="card-link" href="/case-studies/kazutb/">Открыть кейс</a></article>
+                    <article class="card"><h3>Спортивный комплекс</h3><p>Быстрый запуск и миграция данных из legacy-среды.</p><a class="card-link" href="/case-studies/sports-complex/">Открыть кейс</a></article>
+                    <article class="card"><h3>Общежитие</h3><p>Новый контур доступа и интеграция отчетности.</p><a class="card-link" href="/case-studies/dormitory/">Открыть кейс</a></article>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
         <div class="container">
             <div class="footer-grid">
                 <section class="footer-col"><p class="footer-title">Контакты</p><p>Email: <a href="mailto:info@smarttech.asia">info@smarttech.asia</a></p><p>WhatsApp: <a href="https://wa.me/77087262237" target="_blank" rel="noopener">+7 708 726 2237</a></p><p>Астана, Казахстан</p></section>

@@ -575,6 +575,32 @@ h3 {
     white-space: pre;
 }
 
+.case-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.7rem;
+    margin-top: 0.75rem;
+}
+
+.case-photo {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 178, 211, 0.25);
+    background: rgba(8, 22, 34, 0.85);
+}
+
+.case-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.case-photo figcaption {
+    padding: 0.45rem 0.55rem 0.55rem;
+    color: var(--text-soft);
+    font-size: 0.8rem;
+}
+
 .sidebar-card {
     position: sticky;
     top: 96px;
@@ -761,7 +787,8 @@ h3 {
     .contact-grid,
     .footer-grid,
     .security-grid,
-    .results-grid {
+    .results-grid,
+    .case-gallery {
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -810,6 +837,7 @@ h3 {
     .footer-grid,
     .security-grid,
     .results-grid,
+    .case-gallery,
     .hero-metrics {
         grid-template-columns: 1fr;
     }
