@@ -103,4 +103,107 @@
             form.reset();
         });
     });
+
+    const lightboxImages = Array.from(document.querySelectorAll('.case-gallery img, .sidebar-gallery img, .card-media'));
+    if (lightboxImages.length) {
+        let currentIndex = 0;
+
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.innerHTML = '' +
+            '<div class=\"lightbox-content\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Image viewer\">' +
+            '  <button type=\"button\" class=\"lightbox-close\" aria-label=\"Close image viewer\">&times;</button>' +
+            '  <button type=\"button\" class=\"lightbox-nav lightbox-prev\" aria-label=\"Previous image\">&#10094;</button>' +
+            '  <img class=\"lightbox-image\" alt=\"\" />' +
+            '  <button type=\"button\" class=\"lightbox-nav lightbox-next\" aria-label=\"Next image\">&#10095;</button>' +
+            '</div>' +
+            '<div class=\"lightbox-caption\" aria-live=\"polite\"></div>';
+
+        document.body.appendChild(lightbox);
+
+        const imageEl = lightbox.querySelector('.lightbox-image');
+        const captionEl = lightbox.querySelector('.lightbox-caption');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+
+        function renderImage(index) {
+            if (!imageEl || !captionEl) {
+                return;
+            }
+            const target = lightboxImages[index];
+            imageEl.src = target.currentSrc || target.src;
+            imageEl.alt = target.alt || 'Project image';
+            captionEl.textContent = target.alt || '';
+        }
+
+        function openLightbox(index) {
+            currentIndex = index;
+            renderImage(currentIndex);
+            lightbox.classList.add('is-open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('is-open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function move(delta) {
+            currentIndex = (currentIndex + delta + lightboxImages.length) % lightboxImages.length;
+            renderImage(currentIndex);
+        }
+
+        lightboxImages.forEach(function (img, index) {
+            img.setAttribute('tabindex', '0');
+            img.setAttribute('role', 'button');
+            img.setAttribute('aria-label', (img.alt || 'Project image') + '. Open full size');
+
+            img.addEventListener('click', function () {
+                openLightbox(index);
+            });
+
+            img.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openLightbox(index);
+                }
+            });
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeLightbox);
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () { move(-1); });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () { move(1); });
+        }
+
+        lightbox.addEventListener('click', function (event) {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (!lightbox.classList.contains('is-open')) {
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                closeLightbox();
+            } else if (event.key === 'ArrowLeft') {
+                move(-1);
+            } else if (event.key === 'ArrowRight') {
+                move(1);
+            }
+        });
+    }
 })();
