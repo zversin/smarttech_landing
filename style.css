@@ -422,6 +422,10 @@ body {
     word-break: break-word;
 }
 
+.package-media-placeholder[hidden] {
+    display: none;
+}
+
 .package-body {
     display: flex;
     flex-direction: column;
