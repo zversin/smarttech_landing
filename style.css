@@ -451,6 +451,59 @@ body {
     font-size: 0.95rem;
 }
 
+.package-highlights {
+    display: grid;
+    gap: 0.45rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.package-highlights li {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--text-color);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+.package-highlights li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.68rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(201, 168, 106, 0.14);
+}
+
+.package-more {
+    border-top: 1px solid rgba(201, 168, 106, 0.14);
+    padding-top: 0.85rem;
+}
+
+.package-more summary {
+    color: var(--primary-color);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.94rem;
+    font-weight: 700;
+    list-style-position: inside;
+}
+
+.package-more summary:hover {
+    color: var(--dark-color);
+}
+
+.package-more[open] summary {
+    margin-bottom: 0.85rem;
+}
+
+.package-more .package-list + .package-list {
+    margin-top: 0.9rem;
+}
+
 .package-list h4 {
     margin-bottom: 0.35rem;
     color: var(--dark-color);
