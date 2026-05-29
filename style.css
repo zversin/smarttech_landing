@@ -540,6 +540,15 @@ body {
     font-size: 1rem;
 }
 
+.package-custom-note {
+    max-width: 860px;
+    margin: 1rem auto 0;
+    color: var(--dark-color);
+    text-align: center;
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
 .package-note {
     max-width: 920px;
     margin: 1rem auto 0;

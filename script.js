@@ -202,6 +202,7 @@ const i18n = {
             packageExtra8: 'резервтік қуат;',
             packageExtra9: 'сервистік қызмет көрсету.',
             packagesSeoText: 'SmartTech Hikvision жабдықтары негізіндегі дайын қолжетімділікті бақылау шешімдерін жеткізеді және орнатады. Жиынтыққа турникет, екі бет тану терминалы, монтаж кронштейндері, қосу, баптау және жүйені іске қосу кіреді. Шешімдер кеңселерге, оқу орындарына, жатақханаларға, бизнес-орталықтарға және кәсіпорындарға жарайды.',
+            packagesCustomNote: 'Жабдық, интеграция немесе жұмыс форматы бойынша басқа тілектеріңіз болса, міндетті қарап, нысаныңызға сай шешім нұсқасын ұсынамыз.',
             packagesNote: 'Құны "бастап" көрсетілген және жабдықтың қолжетімділігіне, монтаж жұмыстарының көлеміне, кабель трассаларының ұзындығына және интеграция талаптарына байланысты өзгеруі мүмкін. Нақты есеп үшін өтінім қалдырыңыз - нысаныңызға арналған коммерциялық ұсыныс дайындаймыз.',
 
             capabilitiesTitle: 'Нысан не алады',
@@ -401,6 +402,7 @@ const i18n = {
             packageExtra8: 'backup power;',
             packageExtra9: 'service maintenance.',
             packagesSeoText: 'SmartTech supplies and installs ready access control solutions based on Hikvision equipment. The kit includes a turnstile, two face recognition terminals, mounting brackets, connection, setup, and system launch. The solutions fit offices, educational institutions, dormitories, business centers, and enterprises.',
+            packagesCustomNote: 'If you have other requirements for equipment, integration, or the way the system should work, we can review the task and propose a suitable solution.',
             packagesNote: 'Prices are listed as "from" and may change depending on equipment availability, installation scope, cable route length, and integration requirements. Leave a request for an exact calculation - we will prepare a commercial offer for your site.',
 
             capabilitiesTitle: 'What Your Site Gets',
