@@ -70,126 +70,13 @@ if (featureCards.length) {
     }
 }
 
-const textBindings = {
-    navHome: '.nav-menu li:nth-child(1) a',
-    navSolutions: '.nav-menu li:nth-child(2) a',
-    navCapabilities: '.nav-menu li:nth-child(3) a',
-    navCases: '.nav-menu li:nth-child(4) a',
-    navProcess: '.nav-menu li:nth-child(5) a',
-    navAbout: '.nav-menu li:nth-child(6) a',
-    navContacts: '.nav-menu li:nth-child(7) a',
-
-    heroTitle: '#hero .hero-title',
-    heroSubtitle: '#hero .hero-subtitle',
-    heroBtnConsult: '#hero .hero-buttons .btn-primary',
-    heroBtnCases: '#hero .hero-buttons .btn-secondary',
-    heroTrust1: '#hero .hero-trust span:nth-child(1)',
-    heroTrust2: '#hero .hero-trust span:nth-child(2)',
-    heroTrust3: '#hero .hero-trust span:nth-child(3)',
-    heroTrust4: '#hero .hero-trust span:nth-child(4)',
-
-    featuresTitle: '#features .section-title',
-    feature1Title: '#features .feature-card:nth-of-type(1) h3',
-    feature1Desc: '#features .feature-card:nth-of-type(1) p',
-    feature2Title: '#features .feature-card:nth-of-type(2) h3',
-    feature2Desc: '#features .feature-card:nth-of-type(2) p',
-    feature3Title: '#features .feature-card:nth-of-type(3) h3',
-    feature3Desc: '#features .feature-card:nth-of-type(3) p',
-    feature4Title: '#features .feature-card:nth-of-type(4) h3',
-    feature4Desc: '#features .feature-card:nth-of-type(4) p',
-
-    capabilitiesTitle: '#capabilities .section-title',
-    capabilitiesSubtitle: '#capabilities .section-subtitle',
-    cap1Title: '#capabilities .capability-item:nth-of-type(1) h3',
-    cap1Desc: '#capabilities .capability-item:nth-of-type(1) p',
-    cap2Title: '#capabilities .capability-item:nth-of-type(2) h3',
-    cap2Desc: '#capabilities .capability-item:nth-of-type(2) p',
-    cap3Title: '#capabilities .capability-item:nth-of-type(3) h3',
-    cap3Desc: '#capabilities .capability-item:nth-of-type(3) p',
-    cap4Title: '#capabilities .capability-item:nth-of-type(4) h3',
-    cap4Desc: '#capabilities .capability-item:nth-of-type(4) p',
-    cap5Title: '#capabilities .capability-item:nth-of-type(5) h3',
-    cap5Desc: '#capabilities .capability-item:nth-of-type(5) p',
-    cap6Title: '#capabilities .capability-item:nth-of-type(6) h3',
-    cap6Desc: '#capabilities .capability-item:nth-of-type(6) p',
-
-    projectsTitle: '#projects .section-title',
-    projectsSubtitle: '#projects .section-subtitle',
-
-    case1Title: '#projects .project-item:nth-of-type(1) .project-title',
-    case1Desc: '#projects .project-item:nth-of-type(1) .project-description',
-    case1What: '#projects .project-item:nth-of-type(1) .equipment-info p:nth-of-type(1) strong',
-    case1Result: '#projects .project-item:nth-of-type(1) .equipment-info p:nth-of-type(2) strong',
-    case1What1: '#projects .project-item:nth-of-type(1) .equipment-info ul:nth-of-type(1) li:nth-of-type(1)',
-    case1What2: '#projects .project-item:nth-of-type(1) .equipment-info ul:nth-of-type(1) li:nth-of-type(2)',
-    case1What3: '#projects .project-item:nth-of-type(1) .equipment-info ul:nth-of-type(1) li:nth-of-type(3)',
-    case1Result1: '#projects .project-item:nth-of-type(1) .equipment-info ul:nth-of-type(2) li:nth-of-type(1)',
-    case1Result2: '#projects .project-item:nth-of-type(1) .equipment-info ul:nth-of-type(2) li:nth-of-type(2)',
-
-    case2Title: '#projects .project-item:nth-of-type(2) .project-title',
-    case2Desc: '#projects .project-item:nth-of-type(2) .project-description',
-    case2What: '#projects .project-item:nth-of-type(2) .equipment-info p:nth-of-type(1) strong',
-    case2Result: '#projects .project-item:nth-of-type(2) .equipment-info p:nth-of-type(2) strong',
-    case2What1: '#projects .project-item:nth-of-type(2) .equipment-info ul:nth-of-type(1) li:nth-of-type(1)',
-    case2What2: '#projects .project-item:nth-of-type(2) .equipment-info ul:nth-of-type(1) li:nth-of-type(2)',
-    case2What3: '#projects .project-item:nth-of-type(2) .equipment-info ul:nth-of-type(1) li:nth-of-type(3)',
-    case2Result1: '#projects .project-item:nth-of-type(2) .equipment-info ul:nth-of-type(2) li:nth-of-type(1)',
-    case2Result2: '#projects .project-item:nth-of-type(2) .equipment-info ul:nth-of-type(2) li:nth-of-type(2)',
-
-    case3Title: '#projects .project-item:nth-of-type(3) .project-title',
-    case3Desc: '#projects .project-item:nth-of-type(3) .project-description',
-    case3What: '#projects .project-item:nth-of-type(3) .equipment-info p:nth-of-type(1) strong',
-    case3Result: '#projects .project-item:nth-of-type(3) .equipment-info p:nth-of-type(2) strong',
-    case3What1: '#projects .project-item:nth-of-type(3) .equipment-info ul:nth-of-type(1) li:nth-of-type(1)',
-    case3What2: '#projects .project-item:nth-of-type(3) .equipment-info ul:nth-of-type(1) li:nth-of-type(2)',
-    case3What3: '#projects .project-item:nth-of-type(3) .equipment-info ul:nth-of-type(1) li:nth-of-type(3)',
-    case3Result1: '#projects .project-item:nth-of-type(3) .equipment-info ul:nth-of-type(2) li:nth-of-type(1)',
-    case3Result2: '#projects .project-item:nth-of-type(3) .equipment-info ul:nth-of-type(2) li:nth-of-type(2)',
-
-    processTitle: '#process .section-title',
-    processSubtitle: '#process .section-subtitle',
-    process1Title: '#process .process-step:nth-of-type(1) h3',
-    process1Desc: '#process .process-step:nth-of-type(1) p',
-    process2Title: '#process .process-step:nth-of-type(2) h3',
-    process2Desc: '#process .process-step:nth-of-type(2) p',
-    process3Title: '#process .process-step:nth-of-type(3) h3',
-    process3Desc: '#process .process-step:nth-of-type(3) p',
-
-    aboutTitle: '#about .section-title',
-    aboutP1: '#about .about-text p:nth-of-type(1)',
-    aboutP2: '#about .about-text p:nth-of-type(2)',
-    aboutP3: '#about .about-text p:nth-of-type(3)',
-    aboutBtn: '#about .about-text .btn',
-    aboutTeam: '#about .image-placeholder span',
-
-    partnersTitle: '#partners .section-title',
-    partner1Subtitle: '#partners .partner-card:nth-of-type(1) > p:nth-of-type(1)',
-    partner1Desc: '#partners .partner-card:nth-of-type(1) .partner-description',
-    partner2Subtitle: '#partners .partner-card:nth-of-type(2) > p:nth-of-type(1)',
-    partner2Desc: '#partners .partner-card:nth-of-type(2) .partner-description',
-    partner3Subtitle: '#partners .partner-card:nth-of-type(3) > p:nth-of-type(1)',
-    partner3Desc: '#partners .partner-card:nth-of-type(3) .partner-description',
-
-    contactTitle: '#contact .section-title',
-    contactSubtitle: '#contact .contact-subtitle',
-    contactCardTitle: '#contact .contact-card-text h3',
-    contactCardDesc: '#contact .contact-card-text p',
-    contactBtnWa: '#contact .contact-actions .btn-primary',
-    contactBtnIg: '#contact .contact-actions .btn-secondary',
-    contactMeta1: '#contact .contact-meta span:nth-of-type(1)',
-    contactMeta2: '#contact .contact-meta span:nth-of-type(2)',
-    contactMeta3: '#contact .contact-meta span:nth-of-type(3)',
-
-    footerRights: '.footer .container > p:nth-of-type(1)',
-    footerPartners: '.footer .container > p:nth-of-type(2)',
-
-    floatingWaText: '.floating-wa'
-};
-
 const defaultTexts = {};
-Object.entries(textBindings).forEach(([key, selector]) => {
-    const element = document.querySelector(selector);
-    defaultTexts[key] = element ? element.textContent.trim() : '';
+document.querySelectorAll('[data-i18n]').forEach((element) => {
+    const key = element.dataset.i18n;
+    if (!key) {
+        return;
+    }
+    defaultTexts[key] = element.textContent.trim();
 });
 
 const defaultMetaTitle = document.title;
@@ -207,8 +94,8 @@ const defaultUi = {
 };
 const i18n = {
     kz: {
-        metaTitle: 'SmartTech - бейнебақылау, дабыл, турникеттер',
-        metaDescription: 'SmartTech - Қазақстандағы периметрді қорғау жүйелері: бейнебақылау, дабыл, турникеттер және қолжетімділікті бақылау. Астана.',
+        metaTitle: 'Hikvision Face ID және турникеттер - дайын СКУД жиынтықтары | SmartTech',
+        metaDescription: 'Hikvision қолжетімділікті бақылау жиынтықтары: турникет, 2 Face ID терминалы, монтаж, қосу және баптау. 3 000, 6 000 және 10 000 адамға дейін.',
         ui: {
             sliderPrev: 'Солға жылжыту',
             sliderNext: 'Оңға жылжыту',
@@ -222,6 +109,7 @@ const i18n = {
         text: {
             navHome: 'Басты бет',
             navSolutions: 'Жүйелер',
+            navPackages: 'Пакеттер',
             navCapabilities: 'Мүмкіндіктер',
             navCases: 'Кейстер',
             navProcess: 'Қалай жұмыс істейміз',
@@ -246,6 +134,75 @@ const i18n = {
             feature3Desc: 'Турникеттерді, Face ID, карталарды және қызметкерлер мен келушілердің өту есебін орнатамыз.',
             feature4Title: 'Интеграция және сервис',
             feature4Desc: 'Күзет жүйелерін өзара және нысандағы қолданыстағы инфрақұрылыммен байланыстырамыз.',
+
+            packagesTitle: 'Hikvision Face ID + турникет дайын жиынтықтары',
+            packagesSubtitle: 'Бір өту нүктесіне арналған дайын қолжетімділікті бақылау шешімін орнатамыз: Hikvision турникеті, кіріс пен шығысқа екі бет тану терминалы, кронштейндер, монтаж, қосу және базалық баптау.',
+            packagesLead: 'Шешім кеңселерге, оқу орындарына, жатақханаларға, бизнес-орталықтарға, қоймаларға және кәсіпорындарға жарайды.',
+            packageIncludesTitle: 'Құрамы',
+            packageCapabilitiesTitle: 'Мүмкіндіктері',
+            packageCta: 'КП алу',
+            packageRecommended: 'Ұсынамыз',
+            packageSetBracket: 'Терминалды турникетке орнатуға арналған кронштейн - 2 дана',
+            packageSetInstall: 'Монтаж, қосу және базалық баптау - 1 жиынтық',
+            packageStart3000Title: 'Hikvision START 3000',
+            packageStart3000Short: '1 турникет + 3 000 бетке дейін 2 Face ID',
+            packageStart3000Audience: 'Шағын нысандарға: кеңселерге, қоймаларға, мектептерге, оқу орталықтарына және шағын бизнес-орталықтарға.',
+            packageStart3000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 турникеті - 1 дана',
+            packageStart3000Set2: 'Hikvision DS-K1T341CM Face ID терминалы - 2 дана',
+            packageStart3000Cap1: 'бет арқылы тану;',
+            packageStart3000Cap2: 'карта арқылы кіру;',
+            packageStart3000Cap3: 'кіру мен шығуды бақылау;',
+            packageStart3000Cap4: 'оқиғалар журналы;',
+            packageStart3000Cap5: 'пайдаланушыларды базалық баптау;',
+            packageStart3000Cap6: 'терминалдарды кронштейн арқылы турникетке орнату.',
+            packageStart3000Price: '1 250 000 ₸ бастап',
+            packageStart6000Title: 'Hikvision START 6000',
+            packageStart6000Short: '1 турникет + 6 000 бетке дейін 2 Face ID',
+            packageStart6000Audience: 'Орташа жүктемелі нысандарға: колледждерге, жатақханаларға, бизнес-орталықтарға, кәсіпорындарға және оқу корпустарына.',
+            packageStart6000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 турникеті - 1 дана',
+            packageStart6000Set2: 'Hikvision DS-K1T670MX / DS-K1T670MX-QR Face ID терминалы - 2 дана',
+            packageStart6000Cap1: 'Face ID арқылы жылдам өту;',
+            packageStart6000Cap2: 'кіру мен шығуға бөлек терминалдар;',
+            packageStart6000Cap3: 'қолжетімділік карталарын қолдау;',
+            packageStart6000Cap4: 'оқиғалар журналы;',
+            packageStart6000Cap5: 'HikCentral жүйесімен кейінгі интеграция мүмкіндігі;',
+            packageStart6000Cap6: 'пайдаланушы базасы өсетін нысандарға жарайды.',
+            packageStart6000Price: '1 450 000 ₸ бастап',
+            packageStart10000Title: 'Hikvision START 10000',
+            packageStart10000Short: '1 турникет + 10 000 бетке дейін 2 Face ID',
+            packageStart10000Audience: 'Университеттерге, жатақханаларға, спорт кешендеріне, зауыттарға және өту ағыны жоғары нысандарға ұсынылатын жиынтық.',
+            packageStart10000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 турникеті - 1 дана',
+            packageStart10000Set2: 'Hikvision DS-K1T673DX Face ID терминалы - 2 дана',
+            packageStart10000Cap1: 'кіру мен шығуда бет тану;',
+            packageStart10000Cap2: 'өту жылдамдығы жоғары;',
+            packageStart10000Cap3: 'карталарды қолдау;',
+            packageStart10000Cap4: 'оқиғалар журналы;',
+            packageStart10000Cap5: 'үлкен пайдаланушы базасымен жұмыс;',
+            packageStart10000Cap6: 'HikCentral-ға қосу мүмкіндігі;',
+            packageStart10000Cap7: 'қатысу есебі жүйелерімен интеграция мүмкіндігі.',
+            packageStart10000Price: '1 850 000 ₸ бастап',
+            packageIncludedTitle: 'Бағаға не кіреді',
+            packageIncluded1: 'жабдықты жеткізу;',
+            packageIncluded2: 'турникетті жинау және орнату;',
+            packageIncluded3: 'екі Face ID терминалын кронштейндерге орнату;',
+            packageIncluded4: 'қуатты қосу;',
+            packageIncluded5: 'терминалдарды турникетке қосу;',
+            packageIncluded6: 'кіру / шығу режимін баптау;',
+            packageIncluded7: 'тест пайдаланушыларын жасау;',
+            packageIncluded8: 'бет және карта арқылы өтуді тексеру;',
+            packageIncluded9: 'жауапты қызметкерді базалық оқыту.',
+            packageExtraTitle: 'Қосымша қосуға болады',
+            packageExtra1: 'HikCentral Professional;',
+            packageExtra2: 'қатысу есебі;',
+            packageExtra3: 'студенттер немесе қызметкерлер базасымен интеграция;',
+            packageExtra4: 'жатақханамен интеграция;',
+            packageExtra5: 'ескі жүйеден пайдаланушыларды көшіру;',
+            packageExtra6: 'бейнебақылау;',
+            packageExtra7: 'қашықтан мониторинг;',
+            packageExtra8: 'резервтік қуат;',
+            packageExtra9: 'сервистік қызмет көрсету.',
+            packagesSeoText: 'SmartTech Hikvision жабдықтары негізіндегі дайын қолжетімділікті бақылау шешімдерін жеткізеді және орнатады. Жиынтыққа турникет, екі бет тану терминалы, монтаж кронштейндері, қосу, баптау және жүйені іске қосу кіреді. Шешімдер кеңселерге, оқу орындарына, жатақханаларға, бизнес-орталықтарға және кәсіпорындарға жарайды.',
+            packagesNote: 'Құны "бастап" көрсетілген және жабдықтың қолжетімділігіне, монтаж жұмыстарының көлеміне, кабель трассаларының ұзындығына және интеграция талаптарына байланысты өзгеруі мүмкін. Нақты есеп үшін өтінім қалдырыңыз - нысаныңызға арналған коммерциялық ұсыныс дайындаймыз.',
 
             capabilitiesTitle: 'Нысан не алады',
             capabilitiesSubtitle: 'Периметрді қорғау, бейнебақылау және қолжетімділікті бақылау жүйелері іс жүзінде қалай жұмыс істейді',
@@ -336,8 +293,8 @@ const i18n = {
         }
     },
     en: {
-        metaTitle: 'SmartTech - CCTV, alarms, turnstiles',
-        metaDescription: 'SmartTech delivers perimeter security systems in Kazakhstan: CCTV, intrusion alarms, turnstiles, and access control. Based in Astana.',
+        metaTitle: 'Hikvision Face ID and Turnstiles - Ready Access Control Kits | SmartTech',
+        metaDescription: 'Ready Hikvision access control kits: turnstile, 2 Face ID terminals, installation, connection, and setup. Packages for up to 3,000, 6,000, and 10,000 faces.',
         ui: {
             sliderPrev: 'Scroll left',
             sliderNext: 'Scroll right',
@@ -351,6 +308,7 @@ const i18n = {
         text: {
             navHome: 'Home',
             navSolutions: 'Systems',
+            navPackages: 'Packages',
             navCapabilities: 'Capabilities',
             navCases: 'Case Studies',
             navProcess: 'How We Work',
@@ -375,6 +333,75 @@ const i18n = {
             feature3Desc: 'We install turnstiles, Face ID, access cards, and passage tracking for staff and visitors.',
             feature4Title: 'Integration and Service',
             feature4Desc: 'We connect security systems with each other and with the existing infrastructure of your site.',
+
+            packagesTitle: 'Ready Hikvision Face ID + Turnstile Kits',
+            packagesSubtitle: 'We install a ready access control solution for one passage point: a Hikvision turnstile, two face recognition terminals for entry and exit, brackets, installation, connection, and basic setup.',
+            packagesLead: 'The solution fits offices, educational institutions, dormitories, business centers, warehouses, and enterprises.',
+            packageIncludesTitle: 'Included Equipment',
+            packageCapabilitiesTitle: 'Capabilities',
+            packageCta: 'Get a Quote',
+            packageRecommended: 'Recommended',
+            packageSetBracket: 'Bracket for mounting the terminal on the turnstile - 2 pcs.',
+            packageSetInstall: 'Installation, connection, and basic setup - 1 set',
+            packageStart3000Title: 'Hikvision START 3000',
+            packageStart3000Short: '1 turnstile + 2 Face ID terminals for up to 3,000 faces',
+            packageStart3000Audience: 'For smaller sites: offices, warehouses, schools, training centers, and small business centers.',
+            packageStart3000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 turnstile - 1 pc.',
+            packageStart3000Set2: 'Hikvision DS-K1T341CM Face ID terminal - 2 pcs.',
+            packageStart3000Cap1: 'face recognition;',
+            packageStart3000Cap2: 'card access;',
+            packageStart3000Cap3: 'entry and exit control;',
+            packageStart3000Cap4: 'event log;',
+            packageStart3000Cap5: 'basic user setup;',
+            packageStart3000Cap6: 'terminal mounting on the turnstile via brackets.',
+            packageStart3000Price: 'from 1,250,000 ₸',
+            packageStart6000Title: 'Hikvision START 6000',
+            packageStart6000Short: '1 turnstile + 2 Face ID terminals for up to 6,000 faces',
+            packageStart6000Audience: 'For medium-load sites: colleges, dormitories, business centers, enterprises, and educational buildings.',
+            packageStart6000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 turnstile - 1 pc.',
+            packageStart6000Set2: 'Hikvision DS-K1T670MX / DS-K1T670MX-QR Face ID terminal - 2 pcs.',
+            packageStart6000Cap1: 'fast Face ID passage;',
+            packageStart6000Cap2: 'separate terminals for entry and exit;',
+            packageStart6000Cap3: 'access card support;',
+            packageStart6000Cap4: 'event log;',
+            packageStart6000Cap5: 'future integration with HikCentral;',
+            packageStart6000Cap6: 'suitable for sites with a growing user base.',
+            packageStart6000Price: 'from 1,450,000 ₸',
+            packageStart10000Title: 'Hikvision START 10000',
+            packageStart10000Short: '1 turnstile + 2 Face ID terminals for up to 10,000 faces',
+            packageStart10000Audience: 'Recommended for universities, dormitories, sports complexes, factories, and sites with high traffic.',
+            packageStart10000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 turnstile - 1 pc.',
+            packageStart10000Set2: 'Hikvision DS-K1T673DX Face ID terminal - 2 pcs.',
+            packageStart10000Cap1: 'face recognition for entry and exit;',
+            packageStart10000Cap2: 'high passage speed;',
+            packageStart10000Cap3: 'card support;',
+            packageStart10000Cap4: 'event log;',
+            packageStart10000Cap5: 'large user database support;',
+            packageStart10000Cap6: 'HikCentral connection option;',
+            packageStart10000Cap7: 'attendance system integration option.',
+            packageStart10000Price: 'from 1,850,000 ₸',
+            packageIncludedTitle: 'What the Price Includes',
+            packageIncluded1: 'equipment supply;',
+            packageIncluded2: 'turnstile assembly and installation;',
+            packageIncluded3: 'installation of two Face ID terminals on brackets;',
+            packageIncluded4: 'power connection;',
+            packageIncluded5: 'terminal connection to the turnstile;',
+            packageIncluded6: 'entry / exit mode setup;',
+            packageIncluded7: 'test user creation;',
+            packageIncluded8: 'face and card passage testing;',
+            packageIncluded9: 'basic training for the responsible employee.',
+            packageExtraTitle: 'Optional Add-ons',
+            packageExtra1: 'HikCentral Professional;',
+            packageExtra2: 'attendance tracking;',
+            packageExtra3: 'student or employee database integration;',
+            packageExtra4: 'dormitory integration;',
+            packageExtra5: 'user migration from an old system;',
+            packageExtra6: 'CCTV;',
+            packageExtra7: 'remote monitoring;',
+            packageExtra8: 'backup power;',
+            packageExtra9: 'service maintenance.',
+            packagesSeoText: 'SmartTech supplies and installs ready access control solutions based on Hikvision equipment. The kit includes a turnstile, two face recognition terminals, mounting brackets, connection, setup, and system launch. The solutions fit offices, educational institutions, dormitories, business centers, and enterprises.',
+            packagesNote: 'Prices are listed as "from" and may change depending on equipment availability, installation scope, cable route length, and integration requirements. Leave a request for an exact calculation - we will prepare a commercial offer for your site.',
 
             capabilitiesTitle: 'What Your Site Gets',
             capabilitiesSubtitle: 'How perimeter security, CCTV, and access control systems work in practice',
@@ -622,9 +649,9 @@ function applyLanguage(lang) {
         }
     }
 
-    Object.entries(textBindings).forEach(([key, selector]) => {
-        const element = document.querySelector(selector);
-        if (!element) {
+    document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        if (!key) {
             return;
         }
         element.textContent = textByLanguage(currentLanguage, key);
@@ -816,45 +843,76 @@ const nextBtn = document.querySelector('.modal-next');
 if (modal && modalImg && modalCaption && closeBtn && prevBtn && nextBtn) {
     let currentImages = [];
     let currentIndex = 0;
+    let lastFocusedElement = null;
 
-    document.querySelectorAll('.gallery-img').forEach((img) => {
-        img.addEventListener('click', () => {
-            modal.style.display = 'block';
-            modalImg.src = img.src;
-            modalCaption.textContent = img.alt;
+    const getFocusableElements = () => Array.from(modal.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])'))
+        .filter((element) => !element.hasAttribute('disabled'));
 
-            const gallery = img.closest('.photo-gallery');
-            currentImages = gallery ? Array.from(gallery.querySelectorAll('.gallery-img')) : [];
-            currentIndex = currentImages.indexOf(img);
-        });
-    });
+    const openModal = (img) => {
+        modal.style.display = 'block';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
 
-    closeBtn.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modalCaption.textContent = img.alt;
+
+        const gallery = img.closest('.photo-gallery');
+        currentImages = gallery ? Array.from(gallery.querySelectorAll('.gallery-img')) : [];
+        currentIndex = currentImages.indexOf(img);
+
+        lastFocusedElement = document.activeElement;
+        closeBtn.focus();
+    };
+
+    const closeModal = () => {
         modal.style.display = 'none';
-    });
-
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
         }
-    });
+    };
 
-    prevBtn.addEventListener('click', () => {
+    const showPrev = () => {
         if (!currentImages.length) {
             return;
         }
         currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
         modalImg.src = currentImages[currentIndex].src;
         modalCaption.textContent = currentImages[currentIndex].alt;
-    });
+    };
 
-    nextBtn.addEventListener('click', () => {
+    const showNext = () => {
         if (!currentImages.length) {
             return;
         }
         currentIndex = (currentIndex + 1) % currentImages.length;
         modalImg.src = currentImages[currentIndex].src;
         modalCaption.textContent = currentImages[currentIndex].alt;
+    };
+
+    document.querySelectorAll('.gallery-img').forEach((img) => {
+        img.addEventListener('click', () => {
+            openModal(img);
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        closeModal();
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        showPrev();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        showNext();
     });
 
     document.addEventListener('keydown', (e) => {
@@ -862,12 +920,36 @@ if (modal && modalImg && modalCaption && closeBtn && prevBtn && nextBtn) {
             return;
         }
 
+        if (e.key === 'Tab') {
+            const focusable = getFocusableElements();
+            if (!focusable.length) {
+                e.preventDefault();
+                return;
+            }
+
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            const active = document.activeElement;
+
+            if (e.shiftKey && active === first) {
+                e.preventDefault();
+                last.focus();
+                return;
+            }
+
+            if (!e.shiftKey && active === last) {
+                e.preventDefault();
+                first.focus();
+            }
+            return;
+        }
+
         if (e.key === 'Escape') {
-            modal.style.display = 'none';
+            closeModal();
         } else if (e.key === 'ArrowLeft') {
-            prevBtn.click();
+            showPrev();
         } else if (e.key === 'ArrowRight') {
-            nextBtn.click();
+            showNext();
         }
     });
 }
