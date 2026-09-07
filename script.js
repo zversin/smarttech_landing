@@ -107,6 +107,21 @@ const i18n = {
             floatingWaAria: 'WhatsApp-қа жазу'
         },
         text: {
+            aboutProjectCaption: "Біздің жұмыс: ҚазТБУ-дағы қолжетімділікті бақылау",
+            contactBtnCall: "Қоңырау шалу",
+            installTerms: "Баға қуат пен желі жақын орналасқан, орнатуға дайын орынға есептелген. Кабель ұзындығы мен шығын материалдарының құрамын сметада көрсетеміз. Ұзын кабель желілері, құрылыс жұмыстары, басқа қалаға шығу, лицензиялар мен интеграциялар бөлек есептеледі.",
+            installTermsTitle: "Базалық монтаж шарттары",
+            packageConsumables: "стандартты монтажға арналған негізгі шығын материалдары: бекіткіштер, кабель, коннекторлар және кабель-арна;",
+            specTwoTerminals: "2 терминал",
+            specDirection: "Кіру және шығу",
+            specAccessQr: "Бет, карта және QR",
+            specAccessBase: "Бет және карта",
+            specAccess: "Кіру тәсілі",
+            specScreen: "Экран",
+            specTerminal: "Терминал",
+            heroBtnPackages: "Жиынтықтарды көру",
+            heroOfferPrice: "1 120 000 ₸ бастап",
+            heroOffer: "Орнатумен бірге турникет + 2 Face ID",
             navHome: 'Басты бет',
             navSolutions: 'Жүйелер',
             navPackages: 'Пакеттер',
@@ -136,12 +151,12 @@ const i18n = {
             feature4Desc: 'Күзет жүйелерін өзара және нысандағы қолданыстағы инфрақұрылыммен байланыстырамыз.',
 
             packagesTitle: 'Hikvision Face ID + турникет дайын жиынтықтары',
-            packagesSubtitle: 'Бір өту нүктесіне арналған дайын қолжетімділікті бақылау шешімін орнатамыз: Hikvision турникеті, кіріс пен шығысқа екі бет тану терминалы, кронштейндер, монтаж, қосу және базалық баптау.',
+            packagesSubtitle: 'Әр жиынтықта: турникет, екі терминал, кронштейндер, негізгі шығын материалдары, монтаж және баптау.',
             packagesLead: 'Шешім кеңселерге, оқу орындарына, жатақханаларға, бизнес-орталықтарға, қоймаларға және кәсіпорындарға жарайды.',
             packageIncludesTitle: 'Құрамы',
             packageCapabilitiesTitle: 'Мүмкіндіктері',
             packageDetailsSummary: 'Құрамы мен мүмкіндіктері',
-            packageCta: 'Бізге жазу',
+            packageCta: "Нысан құнын есептеу",
             packageRecommended: 'Ұсынамыз',
             packageSetBracket: 'Терминалды турникетке орнатуға арналған кронштейн - 2 дана',
             packageSetInstall: 'Монтаж, қосу және базалық баптау - 1 жиынтық',
@@ -161,7 +176,7 @@ const i18n = {
             packageStart6000Short: '1 турникет + 6 000 бетке дейін 2 Face ID',
             packageStart6000Audience: 'Орташа жүктемелі нысандарға: колледждерге, жатақханаларға, бизнес-орталықтарға, кәсіпорындарға және оқу корпустарына.',
             packageStart6000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 турникеті - 1 дана',
-            packageStart6000Set2: 'Hikvision DS-K1T670MX / DS-K1T670MX-QR Face ID терминалы - 2 дана',
+            packageStart6000Set2: 'Hikvision DS-K1T670MX-QR Face ID терминалы - 2 дана',
             packageStart6000Cap1: 'Face ID арқылы жылдам өту;',
             packageStart6000Cap2: 'кіру мен шығуға бөлек терминалдар;',
             packageStart6000Cap3: 'қолжетімділік карталарын қолдау;',
@@ -308,6 +323,21 @@ const i18n = {
             floatingWaAria: 'Write to WhatsApp'
         },
         text: {
+            aboutProjectCaption: "Our work: access control at KazUTB",
+            contactBtnCall: "Call us",
+            installTerms: "The price assumes a prepared installation location with power and network connections nearby. Cable lengths and consumables are itemised in the quote. Long cable runs, construction work, travel to another city, licences and integrations are quoted separately.",
+            installTermsTitle: "Standard installation conditions",
+            packageConsumables: "basic installation consumables: fixings, cable, connectors and cable trunking;",
+            specTwoTerminals: "2 terminals",
+            specDirection: "Entry and exit",
+            specAccessQr: "Face, card and QR",
+            specAccessBase: "Face and card",
+            specAccess: "Access",
+            specScreen: "Screen",
+            specTerminal: "Terminal",
+            heroBtnPackages: "View packages",
+            heroOfferPrice: "from 1,120,000 ₸",
+            heroOffer: "Turnstile + 2 Face ID terminals, installed",
             navHome: 'Home',
             navSolutions: 'Systems',
             navPackages: 'Packages',
@@ -337,12 +367,12 @@ const i18n = {
             feature4Desc: 'We connect security systems with each other and with the existing infrastructure of your site.',
 
             packagesTitle: 'Ready Hikvision Face ID + Turnstile Kits',
-            packagesSubtitle: 'We install a ready access control solution for one passage point: a Hikvision turnstile, two face recognition terminals for entry and exit, brackets, installation, connection, and basic setup.',
+            packagesSubtitle: 'Every package includes a turnstile, two terminals, brackets, basic consumables, installation and setup.',
             packagesLead: 'The solution fits offices, educational institutions, dormitories, business centers, warehouses, and enterprises.',
             packageIncludesTitle: 'Included Equipment',
             packageCapabilitiesTitle: 'Capabilities',
             packageDetailsSummary: 'Equipment and Capabilities',
-            packageCta: 'Message Us',
+            packageCta: "Get a site quote",
             packageRecommended: 'Recommended',
             packageSetBracket: 'Bracket for mounting the terminal on the turnstile - 2 pcs.',
             packageSetInstall: 'Installation, connection, and basic setup - 1 set',
@@ -362,7 +392,7 @@ const i18n = {
             packageStart6000Short: '1 turnstile + 2 Face ID terminals for up to 6,000 faces',
             packageStart6000Audience: 'For medium-load sites: colleges, dormitories, business centers, enterprises, and educational buildings.',
             packageStart6000Set1: 'Hikvision DS-K3G411LX-R/Pg-Dm55 turnstile - 1 pc.',
-            packageStart6000Set2: 'Hikvision DS-K1T670MX / DS-K1T670MX-QR Face ID terminal - 2 pcs.',
+            packageStart6000Set2: 'Hikvision DS-K1T670MX-QR Face ID terminal - 2 pcs.',
             packageStart6000Cap1: 'fast Face ID passage;',
             packageStart6000Cap2: 'separate terminals for entry and exit;',
             packageStart6000Cap3: 'access card support;',
@@ -659,6 +689,17 @@ function applyLanguage(lang) {
             return;
         }
         element.textContent = textByLanguage(currentLanguage, key);
+    });
+
+    document.querySelectorAll('a[data-package]').forEach((link) => {
+        const name = `START ${link.dataset.package}`;
+        const price = link.closest('.package-card').querySelector('.package-price').textContent;
+        const messages = {
+            ru: `Здравствуйте! Интересует комплект ${name}, ${price}. Хочу рассчитать установку. Город и объект: `,
+            kz: `Сәлеметсіз бе! ${name} жиынтығы қызықтырады, ${price}. Орнату құнын есептегім келеді. Қала және нысан: `,
+            en: `Hello! I am interested in ${name}, ${price}. Please quote installation. City and site: `
+        };
+        link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
     });
 
     updateGalleryMetadata(currentLanguage);

@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
     <!-- Навигация -->
@@ -53,9 +53,10 @@
             <div class="hero-content">
                 <h1 class="hero-title" data-i18n="heroTitle">SmartTech - видеонаблюдение, сигнализация, турникеты</h1>
                 <p class="hero-subtitle" data-i18n="heroSubtitle">Ставим камеры, сигнализацию, турникеты и контроль доступа. Выезжаем на объект, подбираем схему и запускаем систему под ваш режим работы.</p>
+                <div class="hero-offer"><p data-i18n="heroOffer">Турникет + 2 Face ID с установкой</p><strong data-i18n="heroOfferPrice">от 1 120 000 ₸</strong></div>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary" data-i18n="heroBtnConsult">Обсудить объект</a>
-                    <a href="#projects" class="btn btn-secondary" data-i18n="heroBtnCases">Смотреть кейсы</a>
+                    <a href="#packages" class="btn btn-primary" data-i18n="heroBtnPackages">Посмотреть комплекты</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="heroBtnConsult">Обсудить объект</a>
                 </div>
                 <div class="hero-trust">
                     <span data-i18n="heroTrust1">Астана</span>
@@ -64,6 +65,196 @@
                     <span data-i18n="heroTrust4">Договор и обслуживание</span>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Секция готовых комплектов -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title" data-i18n="packagesTitle">Готовые комплекты Face ID + турникет Hikvision</h2>
+            <p class="section-subtitle" data-i18n="packagesSubtitle">В каждом комплекте: турникет, два терминала, кронштейны, базовые расходники, монтаж и настройка.</p>
+
+            <div class="packages-grid">
+                <article class="package-card">
+                    <div class="package-media-grid">
+                        <div class="package-media">
+                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
+                        </div>
+                        <div class="package-media">
+                            <img src="public/images/access-control/faceid-ds-k1t341cm.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T341CM" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T341CM" hidden>DS-K1T341CM</div>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 data-i18n="packageStart3000Title">Hikvision START 3000</h3>
+                        <strong class="package-price" data-i18n="packageStart3000Price">от 1 120 000 ₸</strong>
+                        <p class="package-short" data-i18n="packageStart3000Short">1 турникет + 2 Face ID до 3 000 лиц</p>
+                        <p class="package-audience" data-i18n="packageStart3000Audience">Для небольших объектов: офисов, складов, школ, учебных центров и небольших бизнес-центров.</p>
+                        <dl class="package-specs"><div><dt data-i18n="specTerminal">Терминал</dt><dd>DS-K1T341CM</dd></div><div><dt data-i18n="specScreen">Экран</dt><dd>4,3″</dd></div><div><dt data-i18n="specAccess">Доступ</dt><dd><span data-i18n="specAccessBase">Лицо и карта</span></dd></div><div><dt data-i18n="specDirection">Вход и выход</dt><dd><span data-i18n="specTwoTerminals">2 терминала</span></dd></div></dl>
+                        <details class="package-more">
+                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
+                            <div class="package-list">
+                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
+                                <ul>
+                                    <li data-i18n="packageStart3000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
+                                    <li data-i18n="packageStart3000Set2">Face ID терминал Hikvision DS-K1T341CM — 2 шт.</li>
+                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
+                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
+                                </ul>
+                            </div>
+                            <div class="package-list">
+                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
+                                <ul>
+                                    <li data-i18n="packageStart3000Cap1">распознавание лица;</li>
+                                    <li data-i18n="packageStart3000Cap2">доступ по карте;</li>
+                                    <li data-i18n="packageStart3000Cap3">контроль входа и выхода;</li>
+                                    <li data-i18n="packageStart3000Cap4">журнал событий;</li>
+                                    <li data-i18n="packageStart3000Cap5">базовая настройка пользователей;</li>
+                                    <li data-i18n="packageStart3000Cap6">установка терминалов на турникет через кронштейны.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="package-footer">
+
+                        <a href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20START%203000%2C%20%D0%BE%D1%82%201%20120%20000%20%E2%82%B8.%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D1%83.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-package="3000" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Рассчитать мой объект</a>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-media-grid">
+                        <div class="package-media">
+                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
+                        </div>
+                        <div class="package-media">
+                            <img src="public/images/access-control/faceid-ds-k1t670mx.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T670MX-QR" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T670MX-QR" hidden>DS-K1T670MX-QR</div>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 data-i18n="packageStart6000Title">Hikvision START 6000</h3>
+                        <strong class="package-price" data-i18n="packageStart6000Price">от 1 380 000 ₸</strong>
+                        <p class="package-short" data-i18n="packageStart6000Short">1 турникет + 2 Face ID до 6 000 лиц</p>
+                        <p class="package-audience" data-i18n="packageStart6000Audience">Для объектов со средней нагрузкой: колледжей, общежитий, бизнес-центров, предприятий и учебных корпусов.</p>
+                        <dl class="package-specs"><div><dt data-i18n="specTerminal">Терминал</dt><dd>DS-K1T670MX-QR</dd></div><div><dt data-i18n="specScreen">Экран</dt><dd>7″</dd></div><div><dt data-i18n="specAccess">Доступ</dt><dd><span data-i18n="specAccessQr">Лицо, карта и QR</span></dd></div><div><dt data-i18n="specDirection">Вход и выход</dt><dd><span data-i18n="specTwoTerminals">2 терминала</span></dd></div></dl>
+                        <details class="package-more">
+                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
+                            <div class="package-list">
+                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
+                                <ul>
+                                    <li data-i18n="packageStart6000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
+                                    <li data-i18n="packageStart6000Set2">Face ID терминал Hikvision DS-K1T670MX-QR — 2 шт.</li>
+                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
+                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
+                                </ul>
+                            </div>
+                            <div class="package-list">
+                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
+                                <ul>
+                                    <li data-i18n="packageStart6000Cap1">быстрый проход по Face ID;</li>
+                                    <li data-i18n="packageStart6000Cap2">отдельные терминалы на вход и выход;</li>
+                                    <li data-i18n="packageStart6000Cap3">поддержка карт доступа;</li>
+                                    <li data-i18n="packageStart6000Cap4">журнал событий;</li>
+                                    <li data-i18n="packageStart6000Cap5">возможность дальнейшей интеграции с HikCentral;</li>
+                                    <li data-i18n="packageStart6000Cap6">подходит для объектов с растущей базой пользователей.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="package-footer">
+
+                        <a href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20START%206000%2C%20%D0%BE%D1%82%201%20380%20000%20%E2%82%B8.%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D1%83.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-package="6000" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Рассчитать мой объект</a>
+                    </div>
+                </article>
+
+                <article class="package-card package-card-recommended">
+                    <div class="package-badge" data-i18n="packageRecommended">Рекомендуем</div>
+                    <div class="package-media-grid">
+                        <div class="package-media">
+                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
+                        </div>
+                        <div class="package-media">
+                            <img src="public/images/access-control/faceid-ds-k1t673dx.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T673DX" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
+                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T673DX" hidden>DS-K1T673DX</div>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <h3 data-i18n="packageStart10000Title">Hikvision START 10000</h3>
+                        <strong class="package-price" data-i18n="packageStart10000Price">от 1 550 000 ₸</strong>
+                        <p class="package-short" data-i18n="packageStart10000Short">1 турникет + 2 Face ID до 10 000 лиц</p>
+                        <p class="package-audience" data-i18n="packageStart10000Audience">Рекомендуемый комплект для университетов, общежитий, спорткомплексов, заводов и объектов с высокой проходимостью.</p>
+                        <dl class="package-specs"><div><dt data-i18n="specTerminal">Терминал</dt><dd>DS-K1T673DX</dd></div><div><dt data-i18n="specScreen">Экран</dt><dd>7″</dd></div><div><dt data-i18n="specAccess">Доступ</dt><dd><span data-i18n="specAccessBase">Лицо и карта</span></dd></div><div><dt data-i18n="specDirection">Вход и выход</dt><dd><span data-i18n="specTwoTerminals">2 терминала</span></dd></div></dl>
+                        <details class="package-more">
+                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
+                            <div class="package-list">
+                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
+                                <ul>
+                                    <li data-i18n="packageStart10000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
+                                    <li data-i18n="packageStart10000Set2">Face ID терминал Hikvision DS-K1T673DX — 2 шт.</li>
+                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
+                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
+                                </ul>
+                            </div>
+                            <div class="package-list">
+                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
+                                <ul>
+                                    <li data-i18n="packageStart10000Cap1">распознавание лиц на вход и выход;</li>
+                                    <li data-i18n="packageStart10000Cap2">высокая скорость прохода;</li>
+                                    <li data-i18n="packageStart10000Cap3">поддержка карт;</li>
+                                    <li data-i18n="packageStart10000Cap4">журнал событий;</li>
+                                    <li data-i18n="packageStart10000Cap5">работа с большой базой пользователей;</li>
+                                    <li data-i18n="packageStart10000Cap6">возможность подключения к HikCentral;</li>
+                                    <li data-i18n="packageStart10000Cap7">возможность интеграции с системами учета посещаемости.</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="package-footer">
+
+                        <a href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%20START%2010000%2C%20%D0%BE%D1%82%201%20550%20000%20%E2%82%B8.%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%80%D0%B0%D1%81%D1%81%D1%87%D0%B8%D1%82%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D1%83.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-package="10000" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Рассчитать мой объект</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="package-details-grid">
+                <div class="package-detail-card">
+                    <h3 data-i18n="packageIncludedTitle">Что входит в стоимость</h3>
+                    <ul>
+                        <li data-i18n="packageIncluded1">поставка оборудования;</li>
+                        <li data-i18n="packageIncluded2">сборка и установка турникета;</li>
+                        <li data-i18n="packageIncluded3">установка двух Face ID терминалов на кронштейны;</li>
+                        <li data-i18n="packageIncluded4">подключение питания;</li>
+                        <li data-i18n="packageIncluded5">подключение терминалов к турникету;</li>
+                        <li data-i18n="packageIncluded6">настройка режима вход / выход;</li>
+                        <li data-i18n="packageIncluded7">создание тестовых пользователей;</li>
+                        <li data-i18n="packageIncluded8">проверка прохода по лицу и карте;</li>
+                        <li data-i18n="packageConsumables">базовые расходные материалы: крепёж, кабель, разъёмы и кабель-канал для стандартного монтажа;</li>
+                        <li data-i18n="packageIncluded9">базовое обучение ответственного сотрудника.</li>
+                    </ul>
+                </div>
+                <div class="package-detail-card">
+                    <h3 data-i18n="packageExtraTitle">Дополнительно можно подключить</h3>
+                    <ul>
+                        <li data-i18n="packageExtra1">HikCentral Professional;</li>
+                        <li data-i18n="packageExtra2">учет посещаемости;</li>
+                        <li data-i18n="packageExtra3">интеграцию с базой студентов или сотрудников;</li>
+                        <li data-i18n="packageExtra4">интеграцию с общежитием;</li>
+                        <li data-i18n="packageExtra5">перенос пользователей из старой системы;</li>
+                        <li data-i18n="packageExtra6">видеонаблюдение;</li>
+                        <li data-i18n="packageExtra7">удаленный мониторинг;</li>
+                        <li data-i18n="packageExtra8">резервное питание;</li>
+                        <li data-i18n="packageExtra9">сервисное обслуживание.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="installation-terms"><h3 data-i18n="installTermsTitle">Условия базового монтажа</h3><p data-i18n="installTerms">Цена рассчитана для подготовленного места установки с питанием и сетью рядом. Длину кабеля и состав расходников фиксируем в смете. Длинные кабельные трассы, строительные работы, выезд в другой город, лицензии и интеграции рассчитываются отдельно.</p></div>
+            <p class="package-seo-text" data-i18n="packagesSeoText">SmartTech поставляет и устанавливает готовые решения контроля доступа на базе оборудования Hikvision. В комплект входит турникет, два терминала распознавания лиц, монтажные кронштейны, подключение, настройка и запуск системы. Решения подходят для офисов, учебных заведений, общежитий, бизнес-центров и предприятий.</p>
+            <p class="package-custom-note" data-i18n="packagesCustomNote">Если у вас есть другие пожелания по оборудованию, интеграции или формату работы, можем рассмотреть задачу и предложить подходящий вариант решения.</p>
+            <p class="package-note" data-i18n="packagesNote">Стоимость указана ‘от’ и может изменяться в зависимости от наличия оборудования, объема монтажных работ, длины кабельных трасс и требований к интеграции. Для точного расчета оставьте заявку — мы подготовим коммерческое предложение под ваш объект.</p>
         </div>
     </section>
 
@@ -96,241 +287,43 @@
         </div>
     </section>
 
-    <!-- Секция готовых комплектов -->
-    <section id="packages" class="packages">
-        <div class="container">
-            <h2 class="section-title" data-i18n="packagesTitle">Готовые комплекты Face ID + турникет Hikvision</h2>
-            <p class="section-subtitle" data-i18n="packagesSubtitle">Установим готовое решение контроля доступа для одного прохода: турникет Hikvision, два терминала распознавания лиц на вход и выход, кронштейны, монтаж, подключение и базовая настройка.</p>
-            <p class="packages-lead" data-i18n="packagesLead">Решение подходит для офисов, учебных заведений, общежитий, бизнес-центров, складов и предприятий.</p>
-
-            <div class="packages-grid">
-                <article class="package-card">
-                    <div class="package-media-grid">
-                        <div class="package-media">
-                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
-                        </div>
-                        <div class="package-media">
-                            <img src="public/images/access-control/faceid-ds-k1t341cm.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T341CM" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T341CM" hidden>DS-K1T341CM</div>
-                        </div>
-                    </div>
-                    <div class="package-body">
-                        <h3 data-i18n="packageStart3000Title">Hikvision START 3000</h3>
-                        <p class="package-short" data-i18n="packageStart3000Short">1 турникет + 2 Face ID до 3 000 лиц</p>
-                        <p class="package-audience" data-i18n="packageStart3000Audience">Для небольших объектов: офисов, складов, школ, учебных центров и небольших бизнес-центров.</p>
-                        <ul class="package-highlights">
-                            <li data-i18n="packageStart3000Cap1">распознавание лица;</li>
-                            <li data-i18n="packageStart3000Cap2">доступ по карте;</li>
-                            <li data-i18n="packageStart3000Cap3">контроль входа и выхода;</li>
-                        </ul>
-                        <details class="package-more">
-                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
-                            <div class="package-list">
-                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
-                                <ul>
-                                    <li data-i18n="packageStart3000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
-                                    <li data-i18n="packageStart3000Set2">Face ID терминал Hikvision DS-K1T341CM — 2 шт.</li>
-                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
-                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
-                                </ul>
-                            </div>
-                            <div class="package-list">
-                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
-                                <ul>
-                                    <li data-i18n="packageStart3000Cap1">распознавание лица;</li>
-                                    <li data-i18n="packageStart3000Cap2">доступ по карте;</li>
-                                    <li data-i18n="packageStart3000Cap3">контроль входа и выхода;</li>
-                                    <li data-i18n="packageStart3000Cap4">журнал событий;</li>
-                                    <li data-i18n="packageStart3000Cap5">базовая настройка пользователей;</li>
-                                    <li data-i18n="packageStart3000Cap6">установка терминалов на турникет через кронштейны.</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="package-footer">
-                        <strong class="package-price" data-i18n="packageStart3000Price">от 1 120 000 ₸</strong>
-                        <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Написать нам</a>
-                    </div>
-                </article>
-
-                <article class="package-card">
-                    <div class="package-media-grid">
-                        <div class="package-media">
-                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
-                        </div>
-                        <div class="package-media">
-                            <img src="public/images/access-control/faceid-ds-k1t670mx.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T670MX" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T670MX" hidden>DS-K1T670MX</div>
-                        </div>
-                    </div>
-                    <div class="package-body">
-                        <h3 data-i18n="packageStart6000Title">Hikvision START 6000</h3>
-                        <p class="package-short" data-i18n="packageStart6000Short">1 турникет + 2 Face ID до 6 000 лиц</p>
-                        <p class="package-audience" data-i18n="packageStart6000Audience">Для объектов со средней нагрузкой: колледжей, общежитий, бизнес-центров, предприятий и учебных корпусов.</p>
-                        <ul class="package-highlights">
-                            <li data-i18n="packageStart6000Cap1">быстрый проход по Face ID;</li>
-                            <li data-i18n="packageStart6000Cap2">отдельные терминалы на вход и выход;</li>
-                            <li data-i18n="packageStart6000Cap3">поддержка карт доступа;</li>
-                        </ul>
-                        <details class="package-more">
-                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
-                            <div class="package-list">
-                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
-                                <ul>
-                                    <li data-i18n="packageStart6000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
-                                    <li data-i18n="packageStart6000Set2">Face ID терминал Hikvision DS-K1T670MX / DS-K1T670MX-QR — 2 шт.</li>
-                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
-                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
-                                </ul>
-                            </div>
-                            <div class="package-list">
-                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
-                                <ul>
-                                    <li data-i18n="packageStart6000Cap1">быстрый проход по Face ID;</li>
-                                    <li data-i18n="packageStart6000Cap2">отдельные терминалы на вход и выход;</li>
-                                    <li data-i18n="packageStart6000Cap3">поддержка карт доступа;</li>
-                                    <li data-i18n="packageStart6000Cap4">журнал событий;</li>
-                                    <li data-i18n="packageStart6000Cap5">возможность дальнейшей интеграции с HikCentral;</li>
-                                    <li data-i18n="packageStart6000Cap6">подходит для объектов с растущей базой пользователей.</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="package-footer">
-                        <strong class="package-price" data-i18n="packageStart6000Price">от 1 380 000 ₸</strong>
-                        <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Написать нам</a>
-                    </div>
-                </article>
-
-                <article class="package-card package-card-recommended">
-                    <div class="package-badge" data-i18n="packageRecommended">Рекомендуем</div>
-                    <div class="package-media-grid">
-                        <div class="package-media">
-                            <img src="public/images/access-control/turnstile-hikvision-ds-k3g411.jpg" loading="lazy" decoding="async" alt="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Турникет Hikvision DS-K3G411LX-R/Pg-Dm55" hidden>DS-K3G411</div>
-                        </div>
-                        <div class="package-media">
-                            <img src="public/images/access-control/faceid-ds-k1t673dx.jpg" loading="lazy" decoding="async" alt="Терминал Face ID Hikvision DS-K1T673DX" onerror="this.hidden=true; this.nextElementSibling.hidden=false;">
-                            <div class="package-media-placeholder" role="img" aria-label="Терминал Face ID Hikvision DS-K1T673DX" hidden>DS-K1T673DX</div>
-                        </div>
-                    </div>
-                    <div class="package-body">
-                        <h3 data-i18n="packageStart10000Title">Hikvision START 10000</h3>
-                        <p class="package-short" data-i18n="packageStart10000Short">1 турникет + 2 Face ID до 10 000 лиц</p>
-                        <p class="package-audience" data-i18n="packageStart10000Audience">Рекомендуемый комплект для университетов, общежитий, спорткомплексов, заводов и объектов с высокой проходимостью.</p>
-                        <ul class="package-highlights">
-                            <li data-i18n="packageStart10000Cap1">распознавание лиц на вход и выход;</li>
-                            <li data-i18n="packageStart10000Cap2">высокая скорость прохода;</li>
-                            <li data-i18n="packageStart10000Cap5">работа с большой базой пользователей;</li>
-                        </ul>
-                        <details class="package-more">
-                            <summary data-i18n="packageDetailsSummary">Состав и возможности</summary>
-                            <div class="package-list">
-                                <h4 data-i18n="packageIncludesTitle">Состав</h4>
-                                <ul>
-                                    <li data-i18n="packageStart10000Set1">Турникет Hikvision DS-K3G411LX-R/Pg-Dm55 — 1 шт.</li>
-                                    <li data-i18n="packageStart10000Set2">Face ID терминал Hikvision DS-K1T673DX — 2 шт.</li>
-                                    <li data-i18n="packageSetBracket">Кронштейн для установки терминала на турникет — 2 шт.</li>
-                                    <li data-i18n="packageSetInstall">Монтаж, подключение и базовая настройка — 1 комплект</li>
-                                </ul>
-                            </div>
-                            <div class="package-list">
-                                <h4 data-i18n="packageCapabilitiesTitle">Возможности</h4>
-                                <ul>
-                                    <li data-i18n="packageStart10000Cap1">распознавание лиц на вход и выход;</li>
-                                    <li data-i18n="packageStart10000Cap2">высокая скорость прохода;</li>
-                                    <li data-i18n="packageStart10000Cap3">поддержка карт;</li>
-                                    <li data-i18n="packageStart10000Cap4">журнал событий;</li>
-                                    <li data-i18n="packageStart10000Cap5">работа с большой базой пользователей;</li>
-                                    <li data-i18n="packageStart10000Cap6">возможность подключения к HikCentral;</li>
-                                    <li data-i18n="packageStart10000Cap7">возможность интеграции с системами учета посещаемости.</li>
-                                </ul>
-                            </div>
-                        </details>
-                    </div>
-                    <div class="package-footer">
-                        <strong class="package-price" data-i18n="packageStart10000Price">от 1 550 000 ₸</strong>
-                        <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="packageCta">Написать нам</a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="package-details-grid">
-                <div class="package-detail-card">
-                    <h3 data-i18n="packageIncludedTitle">Что входит в стоимость</h3>
-                    <ul>
-                        <li data-i18n="packageIncluded1">поставка оборудования;</li>
-                        <li data-i18n="packageIncluded2">сборка и установка турникета;</li>
-                        <li data-i18n="packageIncluded3">установка двух Face ID терминалов на кронштейны;</li>
-                        <li data-i18n="packageIncluded4">подключение питания;</li>
-                        <li data-i18n="packageIncluded5">подключение терминалов к турникету;</li>
-                        <li data-i18n="packageIncluded6">настройка режима вход / выход;</li>
-                        <li data-i18n="packageIncluded7">создание тестовых пользователей;</li>
-                        <li data-i18n="packageIncluded8">проверка прохода по лицу и карте;</li>
-                        <li data-i18n="packageIncluded9">базовое обучение ответственного сотрудника.</li>
-                    </ul>
-                </div>
-                <div class="package-detail-card">
-                    <h3 data-i18n="packageExtraTitle">Дополнительно можно подключить</h3>
-                    <ul>
-                        <li data-i18n="packageExtra1">HikCentral Professional;</li>
-                        <li data-i18n="packageExtra2">учет посещаемости;</li>
-                        <li data-i18n="packageExtra3">интеграцию с базой студентов или сотрудников;</li>
-                        <li data-i18n="packageExtra4">интеграцию с общежитием;</li>
-                        <li data-i18n="packageExtra5">перенос пользователей из старой системы;</li>
-                        <li data-i18n="packageExtra6">видеонаблюдение;</li>
-                        <li data-i18n="packageExtra7">удаленный мониторинг;</li>
-                        <li data-i18n="packageExtra8">резервное питание;</li>
-                        <li data-i18n="packageExtra9">сервисное обслуживание.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <p class="package-seo-text" data-i18n="packagesSeoText">SmartTech поставляет и устанавливает готовые решения контроля доступа на базе оборудования Hikvision. В комплект входит турникет, два терминала распознавания лиц, монтажные кронштейны, подключение, настройка и запуск системы. Решения подходят для офисов, учебных заведений, общежитий, бизнес-центров и предприятий.</p>
-            <p class="package-custom-note" data-i18n="packagesCustomNote">Если у вас есть другие пожелания по оборудованию, интеграции или формату работы, можем рассмотреть задачу и предложить подходящий вариант решения.</p>
-            <p class="package-note" data-i18n="packagesNote">Стоимость указана ‘от’ и может изменяться в зависимости от наличия оборудования, объема монтажных работ, длины кабельных трасс и требований к интеграции. Для точного расчета оставьте заявку — мы подготовим коммерческое предложение под ваш объект.</p>
-        </div>
-    </section>
-
     <!-- Секция Возможности систем -->
     <section id="capabilities" class="capabilities">
         <div class="container">
             <h2 class="section-title" data-i18n="capabilitiesTitle">Что получает объект</h2>
             <p class="section-subtitle" data-i18n="capabilitiesSubtitle">Как работают системы охраны периметра, видеонаблюдения и контроля доступа на практике</p>
-            
+
             <div class="capabilities-grid">
                 <div class="capability-item">
                     <div class="capability-icon">⏱️</div>
                     <h3 data-i18n="cap1Title">Контроль периметра и входных групп</h3>
                     <p data-i18n="cap1Desc">Закрываем проходные, служебные зоны и критичные точки объекта единым контуром безопасности.</p>
                 </div>
-                
+
                 <div class="capability-item">
                     <div class="capability-icon">📈</div>
                     <h3 data-i18n="cap2Title">Быстрые уведомления о событиях</h3>
                     <p data-i18n="cap2Desc">Настраиваем тревоги, уведомления и реакции на нарушения доступа, движение и инциденты.</p>
                 </div>
-                
+
                 <div class="capability-item">
                     <div class="capability-icon">🔗</div>
                     <h3 data-i18n="cap3Title">Архив и разбор инцидентов</h3>
                     <p data-i18n="cap3Desc">Сохраняем видео, историю проходов и события, чтобы быстро восстановить картину по объекту.</p>
                 </div>
-                
+
                 <div class="capability-item">
                     <div class="capability-icon">👤</div>
                     <h3 data-i18n="cap4Title">Интеграция без лишней замены</h3>
                     <p data-i18n="cap4Desc">Если часть оборудования уже установлена, сохраняем рабочую инфраструктуру и расширяем ее.</p>
                 </div>
-                
+
                 <div class="capability-item">
                     <div class="capability-icon">🚨</div>
                     <h3 data-i18n="cap5Title">Контроль для руководства</h3>
                     <p data-i18n="cap5Desc">Даем понятные отчеты по проходам, посещаемости и событиям безопасности без ручного учета.</p>
                 </div>
-                
+
                 <div class="capability-item">
                     <div class="capability-icon">📱</div>
                     <h3 data-i18n="cap6Title">Сервис и развитие системы</h3>
@@ -345,7 +338,7 @@
         <div class="container">
             <h2 class="section-title" data-i18n="projectsTitle">Кейсы</h2>
             <p class="section-subtitle" data-i18n="projectsSubtitle">Примеры объектов, где мы усилили безопасность и сохранили действующую инфраструктуру</p>
-            
+
             <!-- Кейс 1: корпуса 1-3 -->
             <div class="project-item">
                 <h3 class="project-title" data-i18n="case1Title">КазУТБ: корпуса 1-3</h3>
@@ -502,11 +495,7 @@
                     <p data-i18n="aboutP3">Работаем официально по договору: выезжаем на объект, подбираем решение, выполняем монтаж, пусконаладку и сопровождаем систему после запуска.</p>
                     <a href="#contact" class="btn btn-primary" data-i18n="aboutBtn">Обсудить проект</a>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <span data-i18n="aboutTeam">Команда SmartTech</span>
-                    </div>
-                </div>
+                <figure class="about-image"><img src="photos/1/IMG20260103124850-800.jpg" loading="lazy" decoding="async" alt="Контроль доступа на объекте КазУТБ"><figcaption data-i18n="aboutProjectCaption">Наша работа: контроль доступа в КазУТБ</figcaption></figure>
             </div>
         </div>
     </section>
@@ -549,6 +538,7 @@
                     <p data-i18n="contactCardDesc">Подскажем, что лучше поставить, что можно оставить из текущего и во сколько это примерно выйдет.</p>
                 </div>
                 <div class="contact-actions">
+                    <a href="tel:+77087262237" class="btn btn-secondary" data-i18n="contactBtnCall">Позвонить</a>
                     <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="btn btn-primary" aria-label="WhatsApp" data-i18n="contactBtnWa">Написать в WhatsApp</a>
                     <a href="https://instagram.com/smarttechastana" target="_blank" rel="noopener" class="btn btn-secondary" aria-label="Instagram" data-i18n="contactBtnIg">Instagram</a>
                 </div>
@@ -593,6 +583,6 @@
         <button type="button" class="modal-nav modal-next" aria-label="Следующее фото">&#10095;</button>
     </div>
 
-    <script src="script.js?v=10"></script>
+    <script src="script.js?v=11"></script>
 </body>
 </html>
