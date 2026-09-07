@@ -107,6 +107,32 @@ const i18n = {
             floatingWaAria: 'WhatsApp-қа жазу'
         },
         text: {
+            upgradeEyebrow: "Қолжетімділікті бақылауды жаңарту",
+            upgradeTitle: "Турникет орнатылған ба?",
+            upgradeIntro: "Қолданыстағы жүйеге бет арқылы өтуді қосамыз. Алдымен турникет моделін, контроллерді және бағдарламалық жасақтаманы тексеріп, нені сақтауға және нені жаңартуға болатынын ұсынамыз.",
+            upgradeStep1: "Жабдықтың үйлесімділігін және қосылу тәсілін тексереміз.",
+            upgradeStep2: "Терминалдарды, бекіткіштерді және кіру мен шығу сызбасын таңдаймыз.",
+            upgradeStep3: "Пайдаланушыларды көшіру мен қажетті интеграцияларды бағалаймыз.",
+            upgradeCta: "Жаңарту құнын бағалау",
+            upgradeHint: "Турникеттің фотосын, моделін және қолданыстағы бағдарлама атауын жіберіңіз. Құнын жүйеңізге қарай есептейміз.",
+            upgradeCaseLabel: "Біздің тәжірибемізден",
+            upgradeCaseTitle: "ҚазТБУ: Perco сақталып, Face ID қосылды",
+            upgradeCaseText: "Қолданыстағы турникеттерді жаңартып, базаны синхрондадық және қатысу есептерін баптадық. Жүйені ауыстырмай, турникеттер санын 7-ден 10-ға жеткіздік.",
+            upgradeCaseLink: "Кейс пен фотоларды көру",
+            faqTitle: "Орнату алдында: жиі қойылатын сұрақтар",
+            faqSubtitle: "Жиынтыққа не кіреді және не нысаныңызға байланысты.",
+            faqOfflineQ: "Интернетсіз өтуге бола ма?",
+            faqOfflineA: "Алдын ала жүктелген база бойынша өту үшін терминалдардың жергілікті жұмысын баптауға болады. Қашықтан басқару мен сыртқы жүйелермен дерек алмасу үшін байланыс қажет. Автономды жұмысты таңдалған жабдықта баптау кезінде тексереміз.",
+            faqPowerQ: "Электр қуаты өшсе не болады?",
+            faqPowerA: "Электр өшкенде терминалдар жұмыс істеуі үшін резервтік қуат қажет; ол базалық жиынтықтарға кірмейді. Оны жабдық пен қажетті жұмыс уақытына қарай бөлек таңдаймыз. Қуат жоғалғандағы турникет жұмысы мен авариялық шығуды жобалау кезінде келісеміз.",
+            faqMigrationQ: "Қызметкерлер мен фотоларды ескі жүйеден көшіруге бола ма?",
+            faqMigrationA: "Көшіру мүмкіндігі бастапқы бағдарламаға, экспортқа қолжетімділікке және дерек форматына байланысты. Алдымен экспортты тексереміз. Perco Web жүйесінен HikCentral жүйесіне база мен фотоларды көшіру тәжірибеміз бар. Көшіру бөлек есептеледі.",
+            faqAttendanceQ: "Жұмыс уақытын есепке алу бағаға кіре ме?",
+            faqAttendanceA: "Базалық жиынтыққа кіру мен шығуды баптау және оқиғалар журналы кіреді. Жұмыс кестесі, кешігу немесе сабақ кестесі бойынша есептер бөлек баптауды, ал шешімге қарай бағдарламалық жасақтама мен лицензияларды қажет етеді. Бұл міндеттерді бөлек сметаға енгіземіз.",
+            faqScopeQ: "Неліктен баға «бастап» көрсетілген? Шығын материалдары кіре ме?",
+            faqScopeA: "Иә, негізгі шығын материалдары, екі кронштейн, монтаж және баптау кіреді. Баға қуат пен желі жақын орналасқан дайын орынға есептелген. Кабель ұзындығы мен материалдарды сметада көрсетеміз; қосымша желілер, құрылыс жұмыстары және басқа қалаға шығу бөлек есептеледі.",
+            faqChoiceQ: "START 3000, 6000 және 10000 арасынан қалай таңдаймын?",
+            faqChoiceA: "Пайдаланушылар саны мен қажетті кіру тәсілдерінен бастаңыз. Әр жиынтықта бір турникет және кіру мен шығуға арналған екі терминал бар. Үлкен бет базасы өту жолдарының санын арттырмайды: қарбалас уақыттағы ағын үшін қанша турникет қажет екенін бөлек бағалаймыз.",
             aboutProjectCaption: "Біздің жұмыс: ҚазТБУ-дағы қолжетімділікті бақылау",
             contactBtnCall: "Қоңырау шалу",
             installTerms: "Баға қуат пен желі жақын орналасқан, орнатуға дайын орынға есептелген. Кабель ұзындығы мен шығын материалдарының құрамын сметада көрсетеміз. Ұзын кабель желілері, құрылыс жұмыстары, басқа қалаға шығу, лицензиялар мен интеграциялар бөлек есептеледі.",
@@ -323,6 +349,32 @@ const i18n = {
             floatingWaAria: 'Write to WhatsApp'
         },
         text: {
+            upgradeEyebrow: "Access control upgrades",
+            upgradeTitle: "Already have a turnstile?",
+            upgradeIntro: "Add face recognition to your existing access system. We first check the turnstile, controller and software, then explain what can stay and what needs upgrading.",
+            upgradeStep1: "Check equipment compatibility and connections.",
+            upgradeStep2: "Select terminals, mounts and an entry and exit setup.",
+            upgradeStep3: "Assess user migration and the integrations you need.",
+            upgradeCta: "Get an upgrade quote",
+            upgradeHint: "Send a turnstile photo, its model and the name of your current software. We will quote for your system.",
+            upgradeCaseLabel: "From our projects",
+            upgradeCaseTitle: "KazUTB: retained Perco, added Face ID",
+            upgradeCaseText: "Upgraded the existing turnstiles, synchronised the user database and configured attendance reports. The installation grew from 7 to 10 turnstiles without replacing the system.",
+            upgradeCaseLink: "See the project and photos",
+            faqTitle: "Before installation: common questions",
+            faqSubtitle: "What is included and what depends on your site.",
+            faqOfflineQ: "Will access work without the internet?",
+            faqOfflineA: "Terminals can be configured for local access using a preloaded user database. Remote management and data exchange with external systems need connectivity. We check standalone operation on the selected equipment during setup.",
+            faqPowerQ: "What happens during a power outage?",
+            faqPowerA: "Terminals need backup power to keep operating during an outage; it is not included in the basic packages. We size it separately for the equipment and required runtime. Turnstile behaviour on power loss and emergency exit arrangements are agreed during design.",
+            faqMigrationQ: "Can you migrate existing users and photos?",
+            faqMigrationA: "Migration depends on your current software, available exports and data formats. We check the export first. Our projects include migrating users and photos from Perco Web to HikCentral. Migration is quoted separately.",
+            faqAttendanceQ: "Is time and attendance included?",
+            faqAttendanceA: "The basic package includes entry and exit setup and an event log. Work schedules, lateness and class attendance reports require additional setup and, depending on the solution, software and licences. We itemise these tasks separately.",
+            faqScopeQ: "Why is the price listed as “from”? Are consumables included?",
+            faqScopeA: "Yes. Basic consumables, two brackets, installation and setup are included. The price assumes a prepared location with power and network connections nearby. Cable lengths and materials are itemised in the quote; additional cable runs, construction work and travel to another city are quoted separately.",
+            faqChoiceQ: "How do I choose between START 3000, 6000 and 10000?",
+            faqChoiceA: "Start with the number of users and the access methods you need. Every package has one turnstile and two terminals for entry and exit. A larger face database does not add passage lanes: we assess the number of turnstiles needed for peak traffic separately.",
             aboutProjectCaption: "Our work: access control at KazUTB",
             contactBtnCall: "Call us",
             installTerms: "The price assumes a prepared installation location with power and network connections nearby. Cable lengths and consumables are itemised in the quote. Long cable runs, construction work, travel to another city, licences and integrations are quoted separately.",
@@ -700,6 +752,15 @@ function applyLanguage(lang) {
             en: `Hello! I am interested in ${name}, ${price}. Please quote installation. City and site: `
         };
         link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
+    });
+
+    const enquiryMessages = {
+        ru: 'Здравствуйте! Хочу добавить Face ID на существующий турникет. Город, модель турникета и текущая программа: ',
+        kz: 'Сәлеметсіз бе! Қолданыстағы турникетке Face ID қосқым келеді. Қала, турникет моделі және қолданыстағы бағдарлама: ',
+        en: 'Hello! I would like to add Face ID to an existing turnstile. City, turnstile model and current software: '
+    };
+    document.querySelectorAll('[data-enquiry="modernization"]').forEach((link) => {
+        link.href = `https://wa.me/77087262237?text=${encodeURIComponent(enquiryMessages[currentLanguage])}`;
     });
 
     updateGalleryMetadata(currentLanguage);
