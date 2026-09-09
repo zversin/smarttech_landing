@@ -236,6 +236,7 @@ const i18n = {
             packageExtraTitle: 'Қосымша қосуға болады',
             packageExtra1: 'HikCentral Professional;',
             packageExtra2: 'қатысу есебі;',
+            packageExtraTelegram: 'Telegram интеграциясы;',
             packageExtra3: 'студенттер немесе қызметкерлер базасымен интеграция;',
             packageExtra4: 'жатақханамен интеграция;',
             packageExtra5: 'ескі жүйеден пайдаланушыларды көшіру;',
@@ -244,7 +245,7 @@ const i18n = {
             packageExtra8: 'резервтік қуат;',
             packageExtra9: 'сервистік қызмет көрсету.',
             packagesSeoText: 'SmartTech Hikvision жабдықтары негізіндегі дайын қолжетімділікті бақылау шешімдерін жеткізеді және орнатады. Жиынтыққа турникет, екі бет тану терминалы, монтаж кронштейндері, қосу, баптау және жүйені іске қосу кіреді. Шешімдер кеңселерге, оқу орындарына, жатақханаларға, бизнес-орталықтарға және кәсіпорындарға жарайды.',
-            packagesCustomNote: 'Жабдық, интеграция немесе жұмыс форматы бойынша басқа тілектеріңіз болса, міндетті қарап, нысаныңызға сай шешім нұсқасын ұсынамыз.',
+            packagesCustomNote: 'Басқа жүйемен интеграция немесе қосымша функциялар қажет пе? Міндеттеріңізге сай шешім әзірлейміз. Нысаныңызға не қажет екенін айтыңыз — мүмкіндіктерді, мерзімдерді және құнын келісеміз.',
             packagesNote: 'Құны "бастап" көрсетілген және жабдықтың қолжетімділігіне, монтаж жұмыстарының көлеміне, кабель трассаларының ұзындығына және интеграция талаптарына байланысты өзгеруі мүмкін. Нақты есеп үшін өтінім қалдырыңыз - нысаныңызға арналған коммерциялық ұсыныс дайындаймыз.',
 
             capabilitiesTitle: 'Нысан не алады',
@@ -478,6 +479,7 @@ const i18n = {
             packageExtraTitle: 'Optional Add-ons',
             packageExtra1: 'HikCentral Professional;',
             packageExtra2: 'attendance tracking;',
+            packageExtraTelegram: 'Telegram integration;',
             packageExtra3: 'student or employee database integration;',
             packageExtra4: 'dormitory integration;',
             packageExtra5: 'user migration from an old system;',
@@ -486,7 +488,7 @@ const i18n = {
             packageExtra8: 'backup power;',
             packageExtra9: 'service maintenance.',
             packagesSeoText: 'SmartTech supplies and installs ready access control solutions based on Hikvision equipment. The kit includes a turnstile, two face recognition terminals, mounting brackets, connection, setup, and system launch. The solutions fit offices, educational institutions, dormitories, business centers, and enterprises.',
-            packagesCustomNote: 'If you have other requirements for equipment, integration, or the way the system should work, we can review the task and propose a suitable solution.',
+            packagesCustomNote: 'Need integration with another system or additional features? We develop solutions for your needs. Tell us what your site requires — we will agree on the scope, timeline, and cost.',
             packagesNote: 'Prices are listed as "from" and may change depending on equipment availability, installation scope, cable route length, and integration requirements. Leave a request for an exact calculation - we will prepare a commercial offer for your site.',
 
             capabilitiesTitle: 'What Your Site Gets',
