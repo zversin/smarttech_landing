@@ -124,11 +124,18 @@ body {
 }
 
 .hamburger {
+    border: 0;
+    background: transparent;
+    padding: 10px;
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
 }
+
+.floor-service-link { padding-top: 24px; padding-bottom: 24px; }
+.floor-service-link a { color: var(--text-color); font-weight: 700; text-underline-offset: 5px; }
+.floor-service-link span { color: var(--text-muted); margin-left: 12px; }
 
 .hamburger span {
     width: 25px;

@@ -1,0 +1,7 @@
+Use case: ads-marketing
+Asset type: One landscape social-preview / Open Graph card for SmartTech. Request wide landscape aspect ratio approximately 1.91:1, around 1536 pixels wide.
+Primary request: A cohesive, exceptionally clean typographic Russian social-preview card with generous whitespace, flat dark navy background #0b1117, warm cream typography #f7f1e8, and muted gold accent typography #c9a86a.
+Style/medium: Professional flat graphic design, typography only, modern sans-serif, crisp large letters, readable as a small social preview.
+Composition: Prominent headline occupies the center-left with generous outer margins. Small SmartTech brand at upper left; small Астана at upper right. Main headline is cream, on two lines if needed. Subheadline is muted gold and clearly legible below it. All text safely away from edges.
+Text (verbatim, omit quotation marks): "SmartTech", "Астана", "Видеонаблюдение на этаж", "без абонентской платы".
+Constraints: Render these exact four text strings in correct Russian spelling and capitalization. No other text. No prices, no equipment images, no camera icons, no photography, no entryways, no people, no decorative objects, no gradients, no shadows, no watermarks. Background is a uniform solid dark navy.

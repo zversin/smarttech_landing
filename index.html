@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -18,14 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
     <!-- Навигация -->
     <nav class="navbar">
         <div class="container">
             <div class="logo">SmartTech</div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="site-menu">
                 <li><a href="#hero" data-i18n="navHome">Главная</a></li>
                 <li><a href="#features" data-i18n="navSolutions">Системы</a></li>
                 <li><a href="#packages" data-i18n="navPackages">Пакеты</a></li>
@@ -41,11 +41,11 @@
                     <button type="button" class="lang-btn" data-lang="kz">KZ</button>
                     <button type="button" class="lang-btn" data-lang="en">EN</button>
                 </div>
-                <div class="hamburger">
+                <button class="hamburger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </nav>
@@ -70,6 +70,10 @@
             </div>
         </div>
     </section>
+
+    <aside class="floor-service-link container" aria-label="Видеонаблюдение для жилого дома">
+        <a href="/videonablyudenie-dlya-etazha/">Видеонаблюдение на этаж без абонентской платы <span aria-hidden="true">→</span></a>
+    </aside>
 
     <!-- Секция готовых комплектов -->
     <section id="packages" class="packages">
@@ -643,6 +647,7 @@
         <button type="button" class="modal-nav modal-next" aria-label="Следующее фото">&#10095;</button>
     </div>
 
-    <script src="script.js?v=12"></script>
+    <script src="navigation.js?v=1"></script>
+    <script src="script.js?v=13"></script>
 </body>
 </html>
