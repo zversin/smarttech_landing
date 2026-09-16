@@ -1,11 +1,8 @@
-// Положите фотографии по этим путям и выполните npm run build.
-// Пока файла нет, выводится подписанная заглушка без запросов к несуществующим файлам.
+// Каталожные изображения: источники и модели — public/images/cctv-floor/SOURCES.md.
+// Размеры оригиналов нужны для стабильной раскладки до загрузки изображений.
 export const photos = {
-    camera: ['hilook-camera.jpg', 'Камера HiLook 5 Мп'],
-    recorder: ['hilook-recorder.jpg', 'Видеорегистратор HiLook'],
-    hdd: ['hdd-1tb.jpg', 'Жёсткий диск HDD 1 ТБ'],
-    elevator: ['installation-elevator.jpg', 'Камера в лифтовом холле'],
-    corridor: ['installation-corridor.jpg', 'Камера в коридоре'],
-    installedRecorder: ['installation-recorder.jpg', 'Видеорегистратор в согласованном месте'],
-    app: ['mobile-app.jpg', 'Онлайн-просмотр и архив в мобильном приложении']
+    camera: ['hilook-camera.jpg', 'Пример камеры HiLook 5 Мп — THC-T150-P', 1280, 937],
+    recorder: ['hilook-recorder.jpg', 'Пример видеорегистратора HiLook — DVR-204Q-M1', 1280, 1280],
+    hdd: ['hdd-1tb.webp', 'Пример диска для видеонаблюдения — WD Purple 1 ТБ', 840, 840],
+    app: ['hilook-app.jpg', 'Официальный скриншот HiLook для iOS: просмотр камеры и кнопка Playback для архива', 444, 960]
 };

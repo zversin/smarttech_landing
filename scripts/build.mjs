@@ -89,10 +89,14 @@ for (const page of pages) {
 }
 
 let floor = await read('templates/cctv-floor.html');
-for (const [key, [filename, alt]] of Object.entries(photos)) {
+for (const [key, [filename, alt, width, height]] of Object.entries(photos)) {
     const path = `public/images/cctv-floor/${filename}`;
     try { await access(new URL(path, root)); } catch { continue; }
-    floor = floor.replace(`data-photo="${key}">`, `data-photo="${key}" data-has-photo="true"><img src="/${path}" alt="${alt}" width="640" height="480" loading="${key === 'camera' ? 'eager' : 'lazy'}" decoding="async">`);
+    let occurrence = 0;
+    floor = floor.replaceAll(`data-photo="${key}">`, () => {
+        const loading = key === 'camera' && occurrence++ === 0 ? 'eager' : 'lazy';
+        return `data-photo="${key}" data-has-photo="true"><img src="/${path}" alt="${escape(alt)}" width="${width}" height="${height}" loading="${loading}" decoding="async">`;
+    });
 }
 outputs.set('videonablyudenie-dlya-etazha/index.html', render(floor, { ...values, HEADER: header('services', false), FOOTER: footer }));
 const urls = [...pages.map(page => page.path), '/videonablyudenie-dlya-etazha/'];
