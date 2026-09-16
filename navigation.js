@@ -3,6 +3,15 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navbar = document.querySelector('.navbar');
 
+// Сохраняем входящие ссылки на разделы прежней главной страницы.
+const legacyAnchors = JSON.parse(document.querySelector('#legacy-anchors')?.textContent || '{}');
+function resolveLegacyAnchor() {
+    const target = legacyAnchors[window.location.hash.slice(1)];
+    if (target) window.location.replace(target);
+}
+resolveLegacyAnchor();
+window.addEventListener('hashchange', resolveLegacyAnchor);
+
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
         navMenu.classList.toggle('active');
@@ -27,10 +36,11 @@ if (hamburger && navMenu) {
     });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
-        const targetSelector = anchor.getAttribute('href');
-        const target = targetSelector ? document.querySelector(targetSelector) : null;
+        const url = new URL(anchor.href, window.location.href);
+        if (url.pathname !== window.location.pathname) return;
+        const target = url.hash ? document.getElementById(url.hash.slice(1)) : null;
         if (!target) {
             return;
         }

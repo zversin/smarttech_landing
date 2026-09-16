@@ -23,14 +23,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style.css?v=13">
+    <link rel="stylesheet" href="/style.css?v=14">
     <link rel="stylesheet" href="/videonablyudenie-dlya-etazha/style.css?v=1">
+    <link rel="stylesheet" href="/site-structure.css?v=1">
 </head>
 <body class="floor-page">
     <a class="floor-skip" href="#main">Перейти к содержимому</a>
     {{HEADER}}
     <main id="main">
         <section class="floor-hero" aria-labelledby="floor-title">
+            <div class="container"><nav class="site-breadcrumbs floor-breadcrumbs" aria-label="Навигационная цепочка"><a href="/">Главная</a><span aria-hidden="true">/</span><a href="/videonablyudenie/">Видеонаблюдение</a><span aria-hidden="true">/</span><span aria-current="page">На этаж</span></nav></div>
             <div class="container floor-hero-grid">
                 <div>
                     <p class="floor-eyebrow">SMARTTECH / АСТАНА / ДЛЯ ЖИЛЫХ ДОМОВ</p>
@@ -43,6 +45,7 @@
                         <a class="btn btn-secondary" href="{{WHATSAPP}}" data-whatsapp target="_blank" rel="noopener">Написать в WhatsApp</a>
                     </div>
                     <div class="floor-hero-notes"><span>Оборудование + монтаж</span><span>0 ₸ / месяц</span></div>
+                    <nav class="site-section-nav floor-local-nav" aria-label="Разделы страницы"><a href="#included">Комплект</a><a href="#cost">Расчёт</a><a href="#steps">Установка</a><a href="#faq">Вопросы</a></nav>
                 </div>
                 <div class="floor-kit" aria-label="Состав системы видеонаблюдения">
                     <div class="floor-kit-heading"><span>ВАШ ЭТАЖ. ВАША СИСТЕМА.</span><span class="floor-kit-tag">HiLook</span></div>
@@ -117,7 +120,7 @@
     </main>
     {{FOOTER}}
     <div class="floor-mobile-cta"><a class="btn btn-primary" href="#request" data-form-open>Получить расчёт</a><a href="{{WHATSAPP}}" data-whatsapp target="_blank" rel="noopener">WhatsApp ↗</a></div>
-    <script src="/navigation.js?v=1" defer></script>
+    <script src="/navigation.js?v=2" defer></script>
     <script type="module" src="/videonablyudenie-dlya-etazha/script.mjs?v=1"></script>
 </body>
 </html>

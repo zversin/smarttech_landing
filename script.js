@@ -1,28 +1,3 @@
-const featureCards = document.querySelectorAll('.feature-card');
-if (featureCards.length) {
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        });
-
-        featureCards.forEach((card) => {
-            card.style.opacity = '0';
-            observer.observe(card);
-        });
-    } else {
-        featureCards.forEach((card) => {
-            card.style.opacity = '1';
-        });
-    }
-}
-
 const defaultTexts = {};
 document.querySelectorAll('[data-i18n]').forEach((element) => {
     const key = element.dataset.i18n;
@@ -32,6 +7,7 @@ document.querySelectorAll('[data-i18n]').forEach((element) => {
     defaultTexts[key] = element.textContent.trim();
 });
 
+const pageMeta = JSON.parse(document.querySelector('#page-meta')?.textContent || '{}');
 const defaultMetaTitle = document.title;
 const defaultMetaDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
 
@@ -534,6 +510,10 @@ const i18n = {
     }
 };
 
+for (const lang of ['kz', 'en']) {
+    Object.assign(i18n[lang].text, window.smarttechTranslations?.[lang] || {});
+}
+
 let currentLanguage = 'ru';
 function resolveInitialLanguage() {
     let savedLanguage = '';
@@ -683,11 +663,18 @@ function applyLanguage(lang) {
             metaDescription.setAttribute('content', defaultMetaDescription);
         }
     } else {
-        document.title = i18n[currentLanguage].metaTitle;
+        document.title = pageMeta[currentLanguage]?.title || defaultMetaTitle;
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute('content', i18n[currentLanguage].metaDescription);
+            metaDescription.setAttribute('content', pageMeta[currentLanguage]?.description || defaultMetaDescription);
         }
+    }
+
+    for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) {
+        document.querySelector(selector)?.setAttribute('content', document.title);
+    }
+    for (const selector of ['meta[property="og:description"]', 'meta[name="twitter:description"]']) {
+        document.querySelector(selector)?.setAttribute('content', document.querySelector('meta[name="description"]').content);
     }
 
     document.querySelectorAll('[data-i18n]').forEach((element) => {
@@ -705,6 +692,16 @@ function applyLanguage(lang) {
             ru: `Здравствуйте! Интересует комплект ${name}, ${price}. Хочу рассчитать установку. Город и объект: `,
             kz: `Сәлеметсіз бе! ${name} жиынтығы қызықтырады, ${price}. Орнату құнын есептегім келеді. Қала және нысан: `,
             en: `Hello! I am interested in ${name}, ${price}. Please quote installation. City and site: `
+        };
+        link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
+    });
+
+    document.querySelectorAll('[data-site-enquiry]').forEach((link) => {
+        const service = document.querySelector('h1').textContent;
+        const messages = {
+            ru: `Здравствуйте! Интересует услуга «${service}». Город и объект: `,
+            kz: `Сәлеметсіз бе! «${service}» қызметі қызықтырады. Қала және нысан: `,
+            en: `Hello! I am interested in ${service}. City and property: `
         };
         link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
     });
@@ -953,8 +950,16 @@ if (modal && modalImg && modalCaption && closeBtn && prevBtn && nextBtn) {
     };
 
     document.querySelectorAll('.gallery-img').forEach((img) => {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
         img.addEventListener('click', () => {
             openModal(img);
+        });
+        img.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openModal(img);
+            }
         });
     });
 
