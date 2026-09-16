@@ -28,7 +28,7 @@ export const pages = [
 ];
 
 export const legacyAnchors = {
-    packages: '/kontrol-dostupa/#packages', modernization: '/kontrol-dostupa/#modernization',
+    modernization: '/kontrol-dostupa/#modernization',
     faq: '/kontrol-dostupa/#faq', capabilities: '/integraciya-i-servis/#capabilities',
     partners: '/o-kompanii/#partners', 'case-kazutb': '/proekty/#case-kazutb'
 };

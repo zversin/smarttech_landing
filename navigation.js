@@ -6,6 +6,7 @@ const navbar = document.querySelector('.navbar');
 // Сохраняем входящие ссылки на разделы прежней главной страницы.
 const legacyAnchors = JSON.parse(document.querySelector('#legacy-anchors')?.textContent || '{}');
 function resolveLegacyAnchor() {
+    if (document.getElementById(window.location.hash.slice(1))) return;
     const target = legacyAnchors[window.location.hash.slice(1)];
     if (target) window.location.replace(target);
 }

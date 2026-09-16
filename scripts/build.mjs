@@ -20,11 +20,22 @@ const header = (group, languages = true) => {
 };
 const sections = {};
 for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services']) sections[id] = await read(`templates/sections/${id}.html`);
+// Короткие карточки на главной берём из того же источника, что и полный каталог.
+const homePackages = [...sections.packages.matchAll(/<article class="package-card[\s\S]*?<\/article>/g)]
+    .map(([card]) => card
+        .replace(/\s*<p class="package-audience"[\s\S]*?<\/p>/, '')
+        .replace(/\s*<dl class="package-specs"[\s\S]*?<\/dl>/, '')
+        .replace(/<h4\b/g, '<h5').replaceAll('</h4>', '</h5>')
+        .replace(/<h3\b/g, '<h4').replaceAll('</h3>', '</h4>'))
+    .join('\n');
 const values = {
+    ACCESS_START_PRICE: sections.packages.match(/data-i18n="packageStart3000Price">([^<]+)</)[1],
     PRICE: formatTenge(FLOOR_CCTV_PRICE), SHARE: formatTenge(pricePerApartment(DEFAULT_APARTMENTS)),
     SUBSCRIPTION: formatTenge(SUBSCRIPTION_MONTHLY_PRICE), YEAR: formatTenge(SUBSCRIPTION_MONTHLY_PRICE * 12),
     THREE_YEARS: formatTenge(SUBSCRIPTION_MONTHLY_PRICE * 36), FIVE_YEARS: formatTenge(SUBSCRIPTION_MONTHLY_PRICE * 60),
     WHATSAPP: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Здравствуйте! Интересует видеонаблюдение на этаж за ${formatTenge(FLOOR_CCTV_PRICE)} без абонентской платы. Хочу получить предложение.`)}`,
+    GENERAL_WHATSAPP: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Здравствуйте! Хочу рассчитать установку системы безопасности. Город и объект: ')}`,
+    HOME_PACKAGES: homePackages,
     CONTACT: sections.contact, PROCESS: sections.process, SERVICES: sections.services
 };
 const breadcrumbs = (page) => `<nav class="site-breadcrumbs" aria-label="Навигационная цепочка"><a href="/" data-i18n="navHome">Главная</a><span aria-hidden="true">/</span>${page.group === 'services' ? '<a href="/#features" data-i18n="siteNavServices">Услуги</a><span aria-hidden="true">/</span>' : ''}<span aria-current="page" data-i18n="${page.headingKey}">${page.heading}</span></nav>`;

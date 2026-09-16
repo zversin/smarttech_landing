@@ -696,12 +696,22 @@ function applyLanguage(lang) {
         link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
     });
 
-    document.querySelectorAll('[data-site-enquiry]').forEach((link) => {
-        const service = document.querySelector('h1').textContent;
+    document.querySelectorAll('[data-site-enquiry], [data-service-key]').forEach((link) => {
+        const service = link.dataset.serviceKey ? textByLanguage(currentLanguage, link.dataset.serviceKey) : document.querySelector('h1').textContent;
         const messages = {
             ru: `Здравствуйте! Интересует услуга «${service}». Город и объект: `,
             kz: `Сәлеметсіз бе! «${service}» қызметі қызықтырады. Қала және нысан: `,
             en: `Hello! I am interested in ${service}. City and property: `
+        };
+        link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
+    });
+
+    document.querySelectorAll('[data-floor-enquiry]').forEach((link) => {
+        const price = link.dataset.floorPrice;
+        const messages = {
+            ru: `Здравствуйте! Интересует видеонаблюдение на этаж за ${price} без абонентской платы. Хочу получить предложение.`,
+            kz: `Сәлеметсіз бе! Абоненттік төлемсіз, бір қабатқа ${price} бейнебақылау жиынтығы қызықтырады. Ұсыныс алғым келеді.`,
+            en: `Hello! I am interested in floor CCTV for ${price} with no subscription. Please send me a quote.`
         };
         link.href = `https://wa.me/77087262237?text=${encodeURIComponent(messages[currentLanguage])}`;
     });

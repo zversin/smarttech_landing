@@ -1,6 +1,17 @@
 // Дополнения к существующим переводам: структура сайта и страницы услуг.
 window.smarttechTranslations = {
     kz: {
+        landingFloorShort: 'Қабатқа камералар', landingAccessShort: 'Турникет + 2 Face ID',
+        landingQuote: 'WhatsApp арқылы есептеу', landingPrices: 'Жиынтықтар мен бағалар',
+        landingPricesIntro: 'Тиісті жиынтықты таңдаңыз — орнатуды бірден WhatsApp арқылы талқылауға болады.',
+        landingServiceQuote: 'Орнату құнын есептеу', landingFloorTerms: 'Құрамы және қосу тәртібі',
+        landingFloorEquipment: '2 HiLook 5 Мп камерасы, тіркеуіш, 1 ТБ HDD, қуат көзі, кабель және монтаж материалдары. Орнату, жазба, мұрағат пен қосымшаны баптау құнға кіреді.',
+        landingFloorInternet: 'Тіркеуіш пәтерлердің біріне орнатылып, оның роутеріне қосылады. Интернет қашықтан қарауға қажет; ол өшсе, электр қуаты бар кезде жергілікті жазба жалғасады.',
+        landingFloorScope: 'Бағаға стандартты монтаж кіреді. Жабдықтың орны мен қосымша жұмыстарды алдын ала келісеміз.',
+        landingFourApartments: '4 пәтер болса —', landingPerApartment: 'әр пәтерден бір рет',
+        landingZero: 'Абоненттік төлем — 0 ₸ / ай', landingFloorDetails: 'Қабат жиынтығы туралы толығырақ →',
+        landingInstallTerms: '«Бастап» бағалары қуат пен желі қосылымы жақын дайын орынға арналған. Кабель ұзындығын, материалдар мен қосымша жұмыстарды сметада бекітеміз.',
+        landingAccessDetails: 'Барлық сипаттамалар мен шарттар →', landingProjectDetails: 'Фотосуреттер мен мәліметтер →',
         siteNavServices: 'Қызметтер', siteNavProjects: 'Жобалар', siteCompany: 'Компания',
         siteFooterIntro: 'Астанада және Қазақстан бойынша қауіпсіздік жүйелері.',
         skipContent: 'Мазмұнға өту', serviceDetails: 'Қызмет туралы',
@@ -38,6 +49,17 @@ window.smarttechTranslations = {
         contactPrepareText: 'Қаланы, нысан түрін және міндетті көрсетіңіз. Бөлме жоспары, орнату орнының фотосуреттері немесе қолданыстағы жабдық моделі болса, WhatsApp арқылы жіберіңіз.'
     },
     en: {
+        landingFloorShort: 'Floor CCTV', landingAccessShort: 'Turnstile + 2 Face ID',
+        landingQuote: 'Get a quote on WhatsApp', landingPrices: 'Packages & prices',
+        landingPricesIntro: 'Choose a package and discuss installation directly on WhatsApp.',
+        landingServiceQuote: 'Get an installation quote', landingFloorTerms: 'Equipment and connection details',
+        landingFloorEquipment: '2 HiLook 5 MP cameras, recorder, 1 TB HDD, power supply, cable and installation materials. Installation, recording, archive and app setup are included.',
+        landingFloorInternet: 'The recorder is installed in one apartment and connected to its router. Internet is needed for remote viewing; local recording continues without it as long as power is available.',
+        landingFloorScope: 'The price includes standard installation. Equipment placement and additional work are agreed in advance.',
+        landingFourApartments: 'With 4 apartments —', landingPerApartment: 'per apartment, paid once',
+        landingZero: 'Subscription fee — 0 ₸ / month', landingFloorDetails: 'More about the floor package →',
+        landingInstallTerms: 'Starting prices assume a prepared location with power and network connections nearby. Cable lengths, materials and additional work are itemised in the quote.',
+        landingAccessDetails: 'Full specifications and terms →', landingProjectDetails: 'Photos and project details →',
         siteNavServices: 'Services', siteNavProjects: 'Projects', siteCompany: 'Company',
         siteFooterIntro: 'Security systems in Astana and across Kazakhstan.',
         skipContent: 'Skip to content', serviceDetails: 'Explore this service',
