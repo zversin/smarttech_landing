@@ -1,31 +1,39 @@
-<section id="features" class="features site-section">
+<section id="features" class="features site-section" aria-labelledby="services-title" data-services-slider>
         <div class="container">
-            <h2 class="section-title" data-i18n="featuresTitle">Что устанавливаем</h2>
-            <div class="features-grid">
-                <div class="feature-card">
+            <div class="site-section-head"><p class="site-eyebrow" data-i18n="siteNavServices">Услуги</p><h2 id="services-title" data-i18n="featuresTitle">Что устанавливаем</h2><p data-i18n="landingServicesIntro">Выберите задачу для вашего объекта. Подберём оборудование, установим и настроим систему.</p></div>
+            <div class="service-slider-controls" hidden>
+                <p class="service-slider-hint" data-i18n="landingSwipe">Листайте, чтобы посмотреть услуги</p>
+                <div class="service-slider-buttons"><button type="button" data-services-prev aria-controls="services-track"><span aria-hidden="true">←</span><span class="site-visually-hidden" data-i18n="landingPrevService">Предыдущая услуга</span></button><span data-services-count role="status" aria-live="polite" aria-atomic="true">01 / 04</span><button type="button" data-services-next aria-controls="services-track"><span aria-hidden="true">→</span><span class="site-visually-hidden" data-i18n="landingNextService">Следующая услуга</span></button></div>
+            </div>
+            <div class="features-grid services-track" id="services-track" role="region" aria-labelledby="services-title">
+                <article class="feature-card" id="service-cctv">
                     <div class="site-service-number" aria-hidden="true">01</div>
                     <h3 data-i18n="feature1Title">Видеонаблюдение</h3>
                     <p data-i18n="feature1Desc">Подбираем камеры, запись, архив и обзор критичных зон объекта.</p>
+                    <p class="service-scope" data-i18n="landingCctvScope">Для жилых домов, офисов, магазинов и других объектов.</p>
                     <a class="site-text-link" href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%20%C2%AB%D0%92%D0%B8%D0%B4%D0%B5%D0%BE%D0%BD%D0%B0%D0%B1%D0%BB%D1%8E%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%C2%BB.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-service-key="feature1Title" target="_blank" rel="noopener"><span data-i18n="landingServiceQuote">Рассчитать установку</span> <span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card" id="service-alarm">
                     <div class="site-service-number" aria-hidden="true">02</div>
                     <h3 data-i18n="feature2Title">Охранная сигнализация</h3>
                     <p data-i18n="feature2Desc">Настраиваем датчики, тревожные сценарии и уведомления по событиям.</p>
+                    <p class="service-scope" data-i18n="landingAlarmScope">Для помещений, где нужен контроль входов и охраняемых зон.</p>
                     <a class="site-text-link" href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%20%C2%AB%D0%9E%D1%85%D1%80%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D0%B3%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%C2%BB.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-service-key="feature2Title" target="_blank" rel="noopener"><span data-i18n="landingServiceQuote">Рассчитать установку</span> <span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card" id="service-access">
                     <div class="site-service-number" aria-hidden="true">03</div>
                     <h3 data-i18n="feature3Title">Турникеты и контроль доступа</h3>
                     <p data-i18n="feature3Desc">Ставим турникеты, Face ID, карты доступа и учет проходов сотрудников и посетителей.</p>
+                    <p class="service-scope" data-i18n="landingAccessScope">Для университетов, общежитий, спорткомплексов и бизнеса.</p>
                     <a class="site-text-link" href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%20%C2%AB%D0%A2%D1%83%D1%80%D0%BD%D0%B8%D0%BA%D0%B5%D1%82%D1%8B%20%D0%B8%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%20%D0%B4%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%B0%C2%BB.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-service-key="feature3Title" target="_blank" rel="noopener"><span data-i18n="landingServiceQuote">Рассчитать установку</span> <span aria-hidden="true">↗</span></a>
-                </div>
-                <div class="feature-card">
+                </article>
+                <article class="feature-card" id="service-integration">
                     <div class="site-service-number" aria-hidden="true">04</div>
                     <h3 data-i18n="feature4Title">Интеграция и сервис</h3>
                     <p data-i18n="feature4Desc">Связываем охранные системы между собой и с действующей инфраструктурой объекта.</p>
+                    <p class="service-scope" data-i18n="landingIntegrationScope">Для объектов, где часть оборудования уже установлена.</p>
                     <a class="site-text-link" href="https://wa.me/77087262237?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%20%C2%AB%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D0%B8%20%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81%C2%BB.%20%D0%93%D0%BE%D1%80%D0%BE%D0%B4%20%D0%B8%20%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%3A%20" data-service-key="feature4Title" target="_blank" rel="noopener"><span data-i18n="landingServiceQuote">Рассчитать установку</span> <span aria-hidden="true">↗</span></a>
-                </div>
+                </article>
             </div>
         </div>
     </section>

@@ -5,7 +5,7 @@ import { pages, SITE_ORIGIN, legacyAnchors } from '../site.config.mjs';
 import { FLOOR_CCTV_PRICE, formatTenge, pricePerApartment } from '../videonablyudenie-dlya-etazha/config.mjs';
 
 const root = new URL('../', import.meta.url);
-for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
+for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
     execFileSync(process.execPath, ['--check', new URL(file, root).pathname], { stdio: 'inherit' });
 }
 execFileSync(process.execPath, [new URL('scripts/build.mjs', root).pathname, '--check'], { stdio: 'inherit' });
