@@ -1,4 +1,4 @@
-import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment } from './config.mjs?v=2';
+import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, ADDITIONAL_CAMERA_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=4';
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {
@@ -18,15 +18,33 @@ const calculator = document.querySelector('#apartments');
 const output = document.querySelector('#apartment-price');
 const form = document.querySelector('#floor-form');
 const apartmentField = form.elements.namedItem('apartments');
+const camerasControl = document.querySelector('#camera-count');
+const diskControl = document.querySelector('#disk-size');
+const bitrateControl = document.querySelector('#bitrate');
+const selection = () => ({ cameras: Number(camerasControl.value), diskTb: Number(diskControl.value), bitrateMbps: Number(bitrateControl.value) });
+const selectionText = () => {
+    const { cameras, diskTb, bitrateMbps } = selection();
+    return `Камер: ${cameras}; HDD: ${diskTb} ТБ; средний битрейт: ${bitrateMbps} Мбит/с на камеру; ориентир архива: ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))} при записи 24/7.`;
+};
+document.querySelector('#camera-unit-price').textContent = formatTenge(ADDITIONAL_CAMERA_PRICE);
 function updateCalculation() {
     const count = Number(calculator.value);
-    output.textContent = formatTenge(pricePerApartment(count));
+    const { cameras, diskTb, bitrateMbps } = selection();
+    const total = packagePrice(cameras, diskTb);
+    document.querySelector('#camera-count-value').textContent = cameras;
+    document.querySelector('#package-price').textContent = formatTenge(total);
+    document.querySelector('#archive-days').textContent = `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
+    output.textContent = formatTenge(total / count);
     apartmentField.value = String(count);
+    document.querySelector('[data-calculator-whatsapp]').href = whatsappUrl(`Здравствуйте! Хочу обсудить расчёт видеонаблюдения. ${selectionText()} Ориентировочная стоимость с монтажом: ${formatTenge(total)}; квартир: ${count}; с квартиры: ${formatTenge(total / count)}.`);
 }
-calculator.addEventListener('change', () => {
-    updateCalculation();
-    track('cctv_floor_calculator_change', { apartments: Number(calculator.value) });
-});
+for (const control of [calculator, camerasControl, diskControl, bitrateControl]) {
+    control.addEventListener('input', updateCalculation);
+    control.addEventListener('change', () => {
+        updateCalculation();
+        track('cctv_floor_calculator_change', { apartments: Number(calculator.value), ...selection() });
+    });
+}
 updateCalculation();
 
 const request = document.querySelector('#request');
@@ -62,8 +80,9 @@ form.addEventListener('submit', (event) => {
         `Подъезд: ${data.get('entrance')}`,
         `Этаж: ${data.get('floor')}`,
         `Количество квартир: ${count}`,
-        `Базовый комплект за этаж: ${formatTenge(FLOOR_CCTV_PRICE)}`,
-        `Ориентировочно с квартиры: ${formatTenge(pricePerApartment(count))}`
+        selectionText(),
+        `Ориентировочная стоимость с монтажом: ${formatTenge(packagePrice(selection().cameras, selection().diskTb))}`,
+        `Ориентировочно с квартиры: ${formatTenge(packagePrice(selection().cameras, selection().diskTb) / count)}`
     ].join('\n');
     const url = whatsappUrl(text);
     const status = document.querySelector('#form-status');

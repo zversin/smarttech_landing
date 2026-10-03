@@ -1,6 +1,7 @@
 // Дополнения к существующим переводам: структура сайта и страницы услуг.
 window.smarttechTranslations = {
     kz: {
+        landingCalculator: 'Камералар, баға және сақтау мерзімін есептеу →',
         landingServicesIntro: "Нысаныңызға қажетті қызметті таңдаңыз. Жабдықты таңдап, орнатып, жүйені баптаймыз.",
         landingSwipe: "Қызметтерді көру үшін сырғытыңыз",
         landingPrevService: "Алдыңғы қызмет",
@@ -60,6 +61,7 @@ window.smarttechTranslations = {
         contactPrepareText: 'Қаланы, нысан түрін және міндетті көрсетіңіз. Бөлме жоспары, орнату орнының фотосуреттері немесе қолданыстағы жабдық моделі болса, WhatsApp арқылы жіберіңіз.'
     },
     en: {
+        landingCalculator: 'Calculate cameras, price and archive retention →',
         landingServicesIntro: "Choose what your property needs. We select the equipment, install it and configure the system.",
         landingSwipe: "Swipe to explore our services",
         landingPrevService: "Previous service",

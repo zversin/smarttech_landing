@@ -90,6 +90,27 @@
 .floor-calculator-controls { padding-left: 40px; border-left: 1px solid #c9b899; }
 .floor-calculator label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
 .floor-calculator select { width: 100%; }
+.floor-calculator { display: block; }
+.floor-calculator-intro { max-width: 650px; margin-bottom: 26px; }
+.floor-calculator .floor-calculator-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 28px; padding: 0; border: 0; }
+.floor-calc-field { min-width: 0; }
+.floor-calc-field small { display: block; font-size: 12px; line-height: 1.6; margin-top: 8px; color: #665944; }
+.floor-calculator .floor-calc-field label { display: flex; align-items: center; justify-content: space-between; font-size: 14px; }
+.floor-calculator #camera-count-value { font-size: 20px; margin: 0; color: #705125; }
+.floor-calculator #camera-count { width: 100%; padding: 0; border: 0; background: transparent; accent-color: #806137; cursor: pointer; }
+.floor-calculator-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.floor-calculator-results > div { min-width: 0; padding: 20px; border-radius: 10px; background: #fffaf0; border: 1px solid #d1c1a6; }
+.floor-calculator-results span { font-size: 12px; }
+.floor-calculator .floor-calculator-results output { font-size: clamp(23px, 2.5vw, 34px); margin-top: 10px; }
+.floor-calculator-notes { margin-top: 22px; }
+.floor-calculator-notes p + p { margin-top: 12px; }
+.floor-calculator-notes .btn { margin-top: 20px; }
+@media (max-width: 640px) {
+    .floor-calculator .floor-calculator-controls, .floor-calculator-results { grid-template-columns: 1fr; }
+    .floor-calculator-results { gap: 10px; }
+    .floor-calculator-results > div { padding: 16px; }
+    .floor-calculator-notes .btn { width: 100%; white-space: normal; text-align: center; }
+}
 .floor-calculator output { display: block; margin-top: 18px; font-size: 34px; font-weight: 800; letter-spacing: -.035em; }
 .floor-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; gap: 26px; }
 .floor-steps li { border-top: 1px solid #c7b9a5; padding-top: 24px; }

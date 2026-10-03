@@ -3,7 +3,7 @@ import { execFileSync } from 'node:child_process';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_ORIGIN, legacyAnchors } from '../site.config.mjs';
-import { FLOOR_CCTV_PRICE, formatTenge, pricePerApartment } from '../videonablyudenie-dlya-etazha/config.mjs';
+import { FLOOR_CCTV_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays } from '../videonablyudenie-dlya-etazha/config.mjs';
 
 const root = new URL('../', import.meta.url);
 for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
@@ -51,6 +51,15 @@ for (const [, price] of floor.matchAll(/data-default-share>([^<]+)</g)) assert.e
 assert(documents.get('/').html.includes(formatTenge(FLOOR_CCTV_PRICE)), 'Цена на главной не совпадает');
 for (const count of [2, 3, 4, 5, 6, 7, 8]) assert.equal(pricePerApartment(count), FLOOR_CCTV_PRICE / count);
 for (const count of [0, 1, 9, 4.5, NaN]) assert.throws(() => pricePerApartment(count), RangeError);
+assert.equal(packagePrice(2, 2), FLOOR_CCTV_PRICE);
+assert.equal(packagePrice(4, 4), 314864);
+assert.equal(packagePrice(1, 2), 205000);
+assert(Math.abs(archiveDays(2, 2, 2) - 41.6666667) < 0.0001);
+assert.equal(archiveDays(4, 4, 2), archiveDays(2, 2, 2));
+assert.equal(archiveDays(2, 2, 4) * 2, archiveDays(2, 2, 2));
+for (const cameraCount of [0, 5, 1.5, NaN]) assert.throws(() => packagePrice(cameraCount, 2), RangeError);
+assert.throws(() => archiveDays(2, 8, 2), RangeError);
+assert.throws(() => archiveDays(2, 2, 0), RangeError);
 const sitemap = await readFile(new URL('sitemap.xml', root), 'utf8');
 for (const route of routes) assert(sitemap.includes(`<loc>${SITE_ORIGIN}${route}</loc>`));
 console.log(`Lint OK: ${routes.length} страниц, JavaScript, JSON, уникальные title/H1, canonical, ссылки, фото, перенесённые якоря, цены и sitemap.`);
