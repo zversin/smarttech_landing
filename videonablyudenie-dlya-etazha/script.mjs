@@ -1,4 +1,4 @@
-import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment } from './config.mjs';
+import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment } from './config.mjs?v=2';
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {

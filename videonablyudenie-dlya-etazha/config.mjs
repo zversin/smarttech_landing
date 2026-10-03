@@ -1,5 +1,5 @@
 // Единственный источник стоимости. После изменения выполните npm run build.
-export const FLOOR_CCTV_PRICE = 160000;
+export const FLOOR_CCTV_PRICE = 230000;
 export const WHATSAPP_NUMBER = '77087262237';
 export const DEFAULT_APARTMENTS = 4;
 export const SUBSCRIPTION_MONTHLY_PRICE = 1500;
