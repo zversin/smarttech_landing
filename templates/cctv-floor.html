@@ -107,7 +107,7 @@
                     <div class="floor-calculator-intro"><p class="floor-eyebrow">СОБЕРИТЕ СВОЙ КОМПЛЕКТ</p><h3 id="calculator-title">Камеры, цена и срок хранения</h3><p>Изменяйте параметры — стоимость и длительность архива пересчитываются сразу.</p></div>
                     <div class="floor-calculator-controls">
                         <div class="floor-calc-field"><label for="camera-count">Количество камер <output id="camera-count-value" for="camera-count">2</output></label><input id="camera-count" type="range" min="1" max="4" step="1" value="2"><small>От 1 до 4 камер на одном регистраторе</small></div>
-                        <div class="floor-calc-field"><label for="disk-size">Объём диска</label><select id="disk-size"><option value="2" selected>2 ТБ · Hikvision DS20HKVS-VX1</option><option value="4">4 ТБ · Hikvision DS40HKVS-VX1</option></select></div>
+                        <div class="floor-calc-field"><label for="disk-size">Объём диска</label><select id="disk-size"><option value="0">Без жёсткого диска</option><option value="2" selected>2 ТБ · Hikvision DS20HKVS-VX1</option><option value="4">4 ТБ · Hikvision DS40HKVS-VX1</option></select></div>
                         <div class="floor-calc-field"><label for="bitrate">Средний битрейт на камеру</label><select id="bitrate"><option value="1">1 Мбит/с · меньше места</option><option value="2" selected>2 Мбит/с · базовый расчёт</option><option value="4">4 Мбит/с · больше места</option></select><small>Больше битрейт — больше расход места. Разрешение записи — 1080p Lite.</small></div>
                         <div class="floor-calc-field"><label for="apartments">Количество квартир</label><select id="apartments" name="apartments"><option value="2">2 квартиры</option><option value="3">3 квартиры</option><option value="4" selected>4 квартиры</option><option value="5">5 квартир</option><option value="6">6 квартир</option><option value="7">7 квартир</option><option value="8">8 квартир</option></select></div>
                     </div>
@@ -116,7 +116,7 @@
                         <div><span>С квартиры единоразово</span><output id="apartment-price" for="camera-count disk-size apartments">{{SHARE}}</output></div>
                         <div><span>Архив при записи 24/7</span><output id="archive-days" for="camera-count disk-size bitrate">≈ 41 день</output></div>
                     </div>
-                    <div class="floor-calculator-notes"><p>База: 2 камеры и HDD 2 ТБ за {{PRICE}}. Изменение количества камер: <span id="camera-unit-price">25 000 ₸</span> за камеру с монтажом. Переход на 4 ТБ: +34 864 ₸. Сложные трассы и дополнительные работы согласуем отдельно.</p><p>Срок хранения рассчитан для непрерывной записи, H.265 и выбранного среднего битрейта с запасом 10%. Фактический срок зависит от сцены и настроек. При включённой циклической записи новые записи заменяют самые старые.</p><a class="btn btn-primary" href="{{WHATSAPP}}" data-calculator-whatsapp target="_blank" rel="noopener">Обсудить этот расчёт в WhatsApp ↗</a></div>
+                    <div class="floor-calculator-notes"><p>База: 2 камеры и HDD 2 ТБ за {{PRICE}}. Изменение количества камер: <span id="camera-unit-price">25 000 ₸</span> за камеру с монтажом. Без HDD: −94 338 ₸, доступен просмотр в реальном времени без локальной записи и архива. Переход на 4 ТБ: +34 864 ₸. Сложные трассы и дополнительные работы согласуем отдельно.</p><p>Срок хранения рассчитан для непрерывной записи, H.265 и выбранного среднего битрейта с запасом 10%. Фактический срок зависит от сцены и настроек. При включённой циклической записи новые записи заменяют самые старые.</p><a class="btn btn-primary" href="{{WHATSAPP}}" data-calculator-whatsapp target="_blank" rel="noopener">Обсудить этот расчёт в WhatsApp ↗</a></div>
                 </div>
 
                 <noscript><p class="floor-nojs">Расчёт для 4 квартир показан выше. Для интерактивного расчёта включите JavaScript или напишите нам в WhatsApp.</p></noscript>
@@ -168,6 +168,6 @@
     {{FOOTER}}
     <div class="floor-mobile-cta"><a class="btn btn-primary" href="#request" data-form-open>Получить расчёт</a><a href="{{WHATSAPP}}" data-whatsapp target="_blank" rel="noopener">WhatsApp ↗</a></div>
     <script src="/navigation.js?v=3" defer></script>
-    <script type="module" src="/videonablyudenie-dlya-etazha/script.mjs?v=5"></script>
+    <script type="module" src="/videonablyudenie-dlya-etazha/script.mjs?v=6"></script>
 </body>
 </html>

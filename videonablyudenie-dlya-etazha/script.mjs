@@ -1,4 +1,4 @@
-import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, ADDITIONAL_CAMERA_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=4';
+import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, ADDITIONAL_CAMERA_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=5';
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {
@@ -24,6 +24,7 @@ const bitrateControl = document.querySelector('#bitrate');
 const selection = () => ({ cameras: Number(camerasControl.value), diskTb: Number(diskControl.value), bitrateMbps: Number(bitrateControl.value) });
 const selectionText = () => {
     const { cameras, diskTb, bitrateMbps } = selection();
+    if (diskTb === 0) return `Камер: ${cameras}; без жёсткого диска — просмотр в реальном времени, без локальной записи и архива.`;
     return `Камер: ${cameras}; HDD: ${diskTb} ТБ; средний битрейт: ${bitrateMbps} Мбит/с на камеру; ориентир архива: ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))} при записи 24/7.`;
 };
 document.querySelector('#camera-unit-price').textContent = formatTenge(ADDITIONAL_CAMERA_PRICE);
@@ -33,7 +34,8 @@ function updateCalculation() {
     const total = packagePrice(cameras, diskTb);
     document.querySelector('#camera-count-value').textContent = cameras;
     document.querySelector('#package-price').textContent = formatTenge(total);
-    document.querySelector('#archive-days').textContent = `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
+    bitrateControl.disabled = diskTb === 0;
+    document.querySelector('#archive-days').textContent = diskTb === 0 ? 'Без записи' : `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
     output.textContent = formatTenge(total / count);
     apartmentField.value = String(count);
     document.querySelector('[data-calculator-whatsapp]').href = whatsappUrl(`Здравствуйте! Хочу обсудить расчёт видеонаблюдения. ${selectionText()} Ориентировочная стоимость с монтажом: ${formatTenge(total)}; квартир: ${count}; с квартиры: ${formatTenge(total / count)}.`);

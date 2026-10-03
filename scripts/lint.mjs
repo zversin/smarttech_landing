@@ -54,6 +54,8 @@ for (const count of [0, 1, 9, 4.5, NaN]) assert.throws(() => pricePerApartment(c
 assert.equal(packagePrice(2, 2), FLOOR_CCTV_PRICE);
 assert.equal(packagePrice(4, 4), 314864);
 assert.equal(packagePrice(1, 2), 205000);
+assert.equal(packagePrice(2, 0), 135662);
+assert.equal(archiveDays(2, 0, 2), 0);
 assert(Math.abs(archiveDays(2, 2, 2) - 41.6666667) < 0.0001);
 assert.equal(archiveDays(4, 4, 2), archiveDays(2, 2, 2));
 assert.equal(archiveDays(2, 2, 4) * 2, archiveDays(2, 2, 2));
