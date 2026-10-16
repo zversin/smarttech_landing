@@ -1,4 +1,5 @@
-import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, ADDITIONAL_CAMERA_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=5';
+import { cameraPrice } from '../pricing/config.mjs';
+import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=6';
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {
@@ -27,13 +28,15 @@ const selectionText = () => {
     if (diskTb === 0) return `Камер: ${cameras}; без жёсткого диска — просмотр в реальном времени, без локальной записи и архива.`;
     return `Камер: ${cameras}; HDD: ${diskTb} ТБ; средний битрейт: ${bitrateMbps} Мбит/с на камеру; ориентир архива: ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))} при записи 24/7.`;
 };
-document.querySelector('#camera-unit-price').textContent = formatTenge(ADDITIONAL_CAMERA_PRICE);
+
 function updateCalculation() {
     const count = Number(calculator.value);
     const { cameras, diskTb, bitrateMbps } = selection();
     const total = packagePrice(cameras, diskTb);
     document.querySelector('#camera-count-value').textContent = cameras;
     document.querySelector('#package-price').textContent = formatTenge(total);
+    const breakdown = cameraPrice(cameras, diskTb);
+    document.querySelectorAll('[data-camera-cost]').forEach(el => { el.textContent = formatTenge(breakdown[el.dataset.cameraCost]); });
     bitrateControl.disabled = diskTb === 0;
     document.querySelector('#archive-days').textContent = diskTb === 0 ? 'Без записи' : `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
     output.textContent = formatTenge(total / count);
