@@ -1,5 +1,6 @@
 import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
 import { pages, SITE_ORIGIN, legacyAnchors } from '../site.config.mjs';
+import { residentialPrice } from '../pricing/config.mjs';
 import { photos } from '../videonablyudenie-dlya-etazha/photos.mjs';
 import { FLOOR_CCTV_PRICE, DEFAULT_APARTMENTS, SUBSCRIPTION_MONTHLY_PRICE, WHATSAPP_NUMBER, formatTenge, pricePerApartment } from '../videonablyudenie-dlya-etazha/config.mjs';
 
@@ -29,6 +30,7 @@ const homePackages = [...sections.packages.matchAll(/<article class="package-car
         .replace(/<h3\b/g, '<h4').replaceAll('</h3>', '</h4>'))
     .join('\n');
 const values = {
+    RESIDENTIAL_START_PRICE: formatTenge(residentialPrice(1).total),
     ACCESS_START_PRICE: sections.packages.match(/data-i18n="packageStart3000Price">([^<]+)</)[1],
     PRICE: formatTenge(FLOOR_CCTV_PRICE), SHARE: formatTenge(pricePerApartment(DEFAULT_APARTMENTS)),
     SUBSCRIPTION: formatTenge(SUBSCRIPTION_MONTHLY_PRICE), YEAR: formatTenge(SUBSCRIPTION_MONTHLY_PRICE * 12),
@@ -67,7 +69,7 @@ const outputs = new Map();
 const shell = await read('templates/page.html');
 for (const page of pages) {
     let body = '';
-    if (page.id === 'home') body = render(await read('templates/pages/home.html'), values).replace('<section class="site-section" id="projects"', sections['residential-preview'] + '<section class="site-section" id="projects"');
+    if (page.id === 'home') body = render(await read('templates/pages/home.html'), values);
     if (page.id === 'residential') body = pageHero(page) + sections.residential + sections.contact;
     if (page.id === 'access') body = pageHero(page, [['#packages', 'accessOfferCta', 'Сравнить комплекты'], ['#modernization', 'upgradeNav', 'Модернизация'], ['#faq', 'faqNav', 'Вопросы и ответы']]) + sections.packages + sections['access-calculator'] + sections.modernization + sections.faq + sections.contact;
     if (scope[page.id]) {
@@ -87,7 +89,7 @@ for (const page of pages) {
     if (page.group === 'services') body = body.replaceAll('href="https://wa.me/77087262237"', `data-site-enquiry href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Здравствуйте! Интересует услуга «${page.heading}». Город и объект: `)}"`);
     const image = page.image ? `<meta property="og:image" content="${SITE_ORIGIN}${page.image}">\n    <meta name="twitter:image" content="${SITE_ORIGIN}${page.image}">` : '';
     const metaI18n = { kz: { title: page.title[1], description: page.description[1] }, en: { title: page.title[2], description: page.description[2] } };
-    let html = render(shell, { TITLE: escape(page.title[0]), DESCRIPTION: escape(page.description[0]), CANONICAL: SITE_ORIGIN + page.path, IMAGE_META: image, HEADER: header(page.group), FOOTER: footer, BODY: body, PAGE_CLASS: `site-${page.id}`, PAGE_ID: page.id, PAGE_SCRIPTS: (['access','residential'].includes(page.id) ? '<script type="module" src="/pricing/calculator.mjs?v=3"></script>' : ''), META_I18N: json(metaI18n), MODAL: page.id === 'projects' ? await read('templates/partials/photo-modal.html') : '' });
+    let html = render(shell, { TITLE: escape(page.title[0]), DESCRIPTION: escape(page.description[0]), CANONICAL: SITE_ORIGIN + page.path, IMAGE_META: image, HEADER: header(page.group), FOOTER: footer, BODY: body, PAGE_CLASS: `site-${page.id}`, PAGE_ID: page.id, PAGE_SCRIPTS: (['access','residential'].includes(page.id) ? '<script type="module" src="/pricing/calculator.mjs?v=4"></script>' : ''), META_I18N: json(metaI18n), MODAL: page.id === 'projects' ? await read('templates/partials/photo-modal.html') : '' });
     if (!page.image) html = html.replace('name="twitter:card" content="summary_large_image"', 'name="twitter:card" content="summary"');
     if (page.id === 'home') html = html.replace('</head>', `<script id="legacy-anchors" type="application/json">${json(legacyAnchors)}</script>\n</head>`);
     outputs.set(page.path.slice(1) + 'index.html', html);

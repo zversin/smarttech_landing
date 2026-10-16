@@ -1,9 +1,9 @@
-import { residentialPrice, accessPrice } from './config.mjs';
+import { residentialPrice, accessScenario } from './config.mjs';
 let language = document.documentElement.lang === 'kk' ? 'kz' : document.documentElement.lang;
 const copy = {
- ru: {request:'По запросу',from:'от ',invalid:'Проверьте количество: ЖК — 1–20 квартир; СКУД — 0–10 единиц.',greeting:'Здравствуйте! Прошу проверить совместимость и рассчитать: ',estimate:'Ориентир',empty:'Выберите оборудование'},
- kz: {request:'Сұраныс бойынша',from:'бастап: ',invalid:'Санын тексеріңіз: 1–20 пәтер; СКУД — 0–10 дана.',greeting:'Сәлеметсіз бе! Үйлесімділігін тексеріп, есептеп беріңіз: ',estimate:'Бағдар',empty:'Жабдықты таңдаңыз'},
- en: {request:'On request',from:'from ',invalid:'Check quantities: 1–20 apartments; access control 0–10 units.',greeting:'Hello! Please check compatibility and quote: ',estimate:'Estimate',empty:'Select equipment'}
+ ru: {request:'По запросу',from:'от ',invalid:'Проверьте количество: ЖК — 1–20 квартир; турникеты — 1–5 проходов.',greeting:'Здравствуйте! Прошу проверить совместимость и рассчитать: ',estimate:'Ориентир',empty:'Выберите оборудование'},
+ kz: {request:'Сұраныс бойынша',from:'бастап: ',invalid:'Санын тексеріңіз: 1–20 пәтер; турникеттер — 1–5 өту жолы.',greeting:'Сәлеметсіз бе! Үйлесімділігін тексеріп, есептеп беріңіз: ',estimate:'Бағдар',empty:'Жабдықты таңдаңыз'},
+ en: {request:'On request',from:'from ',invalid:'Check quantities: 1–20 apartments; turnstiles 1–5 lanes.',greeting:'Hello! Please check compatibility and quote: ',estimate:'Estimate',empty:'Select equipment'}
 };
 const money = n => new Intl.NumberFormat(language==='kz'?'kk-KZ':language==='en'?'en-US':'ru-RU').format(n)+' ₸';
 function update(form) {
@@ -20,9 +20,9 @@ function update(form) {
    result = residentialPrice(n('tier'),n('tier')===1?20:n('apartments'));
    selection = form.elements.tier.selectedOptions[0].textContent + (n('tier')>1?' / '+n('apartments'): '');
   } else {
-   const brackets = n('turnstiles') > 0 ? n('terminals') : 0;
-   result = accessPrice(n('turnstiles'),n('terminals'),brackets,form.elements.model.value,'ZU2');
-   selection = `DS-K3G411 ×${n('turnstiles')}; ${form.elements.model.selectedOptions[0].textContent} ×${n('terminals')}; ZU2 ×${brackets}`;
+   const scenario = accessScenario(n('lanes'),n('directions'),form.elements.model.value);
+   result = scenario.quote;
+   selection = `${form.elements.directions.selectedOptions[0].textContent}; DS-K3G411 ×${scenario.turnstiles}; ${form.elements.model.selectedOptions[0].textContent} ×${scenario.terminals}; ZU2 ×${scenario.brackets}`;
   }
  } catch {
   output.textContent=c.invalid;
@@ -42,7 +42,7 @@ const forms = [...document.querySelectorAll('[data-calculator]')];
 const selectedModel = new URLSearchParams(location.search).get('model');
 if (['341','670QR','673DX'].includes(selectedModel)) {
  const select = document.querySelector('[name="model"]');
- if (select) select.value=selectedModel;
+ if (select) { select.value=selectedModel; if(selectedModel!=='341') select.closest('details').open=true; }
 }
 forms.forEach(form=>{form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',()=>update(form));form.addEventListener('change',()=>update(form));update(form);});
 document.addEventListener('smarttech-language',e=>{language=e.detail;forms.forEach(update);});

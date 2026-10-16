@@ -1,0 +1,99 @@
+{
+  "checked_at_utc": "2026-10-16",
+  "baseline": "2026-10-14",
+  "status": "partial",
+  "method": "Public INTANT product/category pages retrieved through web tool. Listed amounts match baseline; availability and actual procurement quote require supplier confirmation. No price increases verified.",
+  "confirmed": [
+    {
+      "model": "DS-K1T341CM",
+      "kzt": 157878,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/biometricheskie-skud/hikvision-ds-k1t341cm-terminal-dostupa-s-raspoznavaniem-lits/"
+    },
+    {
+      "model": "DVR-204G-M1/T",
+      "kzt": 32091,
+      "source": "https://intant.kz/catalog/sistemy-videonablyudeniya/videoregistratory/tvi-videoregistratory/hilook-dvr-204g-m1-t-4-kanalnyy-videoregistrator/"
+    },
+    {
+      "model": "DS20HKVS-VX1",
+      "kzt": 94338,
+      "source": "https://intant.kz/catalog/sistemy-videonablyudeniya/sistemy-khraneniya-dannykh/zhestkie-diski/hikvision-ds20hkvs-vx1-2tb-5400-3-5-sata-zhestkiy-disk/"
+    },
+    {
+      "model": "THC-T150-P (2.8 mm)",
+      "kzt": 16158,
+      "source": "https://intant.kz/catalog/sistemy-videonablyudeniya/videokamery/tvi-kupolnye-videokamery/hilook-thc-t150-p-2-8-mm-5-mp-exir-videokamera/"
+    },
+    {
+      "model": "DS-KH6110-WE1 (Black)",
+      "kzt": 57335,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/domofoniya/abonentskie-ustroystva/"
+    },
+    {
+      "model": "DS-KAB34X-S1",
+      "kzt": 4746,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/domofoniya/dopolnitelnoe-oborudovanie-dlya-domofonii/"
+    },
+    {
+      "model": "DS-KAB6-ZU2",
+      "kzt": 25055,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/turnikety-ograzhdenie-kalitki-kartopriemniki/aksessuary-dlya-turniketov/"
+    },
+    {
+      "model": "DS-KAB6-ZU3",
+      "kzt": 43847,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/turnikety-ograzhdenie-kalitki-kartopriemniki/aksessuary-dlya-turniketov/"
+    },
+    {
+      "model": "DS-KD8003-IME1",
+      "kzt": 76724,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/domofoniya/vyzyvnye-paneli/"
+    },
+    {
+      "model": "DS-KD-KP",
+      "kzt": 52508,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/domofoniya/vyzyvnye-paneli/"
+    },
+    {
+      "model": "DS-KD-BK",
+      "kzt": 12148,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/domofoniya/vyzyvnye-paneli/"
+    },
+    {
+      "model": "DS-K2804",
+      "kzt": 97753,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/kontrollery-konvertory-po/setevye-kontrollery/"
+    },
+    {
+      "model": "IC S50",
+      "kzt": 594,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/schityvateli-kodonabornye-paneli-identifikatory/karty/"
+    }
+  ],
+  "not_reconfirmed": [
+    "DS40HKVS-VX1",
+    "DS-KAW50-1N",
+    "DS-KD-ACW3",
+    "DS-3E0526P-E/M(B)",
+    "DS-K1109DB",
+    "DS-K3G411LX-R/Pg-Dm55",
+    "DS-TMG4B0-ML",
+    "DS-TMG4B0-LL"
+  ],
+  "on_request": [
+    "DS-K1T673DX",
+    "DS-K1T670MX-QR",
+    "complete barrier system",
+    "shell gate"
+  ],
+  "blocker": "Current Excel price list fetch is blocked by environment HTTP 403; some exact SKUs were absent from retrieved catalogue pages. Full refresh is incomplete; baseline dates and quote conditions retained.",
+  "recalculated_totals_kzt": {
+    "cctv_2_cameras_2TB": 230000,
+    "turnstile_one_lane_entry": 915000,
+    "turnstile_one_lane_entry_exit": 1140000,
+    "residential_existing_door": 270000,
+    "residential_intercom_20_apartments": 2215000,
+    "residential_vehicle_access_20_apartments": 2480000
+  },
+  "commercial_limit": "Labour/material allowances unchanged. These estimates do not establish net margin: procurement discounts, taxes, travel and site-specific costs require the final quote."
+}

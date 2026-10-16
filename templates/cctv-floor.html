@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css?v=24">
     <link rel="stylesheet" href="/videonablyudenie-dlya-etazha/style.css?v=2">
-    <link rel="stylesheet" href="/site-structure.css?v=6">
+    <link rel="stylesheet" href="/site-structure.css?v=7">
 </head>
 <body class="floor-page">
     <a class="floor-skip" href="#main">Перейти к содержимому</a>
@@ -107,9 +107,10 @@
                     <div class="floor-calculator-intro"><p class="floor-eyebrow">СОБЕРИТЕ СВОЙ КОМПЛЕКТ</p><h3 id="calculator-title">Камеры, цена и срок хранения</h3><p>Изменяйте параметры — стоимость и длительность архива пересчитываются сразу.</p></div>
                     <div class="floor-calculator-controls">
                         <div class="floor-calc-field"><label for="camera-count">Количество камер <output id="camera-count-value" for="camera-count">2</output></label><input id="camera-count" type="range" min="1" max="4" step="1" value="2"><small>От 1 до 4 камер на одном регистраторе</small></div>
-                        <div class="floor-calc-field"><label for="disk-size">Объём диска</label><select id="disk-size"><option value="0">Без жёсткого диска</option><option value="2" selected>2 ТБ · Hikvision DS20HKVS-VX1</option><option value="4">4 ТБ · Hikvision DS40HKVS-VX1</option></select></div>
-                        <div class="floor-calc-field"><label for="bitrate">Средний битрейт на камеру</label><select id="bitrate"><option value="1">1 Мбит/с · меньше места</option><option value="2" selected>2 Мбит/с · базовый расчёт</option><option value="4">4 Мбит/с · больше места</option></select><small>Больше битрейт — больше расход места. Разрешение записи — 1080p Lite.</small></div>
+                        <div class="floor-calc-field"><label for="disk-size">Объём диска</label><select id="disk-size"><option value="0">Без записи · без диска</option><option value="2" selected>Базовый архив · 2 ТБ</option><option value="4">Больше архива · 4 ТБ</option></select></div>
+
                         <div class="floor-calc-field"><label for="apartments">Количество квартир</label><select id="apartments" name="apartments"><option value="2">2 квартиры</option><option value="3">3 квартиры</option><option value="4" selected>4 квартиры</option><option value="5">5 квартир</option><option value="6">6 квартир</option><option value="7">7 квартир</option><option value="8">8 квартир</option></select></div>
+<details class="floor-calc-field"><summary>Дополнительные настройки архива</summary><div class="floor-calc-field"><label for="bitrate">Средний битрейт на камеру</label><select id="bitrate"><option value="1">1 Мбит/с · меньше места</option><option value="2" selected>2 Мбит/с · базовый расчёт</option><option value="4">4 Мбит/с · больше места</option></select><small>Больше битрейт — больше расход места. Разрешение записи — 1080p Lite.</small></div></details>
                     </div>
                     <div class="floor-calculator-results" aria-live="polite" aria-atomic="true">
                         <div><span>Ориентировочно с монтажом</span><output id="package-price" for="camera-count disk-size">{{PRICE}}</output></div>

@@ -21,3 +21,10 @@ export function cameraPrice(n, disk) {
  const x = total({equipment:n*16158+32091+({0:0,2:94338,4:129202})[disk],install:Math.max(15000*n,25000),materials:5000*n,setup:30000});
  return {...x,total:Math.max(115000,x.total)};
 }
+
+// Buyer-facing scenario: new lanes, face recognition on one or both sides.
+export function accessScenario(lanes, directions, model = '341') {
+ integer(lanes,1,5); integer(directions,1,2);
+ const terminals = lanes * directions;
+ return {turnstiles:lanes, terminals, brackets:terminals, quote:accessPrice(lanes,terminals,terminals,model)};
+}

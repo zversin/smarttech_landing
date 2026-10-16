@@ -266,3 +266,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible { 
 #features, #service-cctv, #service-intercom, #service-access, #service-alarm, #service-integration { scroll-margin-top:110px; }
 @media(max-width:900px) { .ux-extra-grid { grid-template-columns:1fr; } }
 .ux-extra-grid .btn-secondary { color:#78521d; }
+
+.ux-advanced { grid-column:1/-1; padding:16px; border:1px solid var(--surface-muted); border-radius:10px; }
+.ux-advanced summary { cursor:pointer; font-weight:600; }
+.ux-advanced label { margin-top:16px; max-width:420px; }
+.ux-price-trust { margin-top:24px; line-height:1.65; color:var(--text-muted); }
+
+.site-access .floating-wa, .site-residential .floating-wa { display:none; }

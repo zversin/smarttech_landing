@@ -1,6 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
-import {cameraPrice, accessPrice, residentialPrice} from './config.mjs';
+import {cameraPrice, accessPrice, residentialPrice, accessScenario} from './config.mjs';
 for (const [tier,equipment,install,setup,materials,value] of [[1,180606,40000,40000,5000,270000],[2,1658722,380000,60000,115000,2215000],[3,1835167,420000,90000,130000,2480000]]) {
  test(`Residential ${tier} audited bill of materials`,()=>assert.deepEqual(residentialPrice(tier),{equipment,install,setup,materials,total:value}));
 }
@@ -12,3 +12,12 @@ test('Independent quantities and setup',()=>{assert.equal(accessPrice(0,0,0).tot
 test('Rounded totals never undercut costs',()=>{for(let n=1;n<=20;n++){for(const tier of [1,2,3]){const q=residentialPrice(tier,n);const sum=q.equipment+q.install+q.setup+q.materials;assert(q.total>=sum&&q.total-sum<5000);assert.equal(q.total%5000,0);}}});
 for(const args of [[-1,0,0],[0,NaN,0],[0,1.5,0],[11,0,0]])test(`Reject invalid access quantity ${args}`,()=>assert.throws(()=>accessPrice(...args),RangeError));
 test('Reject unknown components',()=>{assert.throws(()=>cameraPrice(2,8),RangeError);assert.throws(()=>accessPrice(1,1,1,'341','unknown'),RangeError);});
+
+test('Buyer scenario maps entry/exit to terminals and automatic mounts',()=>{
+ assert.deepEqual(accessScenario(1,2),{turnstiles:1,terminals:2,brackets:2,quote:accessPrice(1,2,2)});
+ assert.equal(accessScenario(1,1).quote.total,915000);
+ assert.equal(accessScenario(5,2).terminals,10);
+ assert.equal(accessScenario(2,1).brackets,2);
+});
+test('Buyer scenario rejects unsupported lanes and sides',()=>{for(const args of [[0,1],[6,2],[1.5,1],[1,0],[1,3]])assert.throws(()=>accessScenario(...args),RangeError);});
+test('Buyer scenario keeps unpriced models on request',()=>{for(const model of ['670QR','673DX'])assert.equal(accessScenario(1,2,model).quote,null);});
