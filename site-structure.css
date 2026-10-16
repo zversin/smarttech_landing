@@ -260,3 +260,9 @@
 #calculator,#calculators,#calculator-title { scroll-margin-top:110px; }
 a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid var(--primary-color); outline-offset:4px; }
 @media(max-width:900px) { .ux-choice-grid { grid-template-columns:1fr; } .ux-choice { padding:24px; } }
+.ux-extra-heading { margin:36px 0 20px; font-size:1.25rem; }
+.ux-extra-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.ux-extra-grid .ux-choice { background:transparent; }
+#features, #service-cctv, #service-intercom, #service-access, #service-alarm, #service-integration { scroll-margin-top:110px; }
+@media(max-width:900px) { .ux-extra-grid { grid-template-columns:1fr; } }
+.ux-extra-grid .btn-secondary { color:#78521d; }

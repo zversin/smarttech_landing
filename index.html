@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css?v=14">
-    <link rel="stylesheet" href="/site-structure.css?v=5">
+    <link rel="stylesheet" href="/site-structure.css?v=6">
 <script id="legacy-anchors" type="application/json">{"modernization":"/kontrol-dostupa/#modernization","faq":"/kontrol-dostupa/#faq","capabilities":"/integraciya-i-servis/#capabilities","partners":"/o-kompanii/#partners","case-kazutb":"/proekty/#case-kazutb"}</script>
 </head>
 <body class="site-page site-home" data-page="home">
@@ -32,10 +32,9 @@
     <div class="container">
         <a class="logo" href="/" aria-label="SmartTech — главная">SmartTech</a>
         <ul class="nav-menu" id="site-menu">
-            <li><a href="/#features" data-nav="services" data-i18n="siteNavServices">Услуги</a></li>
+            <li><a href="/#features" data-nav="services" data-i18n="taskNav">Услуги и расчёт</a></li>
             <li><a href="/#solutions" data-nav="solutions" data-i18n="landingPrices">Комплекты и цены</a></li>
             <li><a href="/#projects" data-nav="projects" data-i18n="siteNavProjects">Проекты</a></li>
-            <li><a href="/#calculators" data-nav="calculators" data-i18n="uxCalculators">Калькуляторы</a></li>
             <li><a href="/#contact" data-nav="contacts" data-i18n="navContacts">Контакты</a></li>
         </ul>
         <div class="nav-controls">
@@ -56,46 +55,7 @@
         <figure class="site-hero-photo"><img src="/photos/1/IMG20260103124850-800.jpg" width="800" height="600" fetchpriority="high" alt="Система контроля доступа, установленная SmartTech в КазУТБ"><figcaption data-i18n="aboutProjectCaption">Наша работа: контроль доступа в КазУТБ</figcaption></figure>
     </div>
 </section>
-<section id="calculators" class="site-section ux-calculators" aria-labelledby="calculators-heading"><div class="container"><div class="site-section-head"><h2 id="calculators-heading"><span data-i18n="uxStart">Рассчитать стоимость онлайн</span></h2><p><span data-i18n="uxIntro">Выберите задачу. Укажите параметры и получите ориентировочную цену прямо на сайте — без телефона и регистрации.</span></p></div><div class="ux-choice-grid"><article class="ux-choice"><h3><span data-i18n="uxCameras">Камеры на этаж</span></h3><p><span data-i18n="uxCamerasDesc">1–4 камеры, диск и срок хранения. Узнайте общую цену и долю с квартиры.</span></p><a class="btn btn-primary" href="/videonablyudenie-dlya-etazha/#calculator-title"><span data-i18n="uxOpenCalc">Открыть калькулятор</span></a></article><article class="ux-choice"><h3><span data-i18n="uxAccess">Турникеты и Face ID</span></h3><p><span data-i18n="uxAccessDesc">Выберите количество турникетов и терминалов. Работы и материалы видны отдельно.</span></p><a class="btn btn-primary" href="/kontrol-dostupa/#calculator"><span data-i18n="uxOpenCalc">Открыть калькулятор</span></a></article><article class="ux-choice"><h3><span data-i18n="uxResidential">Домофония и доступ в ЖК</span></h3><p><span data-i18n="uxResidentialDesc">Три пакета: действующая дверь, домофон или карточный въезд. Для одного подъезда до 20 квартир.</span></p><a class="btn btn-primary" href="/dlya-zhilyh-kompleksov/#calculator"><span data-i18n="uxOpenCalc">Открыть калькулятор</span></a></article></div><p class="ux-flow"><span data-i18n="uxFlow">1. Выберите параметры → 2. Посмотрите стоимость → 3. Обсудите смету в WhatsApp</span></p></div></section>
-<section id="features" class="features site-section" aria-labelledby="services-title" data-services-slider>
-        <div class="container">
-            <div class="site-section-head"><p class="site-eyebrow" data-i18n="siteNavServices">Услуги</p><h2 id="services-title" data-i18n="featuresTitle">Что устанавливаем</h2><p data-i18n="landingServicesIntro">Выберите задачу для вашего объекта. Подберём оборудование, установим и настроим систему.</p></div>
-            <div class="service-slider-controls" hidden>
-                <p class="service-slider-hint" data-i18n="landingSwipe">Листайте, чтобы посмотреть услуги</p>
-                <div class="service-slider-buttons"><button type="button" data-services-prev aria-controls="services-track"><span aria-hidden="true">←</span><span class="site-visually-hidden" data-i18n="landingPrevService">Предыдущая услуга</span></button><span data-services-count role="status" aria-live="polite" aria-atomic="true">01 / 04</span><button type="button" data-services-next aria-controls="services-track"><span aria-hidden="true">→</span><span class="site-visually-hidden" data-i18n="landingNextService">Следующая услуга</span></button></div>
-            </div>
-            <div class="features-grid services-track" id="services-track" role="region" aria-labelledby="services-title">
-                <article class="feature-card" id="service-cctv">
-                    <div class="site-service-number" aria-hidden="true">01</div>
-                    <h3 data-i18n="feature1Title">Видеонаблюдение</h3>
-                    <p data-i18n="feature1Desc">Подбираем камеры, запись, архив и обзор критичных зон объекта.</p>
-                    <p class="service-scope" data-i18n="landingCctvScope">Для жилых домов, офисов, магазинов и других объектов.</p>
-                    <a class="site-text-link" href="/videonablyudenie/" data-i18n="uxServiceDetails">Подробнее об услуге →</a>
-                </article>
-                <article class="feature-card" id="service-alarm">
-                    <div class="site-service-number" aria-hidden="true">02</div>
-                    <h3 data-i18n="feature2Title">Охранная сигнализация</h3>
-                    <p data-i18n="feature2Desc">Настраиваем датчики, тревожные сценарии и уведомления по событиям.</p>
-                    <p class="service-scope" data-i18n="landingAlarmScope">Для помещений, где нужен контроль входов и охраняемых зон.</p>
-                    <a class="site-text-link" href="/ohrannaya-signalizaciya/" data-i18n="uxServiceDetails">Подробнее об услуге →</a>
-                </article>
-                <article class="feature-card" id="service-access">
-                    <div class="site-service-number" aria-hidden="true">03</div>
-                    <h3 data-i18n="feature3Title">Турникеты и контроль доступа</h3>
-                    <p data-i18n="feature3Desc">Ставим турникеты, Face ID, карты доступа и учет проходов сотрудников и посетителей.</p>
-                    <p class="service-scope" data-i18n="landingAccessScope">Для университетов, общежитий, спорткомплексов и бизнеса.</p>
-                    <a class="site-text-link" href="/kontrol-dostupa/" data-i18n="uxServiceDetails">Подробнее об услуге →</a>
-                </article>
-                <article class="feature-card" id="service-integration">
-                    <div class="site-service-number" aria-hidden="true">04</div>
-                    <h3 data-i18n="feature4Title">Интеграция и сервис</h3>
-                    <p data-i18n="feature4Desc">Связываем охранные системы между собой и с действующей инфраструктурой объекта.</p>
-                    <p class="service-scope" data-i18n="landingIntegrationScope">Для объектов, где часть оборудования уже установлена.</p>
-                    <a class="site-text-link" href="/integraciya-i-servis/" data-i18n="uxServiceDetails">Подробнее об услуге →</a>
-                </article>
-            </div>
-        </div>
-    </section>
+<section id="features" class="site-section ux-calculators" aria-labelledby="services-title"><div class="container"><div id="calculators" class="site-section-head"><h2 id="services-title"><span data-i18n="taskHeading">Что нужно вашему объекту?</span></h2><p><span data-i18n="taskIntro">Выберите направление: для камер, домофонов и турникетов можно сразу рассчитать стоимость. Для сигнализации и интеграции подберём решение вместе.</span></p></div><div class="ux-choice-grid"><article id="service-cctv" class="ux-choice"><h3><span data-i18n="taskCamera">Камеры</span></h3><p><span data-i18n="taskCameraDesc">Видеонаблюдение для дома и бизнеса. Калькулятор — для комплекта на этаж: 1–4 камеры, диск и срок хранения.</span></p><a class="btn btn-primary" href="/videonablyudenie-dlya-etazha/#calculator-title"><span data-i18n="taskCameraCalc">Рассчитать камеры на этаж</span></a><a class="site-text-link" href="/videonablyudenie/"><span data-i18n="uxServiceDetails">Подробнее об услуге →</span></a></article><article id="service-intercom" class="ux-choice"><h3><span data-i18n="taskIntercom">Домофоны</span></h3><p><span data-i18n="taskIntercomDesc">Домофония и Face ID для ЖК. Выберите пакет и количество квартир — до 20 в одном подъезде.</span></p><a class="btn btn-primary" href="/dlya-zhilyh-kompleksov/#calculator"><span data-i18n="taskCalculate">Рассчитать стоимость</span></a><a class="site-text-link" href="/dlya-zhilyh-kompleksov/"><span data-i18n="uxServiceDetails">Подробнее об услуге →</span></a></article><article id="service-access" class="ux-choice"><h3><span data-i18n="taskTurnstile">Турникеты</span></h3><p><span data-i18n="taskTurnstileDesc">Турникеты и Face ID для контроля прохода. Укажите количество оборудования — монтаж и настройка учитываются в расчёте.</span></p><a class="btn btn-primary" href="/kontrol-dostupa/#calculator"><span data-i18n="taskCalculate">Рассчитать стоимость</span></a><a class="site-text-link" href="/kontrol-dostupa/"><span data-i18n="uxServiceDetails">Подробнее об услуге →</span></a></article></div><h3 class="ux-extra-heading"><span data-i18n="taskExtra">Дополнительные услуги</span></h3><div class="ux-extra-grid"><article id="service-alarm" class="ux-choice"><h3><span data-i18n="taskAlarm">Охранная сигнализация</span></h3><p><span data-i18n="taskAlarmDesc">Датчики, охраняемые зоны и уведомления. Обсудим объект и составим индивидуальную смету.</span></p><a class="btn btn-secondary" href="https://wa.me/77087262237" data-service-key="taskAlarm" target="_blank" rel="noopener"><span data-i18n="taskDiscuss">Обсудить задачу в WhatsApp</span></a><a class="site-text-link" href="/ohrannaya-signalizaciya/"><span data-i18n="uxServiceDetails">Подробнее об услуге →</span></a></article><article id="service-integration" class="ux-choice"><h3><span data-i18n="taskIntegration">Интеграция и сервис</span></h3><p><span data-i18n="taskIntegrationDesc">Свяжем системы, сохраним рабочее оборудование и настроим совместимые сценарии. Сначала проверим вашу инфраструктуру.</span></p><a class="btn btn-secondary" href="https://wa.me/77087262237" data-service-key="taskIntegration" target="_blank" rel="noopener"><span data-i18n="taskDiscuss">Обсудить задачу в WhatsApp</span></a><a class="site-text-link" href="/integraciya-i-servis/"><span data-i18n="uxServiceDetails">Подробнее об услуге →</span></a></article></div></div></section>
 
 <section class="site-section site-muted landing-solutions" id="solutions">
     <div class="container">
@@ -311,8 +271,8 @@
     <a href="https://wa.me/77087262237" target="_blank" rel="noopener" class="floating-wa" aria-label="Написать в WhatsApp" data-i18n="floatingWaText">WhatsApp</a>
     <script id="page-meta" type="application/json">{"kz":{"title":"Астанадағы қауіпсіздік жүйелері | SmartTech","description":"Астанада және Қазақстан бойынша бейнебақылау, күзет дабылы, турникеттер, Face ID, жүйелерді біріктіру және қызмет көрсету."},"en":{"title":"Security systems in Astana | SmartTech","description":"CCTV, security alarms, turnstiles, Face ID and system integration. Equipment selection, installation and support in Astana and across Kazakhstan."}}</script>
     <script src="/navigation.js?v=4"></script>
-    <script src="/site-i18n.js?v=9"></script>
+    <script src="/site-i18n.js?v=10"></script>
     <script src="/script.js?v=16"></script>
-    <script src="/services-slider.js?v=1"></script>
+
 </body>
 </html>
