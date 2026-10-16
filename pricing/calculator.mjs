@@ -20,8 +20,9 @@ function update(form) {
    result = residentialPrice(n('tier'),n('tier')===1?20:n('apartments'));
    selection = form.elements.tier.selectedOptions[0].textContent + (n('tier')>1?' / '+n('apartments'): '');
   } else {
-   result = accessPrice(n('turnstiles'),n('terminals'),n('brackets'),form.elements.model.value,form.elements.bracketModel.value);
-   selection = `DS-K3G411 ×${n('turnstiles')}; ${form.elements.model.selectedOptions[0].textContent} ×${n('terminals')}; ${form.elements.bracketModel.value} ×${n('brackets')}`;
+   const brackets = n('turnstiles') > 0 ? n('terminals') : 0;
+   result = accessPrice(n('turnstiles'),n('terminals'),brackets,form.elements.model.value,'ZU2');
+   selection = `DS-K3G411 ×${n('turnstiles')}; ${form.elements.model.selectedOptions[0].textContent} ×${n('terminals')}; ZU2 ×${brackets}`;
   }
  } catch {
   output.textContent=c.invalid;
