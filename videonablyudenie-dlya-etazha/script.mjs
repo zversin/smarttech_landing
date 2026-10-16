@@ -41,7 +41,9 @@ function updateCalculation() {
     document.querySelector('#archive-days').textContent = diskTb === 0 ? 'Без записи' : `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
     output.textContent = formatTenge(total / count);
     apartmentField.value = String(count);
-    document.querySelector('[data-calculator-whatsapp]').href = whatsappUrl(`Здравствуйте! Хочу обсудить расчёт видеонаблюдения. ${selectionText()} Ориентировочная стоимость с монтажом: ${formatTenge(total)}; квартир: ${count}; с квартиры: ${formatTenge(total / count)}.`);
+    const message = `Здравствуйте! Хочу обсудить расчёт видеонаблюдения. ${selectionText()} Ориентировочная стоимость с монтажом: ${formatTenge(total)}; квартир: ${count}; с квартиры: ${formatTenge(total / count)}.`;
+    document.querySelector('[data-camera-message]').textContent = message;
+    document.querySelector('[data-calculator-whatsapp]').href = whatsappUrl(message);
 }
 for (const control of [calculator, camerasControl, diskControl, bitrateControl]) {
     control.addEventListener('input', updateCalculation);

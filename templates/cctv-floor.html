@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css?v=24">
     <link rel="stylesheet" href="/videonablyudenie-dlya-etazha/style.css?v=2">
-    <link rel="stylesheet" href="/site-structure.css?v=3">
+    <link rel="stylesheet" href="/site-structure.css?v=5">
 </head>
 <body class="floor-page">
     <a class="floor-skip" href="#main">Перейти к содержимому</a>
@@ -41,11 +41,11 @@
                     <div class="floor-price"><strong data-floor-price>{{PRICE}}</strong><span>за этаж под ключ</span></div>
                     <p class="floor-share">При 4 квартирах — всего <strong data-default-share>{{SHARE}}</strong> с квартиры</p>
                     <div class="floor-actions">
-                        <a class="btn btn-primary" href="#request" data-form-open>Получить предложение <span aria-hidden="true">↗</span></a>
+                        <a class="btn btn-primary" href="#calculator-title">Рассчитать стоимость онлайн</a>
                         <a class="btn btn-secondary" href="{{WHATSAPP}}" data-whatsapp target="_blank" rel="noopener">Написать в WhatsApp</a>
                     </div>
                     <div class="floor-hero-notes"><span>Оборудование + монтаж</span><span>0 ₸ / месяц</span></div>
-                    <nav class="site-section-nav floor-local-nav" aria-label="Разделы страницы"><a href="#included">Комплект</a><a href="#cost">Расчёт</a><a href="#steps">Установка</a><a href="#faq">Вопросы</a></nav>
+                    <nav class="site-section-nav floor-local-nav" aria-label="Разделы страницы"><a href="#included">Комплект</a><a href="#calculator-title">Калькулятор</a><a href="#steps">Установка</a><a href="#faq">Вопросы</a></nav>
                 </div>
                 <div class="floor-kit" aria-label="Состав системы видеонаблюдения">
                     <div class="floor-kit-heading"><span>ВАШ ЭТАЖ. ВАША СИСТЕМА.</span><span class="floor-kit-tag">HiLook</span></div>
@@ -116,7 +116,7 @@
                         <div><span>С квартиры единоразово</span><output id="apartment-price" for="camera-count disk-size apartments">{{SHARE}}</output></div>
                         <div><span>Архив при записи 24/7</span><output id="archive-days" for="camera-count disk-size bitrate">≈ 41 день</output></div>
                     </div>
-                    <dl class="floor-calculator-notes"><div><dt>Оборудование</dt><dd data-camera-cost="equipment"></dd></div><div><dt>Монтаж</dt><dd data-camera-cost="install"></dd></div><div><dt>Настройка</dt><dd data-camera-cost="setup"></dd></div><div><dt>Расходники</dt><dd data-camera-cost="materials"></dd></div></dl><div class="floor-calculator-notes"><p>Оборудование INTANT по прайсу 14.10.2026: камера THC-T150-P — 16 158 ₸/шт., DVR-204G-M1/T — 32 091 ₸, HDD 2 ТБ — 94 338 ₸, 4 ТБ — 129 202 ₸. Монтаж: 15 000 ₸/камеру, минимум 25 000 ₸; материалы: 5 000 ₸/камеру; настройка: 30 000 ₸. Минимальный проект 115 000 ₸, итог округляется вверх до 5 000 ₸.  Без HDD нет локальной записи и архива. Блок питания, длина трасс и дополнительные работы уточняются в смете; наличие не гарантировано.</p><p>Срок хранения рассчитан для непрерывной записи, H.265 и выбранного среднего битрейта с запасом 10%. Фактический срок зависит от сцены и настроек. При включённой циклической записи новые записи заменяют самые старые.</p><a class="btn btn-primary" href="{{WHATSAPP}}" data-calculator-whatsapp target="_blank" rel="noopener">Обсудить этот расчёт в WhatsApp ↗</a></div>
+                    <dl class="floor-calculator-notes"><div><dt>Оборудование</dt><dd data-camera-cost="equipment"></dd></div><div><dt>Монтаж</dt><dd data-camera-cost="install"></dd></div><div><dt>Настройка</dt><dd data-camera-cost="setup"></dd></div><div><dt>Расходники</dt><dd data-camera-cost="materials"></dd></div></dl><div class="floor-calculator-notes"><p>Оборудование INTANT по прайсу 14.10.2026: камера THC-T150-P — 16 158 ₸/шт., DVR-204G-M1/T — 32 091 ₸, HDD 2 ТБ — 94 338 ₸, 4 ТБ — 129 202 ₸. Монтаж: 15 000 ₸/камеру, минимум 25 000 ₸; материалы: 5 000 ₸/камеру; настройка: 30 000 ₸. Минимальный проект 115 000 ₸, итог округляется вверх до 5 000 ₸.  Без HDD нет локальной записи и архива. Блок питания, длина трасс и дополнительные работы уточняются в смете; наличие не гарантировано.</p><p>Срок хранения рассчитан для непрерывной записи, H.265 и выбранного среднего битрейта с запасом 10%. Фактический срок зависит от сцены и настроек. При включённой циклической записи новые записи заменяют самые старые.</p><div class="ux-message"><h4>Сообщение для WhatsApp</h4><p>Расчёт уже включён. После открытия WhatsApp добавьте город и адрес, затем нажмите «Отправить». Ничего не отправляется автоматически.</p><pre data-camera-message></pre></div><a class="btn btn-primary" href="{{WHATSAPP}}" data-calculator-whatsapp target="_blank" rel="noopener">Открыть WhatsApp с этим расчётом ↗</a></div>
                 </div>
 
                 <noscript><p class="floor-nojs">Расчёт для 4 квартир показан выше. Для интерактивного расчёта включите JavaScript или напишите нам в WhatsApp.</p></noscript>
@@ -167,7 +167,7 @@
     </main>
     {{FOOTER}}
     <div class="floor-mobile-cta"><a class="btn btn-primary" href="#request" data-form-open>Получить расчёт</a><a href="{{WHATSAPP}}" data-whatsapp target="_blank" rel="noopener">WhatsApp ↗</a></div>
-    <script src="/navigation.js?v=3" defer></script>
-    <script type="module" src="/videonablyudenie-dlya-etazha/script.mjs?v=6"></script>
+    <script src="/navigation.js?v=4" defer></script>
+    <script type="module" src="/videonablyudenie-dlya-etazha/script.mjs?v=7"></script>
 </body>
 </html>

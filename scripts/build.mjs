@@ -19,7 +19,7 @@ const header = (group, languages = true) => {
     return html;
 };
 const sections = {};
-for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator']) sections[id] = await read(`templates/sections/${id}.html`);
+for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator', 'calculators']) sections[id] = await read(`templates/sections/${id}.html`);
 // Короткие карточки на главной берём из того же источника, что и полный каталог.
 const homePackages = [...sections.packages.matchAll(/<article class="package-card[\s\S]*?<\/article>/g)]
     .map(([card]) => card
@@ -36,10 +36,14 @@ const values = {
     WHATSAPP: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Здравствуйте! Интересует видеонаблюдение на этаж за ${formatTenge(FLOOR_CCTV_PRICE)} без абонентской платы. Хочу получить предложение.`)}`,
     GENERAL_WHATSAPP: `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Здравствуйте! Хочу рассчитать установку системы безопасности. Город и объект: ')}`,
     HOME_PACKAGES: homePackages,
-    CONTACT: sections.contact, PROCESS: sections.process, SERVICES: sections.services
+    CALCULATORS: sections.calculators, CONTACT: sections.contact, PROCESS: sections.process, SERVICES: sections.services
 };
 const breadcrumbs = (page) => `<nav class="site-breadcrumbs" aria-label="Навигационная цепочка"><a href="/" data-i18n="navHome">Главная</a><span aria-hidden="true">/</span>${page.group === 'services' ? '<a href="/#features" data-i18n="siteNavServices">Услуги</a><span aria-hidden="true">/</span>' : ''}<span aria-current="page" data-i18n="${page.headingKey}">${page.heading}</span></nav>`;
-const pageHero = (page, links = []) => `<section class="site-page-hero"><div class="container">${breadcrumbs(page)}<h1 data-i18n="${page.headingKey}">${page.heading}</h1><p class="site-lead" data-i18n="${page.introKey}">${page.intro}</p>${page.group === 'services' ? '<div class="site-actions"><a class="btn btn-primary" href="#contact" data-i18n="heroBtnConsult">Обсудить объект</a></div>' : ''}${links.length ? `<nav class="site-section-nav" aria-label="Разделы страницы">${links.map(([href, key, label]) => `<a href="${href}" data-i18n="${key}">${label}</a>`).join('')}</nav>` : ''}</div></section>`;
+const pageHero = (page, links = []) => {
+    const calculatorHref = ['access', 'residential'].includes(page.id) ? '#calculator' : page.id === 'cctv' ? '/videonablyudenie-dlya-etazha/#calculator-title' : '';
+    const actions = page.group === 'services' ? `<div class="site-actions">${calculatorHref ? `<a class="btn btn-primary" href="${calculatorHref}" data-i18n="uxOpenCalc">Открыть калькулятор</a>` : ''}<a class="btn ${calculatorHref ? 'btn-secondary' : 'btn-primary'}" href="#contact" data-i18n="heroBtnConsult">Обсудить объект</a></div>` : '';
+    return `<section class="site-page-hero"><div class="container">${breadcrumbs(page)}<h1 data-i18n="${page.headingKey}">${page.heading}</h1><p class="site-lead" data-i18n="${page.introKey}">${page.intro}</p>${actions}${links.length ? `<nav class="site-section-nav" aria-label="Разделы страницы">${links.map(([href, key, label]) => `<a href="${href}" data-i18n="${key}">${label}</a>`).join('')}</nav>` : ''}</div></section>`;
+};
 const scopeCards = (cards) => cards.map(([titleKey, title, textKey, text]) => `<article class="site-scope-card"><h3 data-i18n="${titleKey}">${title}</h3><p data-i18n="${textKey}">${text}</p></article>`).join('\n');
 const scope = {
     cctv: [
@@ -83,7 +87,7 @@ for (const page of pages) {
     if (page.group === 'services') body = body.replaceAll('href="https://wa.me/77087262237"', `data-site-enquiry href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Здравствуйте! Интересует услуга «${page.heading}». Город и объект: `)}"`);
     const image = page.image ? `<meta property="og:image" content="${SITE_ORIGIN}${page.image}">\n    <meta name="twitter:image" content="${SITE_ORIGIN}${page.image}">` : '';
     const metaI18n = { kz: { title: page.title[1], description: page.description[1] }, en: { title: page.title[2], description: page.description[2] } };
-    let html = render(shell, { TITLE: escape(page.title[0]), DESCRIPTION: escape(page.description[0]), CANONICAL: SITE_ORIGIN + page.path, IMAGE_META: image, HEADER: header(page.group), FOOTER: footer, BODY: body, PAGE_CLASS: `site-${page.id}`, PAGE_ID: page.id, PAGE_SCRIPTS: (page.id === 'home' ? '<script src="/services-slider.js?v=1"></script>' : '') + (['access','residential'].includes(page.id) ? '<script type="module" src="/pricing/calculator.mjs?v=1"></script>' : ''), META_I18N: json(metaI18n), MODAL: page.id === 'projects' ? await read('templates/partials/photo-modal.html') : '' });
+    let html = render(shell, { TITLE: escape(page.title[0]), DESCRIPTION: escape(page.description[0]), CANONICAL: SITE_ORIGIN + page.path, IMAGE_META: image, HEADER: header(page.group), FOOTER: footer, BODY: body, PAGE_CLASS: `site-${page.id}`, PAGE_ID: page.id, PAGE_SCRIPTS: (page.id === 'home' ? '<script src="/services-slider.js?v=1"></script>' : '') + (['access','residential'].includes(page.id) ? '<script type="module" src="/pricing/calculator.mjs?v=2"></script>' : ''), META_I18N: json(metaI18n), MODAL: page.id === 'projects' ? await read('templates/partials/photo-modal.html') : '' });
     if (!page.image) html = html.replace('name="twitter:card" content="summary_large_image"', 'name="twitter:card" content="summary"');
     if (page.id === 'home') html = html.replace('</head>', `<script id="legacy-anchors" type="application/json">${json(legacyAnchors)}</script>\n</head>`);
     outputs.set(page.path.slice(1) + 'index.html', html);

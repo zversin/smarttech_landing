@@ -47,6 +47,9 @@ document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((anchor) => {
         }
 
         e.preventDefault();
+        history.pushState(null, '', url.hash);
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
         // Раскрываем форму до расчёта прокрутки, иначе высота страницы ограничит её.
         if (target instanceof HTMLDetailsElement) target.open = true;
         const offsetTop = target.getBoundingClientRect().top + window.scrollY - (navbar?.offsetHeight || 70) - 16;

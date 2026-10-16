@@ -26,13 +26,22 @@ function update(form) {
  } catch {
   output.textContent=c.invalid;
   form.querySelectorAll('[data-cost]').forEach(el=>el.textContent='—');
-  quote.removeAttribute('href'); quote.setAttribute('aria-disabled','true'); return;
+  quote.removeAttribute('href'); quote.setAttribute('aria-disabled','true'); form.querySelector('[data-message-preview]').textContent=''; return;
  }
  form.querySelectorAll('[data-cost]').forEach(el=>el.textContent=result?money(result[el.dataset.cost]):c.request);
  output.textContent=result?(result.total?c.from+money(result.total):c.empty):c.request;
+ const site = form.elements.site.value.trim();
+ const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+'. INTANT 14.10.2026.'+(site?'\n'+site:'');
+ form.querySelector('[data-message-preview]').textContent=message;
+ if(result && result.total===0){quote.removeAttribute('href');quote.setAttribute('aria-disabled','true');return;}
  quote.removeAttribute('aria-disabled');
- quote.href='https://wa.me/77087262237?text='+encodeURIComponent(c.greeting+selection+'. '+c.estimate+': '+(result?money(result.total):c.request)+'. INTANT 14.10.2026.');
+ quote.href='https://wa.me/77087262237?text='+encodeURIComponent(message);
 }
 const forms = [...document.querySelectorAll('[data-calculator]')];
+const selectedModel = new URLSearchParams(location.search).get('model');
+if (['341','670QR','673DX'].includes(selectedModel)) {
+ const select = document.querySelector('[name="model"]');
+ if (select) select.value=selectedModel;
+}
 forms.forEach(form=>{form.addEventListener('submit',e=>e.preventDefault());form.addEventListener('input',()=>update(form));form.addEventListener('change',()=>update(form));update(form);});
 document.addEventListener('smarttech-language',e=>{language=e.detail;forms.forEach(update);});

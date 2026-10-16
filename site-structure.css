@@ -242,3 +242,21 @@
 .site-residential .site-muted p { margin:1rem 0; }
 [aria-disabled="true"] { opacity:.6; pointer-events:none; }
 @media(max-width:600px) { .price-breakdown > div { flex-wrap:wrap; gap:.25rem; } }
+
+/* Clear entry points and a predictable quote handoff. */
+.ux-choice-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.ux-choice { padding:28px; border:1px solid var(--surface-muted); border-radius:16px; background:var(--surface-color); display:flex; flex-direction:column; gap:16px; }
+.ux-choice h3 { font-size:1.25rem; line-height:1.35; }
+.ux-choice p { flex:1; }
+.ux-choice .btn { white-space:normal; text-align:center; }
+.ux-flow { margin-top:24px; color:var(--text-muted); }
+.ux-calc-help { max-width:850px; margin:16px 0 24px; }
+.ux-message { margin:24px 0; padding:20px; border:1px solid var(--surface-muted); border-radius:12px; background:var(--light-color); }
+.ux-message h3,.ux-message h4 { margin-bottom:8px; }
+.ux-message label { display:grid; gap:8px; margin-top:16px; }
+.ux-message input { width:100%; min-width:0; padding:12px; font:inherit; border:1px solid var(--text-muted); border-radius:8px; background:var(--surface-color); color:var(--text-color); }
+.ux-message pre { white-space:pre-wrap; overflow-wrap:anywhere; font:inherit; margin:16px 0 0; }
+.ux-contact-brief { margin:20px 0; }
+#calculator,#calculators,#calculator-title { scroll-margin-top:110px; }
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible { outline:3px solid var(--primary-color); outline-offset:4px; }
+@media(max-width:900px) { .ux-choice-grid { grid-template-columns:1fr; } .ux-choice { padding:24px; } }
