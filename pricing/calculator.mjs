@@ -32,7 +32,7 @@ function update(form) {
  form.querySelectorAll('[data-cost]').forEach(el=>el.textContent=result?money(result[el.dataset.cost]):c.request);
  output.textContent=result?(result.total?c.from+money(result.total):c.empty):c.request;
  const site = form.elements.site.value.trim();
- const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+'. INTANT 14.10.2026.'+(site?'\n'+site:'');
+ const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+(result?'. INTANT 14.10.2026.':'.')+(site?'\n'+site:'');
  form.querySelector('[data-message-preview]').textContent=message;
  if(result && result.total===0){quote.removeAttribute('href');quote.setAttribute('aria-disabled','true');return;}
  quote.removeAttribute('aria-disabled');

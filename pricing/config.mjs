@@ -5,9 +5,9 @@ const integer = (n, min, max) => { if (!Number.isInteger(n) || n < min || n > ma
 export const total = x => ({...x, total: roundPrice(x.equipment + x.install + x.setup + x.materials)});
 export function residentialPrice(tier, apartments = 20) {
  integer(tier, 1, 3); integer(apartments, 1, 20);
+ if (tier === 3) return null; // ANPR full scope and price require confirmation.
  const x = {equipment:180606, install:40000, setup:40000, materials:5000};
  if (tier >= 2) { x.equipment += 331416 + apartments * 57335; x.install += 40000 + apartments * 15000; x.setup += 20000; x.materials += 10000 + apartments * 5000; }
- if (tier === 3) { x.equipment += 164565 + apartments * 594; x.install += 40000; x.setup += 30000; x.materials += 15000; }
  return total(x);
 }
 export function accessPrice(turnstiles, terminals, brackets, model = '341', bracketModel = 'ZU2') {

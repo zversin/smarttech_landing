@@ -5,9 +5,9 @@
     "en": "For residential complexes"
   },
   "resIntro": {
-    "ru": "Face ID, домофония и карточный въезд — три решения для одного подъезда.",
-    "kz": "Face ID, домофон және картамен кіру — бір кіреберіске арналған үш шешім.",
-    "en": "Face ID, intercom and card vehicle access — three solutions for one entrance."
+    "ru": "Face ID, домофония и въезд по госномеру — три решения для жилого комплекса.",
+    "kz": "Face ID, домофон және мемлекеттік нөмір арқылы кіру — тұрғын үй кешеніне арналған үш шешім.",
+    "en": "Face ID, intercom and number plate entry — three solutions for a residential complex."
   },
   "resName0": {
     "ru": "Face ID на действующую дверь",
@@ -60,19 +60,19 @@
     "en": "Package 1 + DS-KD8003-IME1 (76,724 ₸), DS-KD-KP (52,508 ₸), DS-KD-ACW3 (53,867 ₸), DS-KD-BK (12,148 ₸), DS-3E0526P-E/M(B) (136,169 ₸), 20 × DS-KH6110-WE1 Black (57,335 ₸ each)."
   },
   "resName2": {
-    "ru": "Домофон + карточный въезд",
-    "kz": "Домофон + картамен көлік кіргізу",
-    "en": "Intercom + vehicle card access"
+    "ru": "Домофон + Face ID + въезд по госномеру",
+    "kz": "Домофон + Face ID + мемлекеттік нөмір арқылы кіру",
+    "en": "Intercom + Face ID + number plate entry"
   },
   "resPrice2": {
-    "ru": "от 2 480 000 ₸",
-    "kz": "2 480 000 ₸ бастап",
-    "en": "from 2 480 000 ₸"
+    "ru": "По запросу",
+    "kz": "Сұраныс бойынша",
+    "en": "On request"
   },
   "resSet2": {
-    "ru": "Пакет 2 + DS-K2804 (97 753 ₸), DS-K1109DB (48 830 ₸), DS-KAW50-1N (17 982 ₸), 20 карт IC S50 (594 ₸/шт.).",
-    "kz": "2-жиынтық + DS-K2804 (97 753 ₸), DS-K1109DB (48 830 ₸), DS-KAW50-1N (17 982 ₸), 20 IC S50 картасы (594 ₸/дана).",
-    "en": "Package 2 + DS-K2804 (97,753 ₸), DS-K1109DB (48,830 ₸), DS-KAW50-1N (17,982 ₸), 20 IC S50 cards (594 ₸ each)."
+    "ru": "Домофония и Face ID из пакета 2 + ANPR-камера для въезда, питание, сеть, крепление и согласование с автоматикой. Камера сверяет госномер со списком разрешённых автомобилей. Модель, количество полос и полный состав подбираем после обследования; цена пока не подтверждена.",
+    "kz": "2-жиынтықтағы домофон мен Face ID + кіреберіске ANPR камерасы, қорек, желі, бекіткіш және автоматикамен үйлестіру. Камера мемлекеттік нөмірді рұқсат етілген көліктер тізімімен салыстырады. Модель, жолақ саны және толық құрам нысанды тексерген соң таңдалады; баға әлі расталмаған.",
+    "en": "Package 2 intercom and Face ID + an ANPR entry camera, power, network, mounting and integration with the gate controls. The camera checks plates against an authorised vehicle list. Model, lane count and full scope follow a site survey; the price is not yet confirmed."
   },
   "resDoor": {
     "ru": "Для всех пакетов: рабочие замок, доводчик, безопасный выход и подходящие трассы уже существуют. Для пакета 1 сохраняется рабочий домофон. Проверяем сухой контакт OPEN; совместимость с любой домофонной шиной не обещаем.",
@@ -90,9 +90,9 @@
     "en": "Packages 2–3: one entrance, up to 20 apartments, suitable existing cabling. Monitors and panel use standard PoE; Face ID uses separate DC power. Switch: 24 ports, 225 W budget. Cable lengths, power and topology require checks. More than 20 apartments or extra doors require a separate design."
   },
   "resGate": {
-    "ru": "Пакет 3 — только карточный въезд на существующем безопасном приводе с независимым выездом. Проверяем Wiegand 26/34. Реле подключается к OPEN, не к мотору 220 В. Контроллер и БП — в тёплом шкафу. QR и Bluetooth не входят.",
-    "kz": "3-жиынтық — тәуелсіз шығуы бар қолданыстағы қауіпсіз жетекке тек картамен кіру. Wiegand 26/34 тексеріледі. Реле 220 В моторға емес, OPEN кірісіне қосылады. Контроллер мен қорек көзі жылы шкафта. QR және Bluetooth кірмейді.",
-    "en": "Package 3 provides card entry only on an existing safe drive with independent exit. Wiegand 26/34 must be checked. Connect the relay to OPEN, never to a 220 V motor. Controller and power supply require a warm cabinet. QR and Bluetooth are not included."
+    "ru": "Пакет 3: существующий безопасный привод шлагбаума или ворот, независимый выезд и защита от закрытия на автомобиль. Согласованный релейный выход подключаем к управляющему входу OPEN, не к мотору 220 В. До заказа подтверждаем номера Казахстана для точной модели и прошивки, включая нужные форматы, и проверяем чтение днём и ночью. Угол, дистанция, скорость, освещение, питание, трассы и зимнее исполнение определяются по объекту. ANPR не заменяет датчики безопасности.",
+    "kz": "3-жиынтық: қолданыстағы қауіпсіз шлагбаум не қақпа жетегі, тәуелсіз шығу және көлік үстіне жабылудан қорғаныс. Келісілген релелік шығыс 220 В моторға емес, OPEN басқару кірісіне қосылады. Тапсырысқа дейін нақты модель мен микробағдарламаның Қазақстан нөмірлерін, қажетті форматтарын қолдауын растап, күндіз және түнде оқуды тексереміз. Бұрыш, қашықтық, жылдамдық, жарық, қорек, трассалар және қысқы орындалу нысан бойынша анықталады. ANPR қауіпсіздік датчиктерін алмастырмайды.",
+    "en": "Package 3 requires an existing safe barrier or gate drive, independent exit and protection against closing onto a vehicle. The approved relay output connects to the OPEN control input, never a 220 V motor. Before ordering, confirm Kazakhstan plate formats for the exact model and firmware and test daytime and nighttime reading. Angle, distance, speed, lighting, power, cabling and winter protection depend on the site. ANPR does not replace safety sensors."
   },
   "resExtra": {
     "ru": "Шлагбаум целиком и ворота-«ракушка» — по запросу. Корпус DS-TMG320-ML/B — 259 740 ₸, LL/B — 269 730 ₸, но это не цена комплекта: совместимая стрела DS-TMG001-3D, защита, фундамент и климатическое исполнение ещё требуют расчёта.",
@@ -178,5 +178,10 @@
     "ru": "Модель кронштейна",
     "kz": "Кронштейн моделі",
     "en": "Bracket model"
+  },
+  "resAnprLicence": {
+    "ru": "Для ANPR отдельно подтверждаем автономную работу, лицензии, сервер или регистратор и интеграцию с HikCentral. Бесплатную лицензию или облако заранее не обещаем. Полная цена пакета, монтаж и расходники — по запросу.",
+    "kz": "ANPR үшін автономды жұмыс, лицензиялар, сервер не тіркеуіш және HikCentral интеграциясы бөлек расталады. Тегін лицензия не бұлт алдын ала уәде етілмейді. Толық жиынтық, орнату және материалдар бағасы — сұраныс бойынша.",
+    "en": "ANPR standalone operation, licences, server or recorder needs and HikCentral integration require separate confirmation. Free licences or cloud services are not assumed. Full package, installation and materials are quoted individually."
   }
 }

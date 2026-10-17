@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-17",
+  "package": "Intercom + Face ID + ANPR vehicle entry",
+  "price": null,
+  "status": "on_request",
+  "candidate": {
+    "model": "DS-TCG406-E(S)(12V/Poe)(2812)",
+    "camera_only_kzt": 377622,
+    "source": "https://intant.kz/catalog/sistemy-videonablyudeniya/videokamery/spetsializirovannye-videokamery/hikvision-ds-tcg406-e-s-12v-poe-2812-4mp-ip-videokamera-anpr-s-ik-podsvetkoy/",
+    "supplier_claims": [
+      "2 relay outputs",
+      "ANPR for CIS/EAEU among 70+ countries",
+      "authorised/blocked plate lists",
+      "DC 12–24V or 802.3at PoE",
+      "-20C to +70C"
+    ],
+    "selection": "Candidate only, not approved for the complete installed package."
+  },
+  "unresolved": [
+    "Exact Kazakhstan plate formats and firmware are not explicitly documented in retrieved product page. Require supplier confirmation and day/night tests.",
+    "Published -20C lower limit requires winter design or alternative equipment for Astana.",
+    "Relay ratings, OPEN interface and existing drive safety must be checked. ANPR is not a safety sensor.",
+    "Standalone licensing, server/NVR and HikCentral requirements/cost are not confirmed.",
+    "Lane geometry, quantity, mounts, power/network, surge/weather protection, installation and materials not priced."
+  ],
+  "blocked_source": "Manufacturer product page could not be fetched by web tool; existing Excel/proxy restriction was not retried.",
+  "legacy_price": "Former 2480000 KZT card-entry estimate is retired and must not be applied to ANPR."
+}
