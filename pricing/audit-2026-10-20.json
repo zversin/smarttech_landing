@@ -1,0 +1,213 @@
+{
+  "checked_at": "2026-10-20T20:17:26.639792+05:00",
+  "price_list_date": "2026-10-20",
+  "status": "confirmed_active_priced_bom",
+  "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
+  "xlsx_sha256": "37ec158f1df0e0f92d17213517a9620e4f8f9ba4e5f776d415f5670bd2d1e895",
+  "price_column": "AT — Интернет - Магазин; currency: Казахстанский теңге",
+  "confirmed_active_positions": 16,
+  "confirmed": [
+    {
+      "product": "HiLook THC-T150-P (2.8 мм) 5 MP EXIR видеокамера ",
+      "supplier_sku": "DC00000006960",
+      "kzt": 16158,
+      "previous_kzt": 16158,
+      "sheet": "02. Системы видеонаблюдения",
+      "row": 234,
+      "price_cell": "AT234",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "HiLook DVR-204G-M1/T 4-канальный видеорегистратор",
+      "supplier_sku": "INT0000007712",
+      "kzt": 32091,
+      "previous_kzt": 32091,
+      "sheet": "02. Системы видеонаблюдения",
+      "row": 343,
+      "price_cell": "AT343",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS40HKVS-VX1,4TB,5400,3.5'',SATA Жесткий диск",
+      "supplier_sku": "INT0000007123",
+      "kzt": 129202,
+      "previous_kzt": 129202,
+      "sheet": "02. Системы видеонаблюдения",
+      "row": 394,
+      "price_cell": "AT394",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS20HKVS-VX1, 2TB,5400,3.5'',SATA Жесткий диск",
+      "supplier_sku": "INT0000007642",
+      "kzt": 94338,
+      "previous_kzt": 94338,
+      "sheet": "02. Системы видеонаблюдения",
+      "row": 397,
+      "price_cell": "AT397",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-3E0526P-E/M (B) Коммутатор 24-портовый неуправляемый PoE",
+      "supplier_sku": "INT0000008515",
+      "kzt": 157383,
+      "previous_kzt": 136169,
+      "sheet": "07. Телекоммуникационное оборуд",
+      "row": 159,
+      "price_cell": "AT159",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-K1T341CM Терминал доступа с распознаванием лиц",
+      "supplier_sku": "INT0000002883",
+      "kzt": 166654,
+      "previous_kzt": 157878,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 150,
+      "price_cell": "AT150",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KH6110-WE1 (Black)  видеодомофон  4.3\" цветной TFT экран",
+      "supplier_sku": "INT0000003591",
+      "kzt": 57335,
+      "previous_kzt": 57335,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 277,
+      "price_cell": "AT277",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KD-BK Модуль заглушки",
+      "supplier_sku": "DC00000004538",
+      "kzt": 12148,
+      "previous_kzt": 12148,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 304,
+      "price_cell": "AT304",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KD8003-IME1  IP вызывная панель",
+      "supplier_sku": "DC00000004016",
+      "kzt": 76724,
+      "previous_kzt": 76724,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 326,
+      "price_cell": "AT326",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KD-KP Модуль клавиатуры с подсветкой",
+      "supplier_sku": "DC00000004017",
+      "kzt": 52508,
+      "previous_kzt": 52508,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 327,
+      "price_cell": "AT327",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KD-ACW3 декоративная рамка",
+      "supplier_sku": "DC00000004021",
+      "kzt": 53867,
+      "previous_kzt": 53867,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 328,
+      "price_cell": "AT328",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KAB34X-S1 Защитный козырек для терминалов доступа серий DS-K1T341A/C и DS-K1T342",
+      "supplier_sku": "INT0000003770",
+      "kzt": 4746,
+      "previous_kzt": 4746,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 380,
+      "price_cell": "AT380",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KAW50-1N Источник питания для оборудования ",
+      "supplier_sku": "DC00000005762",
+      "kzt": 17982,
+      "previous_kzt": 17982,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 382,
+      "price_cell": "AT382",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KAB6-ZU3 Кронштейн турникета для терминалов доступа",
+      "supplier_sku": "INT0000010785",
+      "kzt": 43847,
+      "previous_kzt": 43847,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 499,
+      "price_cell": "AT499",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-KAB6-ZU2 Кронштейн турникета для терминалов доступа",
+      "supplier_sku": "INT0000007631",
+      "kzt": 25055,
+      "previous_kzt": 25055,
+      "sheet": "10. Системы контроля и управлен",
+      "row": 506,
+      "price_cell": "AT506",
+      "source": "PRICE_SOURCE XLSX",
+      "availability": "not established by price list"
+    },
+    {
+      "product": "Hikvision DS-K3G411LX-R/Pg-Dm55",
+      "kzt": 543456,
+      "previous_kzt": 543456,
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/turnikety-ograzhdenie-kalitki-kartopriemniki/tripody/hikvision-ds-k3g411lx-r-pg-dm55-turniket-tripod-s-tremya-plankami/",
+      "availability": "1 unit, Astana, as displayed when checked"
+    }
+  ],
+  "on_request": [
+    "DS-K1T670MX-QR",
+    "DS-K1T673DX",
+    "complete ANPR package",
+    "complete barrier and shell gate systems"
+  ],
+  "rule": "Public INTANT equipment prices + unchanged SmartTech labour/setup/material allowances; total rounded upward to 5000 KZT. No added margin or VAT.",
+  "updated_totals_kzt": {
+    "cctv_2_cameras_2TB": 230000,
+    "turnstile_one_lane_entry": 925000,
+    "turnstile_one_lane_entry_exit": 1160000,
+    "residential_existing_door": 275000,
+    "residential_intercom_20_apartments": 2245000
+  },
+  "limitations": [
+    "Price list establishes listed prices, not availability or a binding supplier quote.",
+    "DS-K1T670MX without QR is not a substitute for DS-K1T670MX-QR.",
+    "ANPR stays on request; the retired card-entry package price is not reused."
+  ],
+  "validation": {
+    "tests": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0
+    },
+    "build": "passed, 10 pages",
+    "lint": "passed, 10 pages",
+    "browser": "Chromium: access entry/exit and residential tier 1/2, ANPR on request in RU/KZ/EN; WhatsApp estimate date/price verified; no page errors",
+    "published_before_update": "GitHub Pages built from main /; public pricing/config.mjs matched origin/main before local edits"
+  }
+}

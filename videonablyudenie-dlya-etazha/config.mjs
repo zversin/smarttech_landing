@@ -4,7 +4,7 @@ export const FLOOR_CCTV_PRICE = 230000;
 export const WHATSAPP_NUMBER = '77087262237';
 export const DEFAULT_APARTMENTS = 4;
 export const SUBSCRIPTION_MONTHLY_PRICE = 1500;
-// Публичные цены INTANT, проверено 14.10.2026.
+// Публичные цены INTANT, проверено 20.10.2026.
 export const HDD_PRICES = { 0: 0, 2: 94338, 4: 129202 };
 
 export function packagePrice(cameras, diskTb) {

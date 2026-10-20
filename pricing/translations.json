@@ -15,14 +15,14 @@
     "en": "Face ID for an existing door"
   },
   "resPrice0": {
-    "ru": "от 270 000 ₸",
-    "kz": "270 000 ₸ бастап",
-    "en": "from 270 000 ₸"
+    "ru": "от 275 000 ₸",
+    "kz": "275 000 ₸ бастап",
+    "en": "from 275 000 ₸"
   },
   "resSet0": {
-    "ru": "DS-K1T341CM ×1 (157 878 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
-    "kz": "DS-K1T341CM ×1 (157 878 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
-    "en": "DS-K1T341CM ×1 (157 878 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸)."
+    "ru": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
+    "kz": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
+    "en": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸)."
   },
   "priceequipment": {
     "ru": "Оборудование",
@@ -50,14 +50,14 @@
     "en": "Face ID + IP intercom, 20 apartments"
   },
   "resPrice1": {
-    "ru": "от 2 215 000 ₸",
-    "kz": "2 215 000 ₸ бастап",
-    "en": "from 2 215 000 ₸"
+    "ru": "от 2 245 000 ₸",
+    "kz": "2 245 000 ₸ бастап",
+    "en": "from 2 245 000 ₸"
   },
   "resSet1": {
-    "ru": "Пакет 1 + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (136 169 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/шт.).",
-    "kz": "1-жиынтық + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (136 169 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/дана).",
-    "en": "Package 1 + DS-KD8003-IME1 (76,724 ₸), DS-KD-KP (52,508 ₸), DS-KD-ACW3 (53,867 ₸), DS-KD-BK (12,148 ₸), DS-3E0526P-E/M(B) (136,169 ₸), 20 × DS-KH6110-WE1 Black (57,335 ₸ each)."
+    "ru": "Пакет 1 + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (157 383 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/шт.).",
+    "kz": "1-жиынтық + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (157 383 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/дана).",
+    "en": "Package 1 + DS-KD8003-IME1 (76,724 ₸), DS-KD-KP (52,508 ₸), DS-KD-ACW3 (53,867 ₸), DS-KD-BK (12,148 ₸), DS-3E0526P-E/M(B) (157,383 ₸), 20 × DS-KH6110-WE1 Black (57,335 ₸ each)."
   },
   "resName2": {
     "ru": "Домофон + Face ID + въезд по госномеру",
@@ -100,9 +100,9 @@
     "en": "Complete barrier and shell-style gates: on request. DS-TMG320-ML/B body: 259,740 ₸; LL/B: 269,730 ₸. These are not complete system prices: compatible DS-TMG001-3D boom, safety devices, foundation and climate protection require a separate quote."
   },
   "resCommon": {
-    "ru": "Локальная базовая работа без обязательной облачной подписки. Облачные вызовы, HikCentral, лицензии и интеграции — отдельно по запросу. Цены оборудования: розничный прайс INTANT от 14.10.2026; наличие не гарантировано. Работы и материалы — ориентиры SmartTech. Итог округляется вверх до 5 000 ₸. Дополнительные трассы, замки, приводы, строительные и климатические работы не входят. Окончательная смета после обследования.",
-    "kz": "Негізгі жергілікті жұмысқа міндетті бұлт жазылымы қажет емес. Бұлт қоңыраулары, HikCentral, лицензиялар мен интеграциялар бөлек есептеледі. Жабдық: INTANT 14.10.2026 бөлшек прайсы; қолжетімділікке кепілдік жоқ. Жұмыс пен материалдар — SmartTech бағдары. Қорытынды 5 000 ₸ қадаммен жоғары дөңгелектенеді. Қосымша кабель, құлып, жетек, құрылыс пен климаттық жұмыстар кірмейді. Соңғы смета тексеруден кейін.",
-    "en": "Basic local operation has no mandatory cloud subscription. Cloud calls, HikCentral, licences and integrations are quoted separately. Equipment: INTANT retail price list dated 14 October 2026; availability is not guaranteed. Labour and materials are SmartTech estimates. Totals round up to 5,000 ₸. Extra cabling, locks, drives, construction and climate work are excluded. Final quote follows a site survey."
+    "ru": "Локальная базовая работа без обязательной облачной подписки. Облачные вызовы, HikCentral, лицензии и интеграции — отдельно по запросу. Цены оборудования: розничный прайс INTANT от 20.10.2026; наличие не гарантировано. Работы и материалы — ориентиры SmartTech. Итог округляется вверх до 5 000 ₸. Дополнительные трассы, замки, приводы, строительные и климатические работы не входят. Окончательная смета после обследования.",
+    "kz": "Негізгі жергілікті жұмысқа міндетті бұлт жазылымы қажет емес. Бұлт қоңыраулары, HikCentral, лицензиялар мен интеграциялар бөлек есептеледі. Жабдық: INTANT 20.10.2026 бөлшек прайсы; қолжетімділікке кепілдік жоқ. Жұмыс пен материалдар — SmartTech бағдары. Қорытынды 5 000 ₸ қадаммен жоғары дөңгелектенеді. Қосымша кабель, құлып, жетек, құрылыс пен климаттық жұмыстар кірмейді. Соңғы смета тексеруден кейін.",
+    "en": "Basic local operation has no mandatory cloud subscription. Cloud calls, HikCentral, licences and integrations are quoted separately. Equipment: INTANT retail price list dated 20 October 2026; availability is not guaranteed. Labour and materials are SmartTech estimates. Totals round up to 5,000 ₸. Extra cabling, locks, drives, construction and climate work are excluded. Final quote follows a site survey."
   },
   "calcTitle": {
     "ru": "Калькулятор стоимости",
@@ -145,9 +145,9 @@
     "en": "Residential scope, conditions and calculator"
   },
   "accessPricing": {
-    "ru": "INTANT, 14.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (при проверке не было в наличии); DS-K1T341CM — 157 878 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR и DS-K1T673DX — по запросу. DS-K1T670MX без QR — другая модель.",
-    "kz": "INTANT, 14.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (тексеру кезінде жоқ); DS-K1T341CM — 157 878 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR және DS-K1T673DX — сұраныс бойынша. QR жоқ DS-K1T670MX — басқа модель.",
-    "en": "INTANT, 14 October 2026: DS-K3G411LX-R/Pg-Dm55 — 543,456 ₸ (unavailable when checked); DS-K1T341CM — 157,878 ₸; ZU2 — 25,055 ₸; ZU3 — 43,847 ₸. DS-K1T670MX-QR and DS-K1T673DX: on request. DS-K1T670MX without QR is a different SKU."
+    "ru": "INTANT, 20.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (при проверке 1 шт. в Астане); DS-K1T341CM — 166 654 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR и DS-K1T673DX — по запросу. DS-K1T670MX без QR — другая модель.",
+    "kz": "INTANT, 20.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (тексеру кезінде Астанада 1 дана); DS-K1T341CM — 166 654 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR және DS-K1T673DX — сұраныс бойынша. QR жоқ DS-K1T670MX — басқа модель.",
+    "en": "INTANT, 20 October 2026: DS-K3G411LX-R/Pg-Dm55 — 543,456 ₸ (1 unit in Astana when checked); DS-K1T341CM — 166,654 ₸; ZU2 — 25,055 ₸; ZU3 — 43,847 ₸. DS-K1T670MX-QR and DS-K1T673DX: on request. DS-K1T670MX without QR is a different SKU."
   },
   "accessLabour": {
     "ru": "Монтаж: 80 000 ₸/турникет + 40 000 ₸/терминал. Расходники: 20 000 ₸/турникет + 5 000 ₸/терминал. Настройка: 40 000 ₸ за первый турникет или только терминалы; +10 000 ₸ за каждый дополнительный турникет. Кронштейны считаются отдельно. Наличие, совместимость, питание, безопасный выход и температурный режим проверяются до заказа.",
