@@ -1,5 +1,5 @@
 export default {
-  "checkedAt": "2026-10-20T20:17:26.639792+05:00",
+  "checkedAt": "2026-10-20T20:41:17.007873+05:00",
   "priceListDate": "2026-10-20",
   "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
   "sourceSha256": "37ec158f1df0e0f92d17213517a9620e4f8f9ba4e5f776d415f5670bd2d1e895",
