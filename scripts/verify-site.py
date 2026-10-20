@@ -12,7 +12,7 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = [
     '/pricing/intant.mjs', '/pricing/config.mjs', '/pricing/calculator.mjs',
-    '/site-i18n.js', '/script.js', '/videonablyudenie-dlya-etazha/config.mjs',
+    '/site-i18n.js', '/script.js', '/analytics.js', '/videonablyudenie-dlya-etazha/config.mjs',
     '/videonablyudenie-dlya-etazha/script.mjs'
 ]
 

@@ -7,7 +7,7 @@ import { cameraPrice } from '../pricing/config.mjs';
 import { FLOOR_CCTV_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays } from '../videonablyudenie-dlya-etazha/config.mjs';
 
 const root = new URL('../', import.meta.url);
-for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'pricing/intant.mjs', 'pricing/config.mjs', 'pricing/calculator.mjs', 'pricing/render.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
+for (const file of ['site.config.mjs', 'analytics.config.mjs', 'analytics.js', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'pricing/intant.mjs', 'pricing/config.mjs', 'pricing/calculator.mjs', 'pricing/render.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
     execFileSync(process.execPath, ['--check', fileURLToPath(new URL(file, root))], { stdio: 'inherit' });
 }
 execFileSync(process.execPath, [fileURLToPath(new URL('scripts/build.mjs', root)), '--check'], { stdio: 'inherit' });

@@ -3,6 +3,7 @@ import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pri
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {
+    if (name === 'cctv_floor_form_submit') document.dispatchEvent(new CustomEvent('smarttech-analytics', { detail: { name: 'form_whatsapp_handoff', params: { calculator: 'cctv_floor', apartments: properties.apartments } } }));
     if (typeof window.gtag === 'function') window.gtag('event', name, properties);
     else if (Array.isArray(window.dataLayer)) window.dataLayer.push({ event: name, ...properties });
 }

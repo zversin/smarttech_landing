@@ -4,6 +4,6 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "lint": "node scripts/lint.mjs",
-    "test": "node --test pricing/config.test.mjs"
+    "test": "node --test pricing/config.test.mjs scripts/analytics.test.mjs"
   }
 }
