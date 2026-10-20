@@ -1,0 +1,77 @@
+name: Daily INTANT prices
+
+on:
+  schedule:
+    # 09:00 Asia/Qyzylorda (UTC+05:00).
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: daily-intant-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Pull current main
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Test supplier parser and failure handling
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
+      - name: Verify all INTANT sources and refresh snapshot
+        run: python3 scripts/update-intant.py --force --summary "$RUNNER_TEMP/intant-summary.md"
+      - name: Test prices, generate offers and validate site
+        run: |
+          npm test
+          npm run build
+          npm run lint
+          git diff --check
+      - name: Check HTTP responses
+        run: |
+          python3 -m http.server 4173 --bind 127.0.0.1 > "$RUNNER_TEMP/smarttech-http.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          python3 scripts/verify-site.py --base http://127.0.0.1:4173 --timeout 30
+      - name: Commit verified prices and offers
+        id: commit
+        run: |
+          git add --update
+          if git diff --cached --quiet; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Update verified INTANT prices and check date'
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+            echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Request Pages build and wait for the committed version
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_COMMIT: ${{ steps.commit.outputs.commit }}
+        run: python3 scripts/publish-pages.py --repository "$GITHUB_REPOSITORY" --commit "$TARGET_COMMIT"
+      - name: Verify smarttech.asia
+        if: steps.commit.outputs.changed == 'true'
+        run: python3 scripts/verify-site.py --base https://smarttech.asia --timeout 180
+      - name: Save check summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/intant-summary.md" ]; then
+            cat "$RUNNER_TEMP/intant-summary.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo 'Порядок: подтянуть → проверить INTANT → округлить → обновить → проверить GitHub Pages.' >> "$GITHUB_STEP_SUMMARY"

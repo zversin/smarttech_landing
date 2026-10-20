@@ -1,0 +1,153 @@
+// Дополнения к существующим переводам: структура сайта и страницы услуг.
+window.smarttechTranslations = {
+    kz: {
+        landingCalculator: 'Камералар, баға және сақтау мерзімін есептеу →',
+        landingServicesIntro: "Нысаныңызға қажетті қызметті таңдаңыз. Жабдықты таңдап, орнатып, жүйені баптаймыз.",
+        landingSwipe: "Қызметтерді көру үшін сырғытыңыз",
+        landingPrevService: "Алдыңғы қызмет",
+        landingNextService: "Келесі қызмет",
+        landingCctvScope: "Тұрғын үйлер, кеңселер, дүкендер және басқа нысандар үшін.",
+        landingAlarmScope: "Кіреберістер мен күзет аймақтарын бақылау қажет бөлмелер үшін.",
+        landingAccessScope: "Университеттер, жатақханалар, спорт кешендері және бизнес үшін.",
+        landingIntegrationScope: "Жабдықтың бір бөлігі орнатылған нысандар үшін.",
+        landingCameraExample: "HiLook THC-T150-P 2.8 мм, 5 Мп матрица. Жиынтықтағы жазба — 1080p Lite.",
+        landingPhotoSource: "Өндірушінің фотосы ↗",
+        landingFloorShort: 'Қабатқа камералар', landingAccessShort: 'Турникет + 2 Face ID',
+        landingQuote: 'WhatsApp арқылы есептеу', landingPrices: 'Жиынтықтар мен бағалар',
+        landingPricesIntro: 'Тиісті жиынтықты таңдаңыз — орнатуды бірден WhatsApp арқылы талқылауға болады.',
+        landingServiceQuote: 'Орнату құнын есептеу', landingFloorTerms: 'Құрамы және қосу тәртібі',
+        landingFloorEquipment: '5 Мп матрицасы бар 2 HiLook THC-T150-P 2.8 мм камерасы, DVR-204G-M1/T тіркеуіші, Hikvision DS20HKVS-VX1 2 ТБ HDD, қуат көзі, кабель және монтаж материалдары. Камералар 1080p режимінде жұмыс істейді; тіркеуіш 1080p Lite форматында жазады. Орнату, жазба, мұрағат пен қосымшаны баптау құнға кіреді.',
+        landingFloorArchive: 'Мұрағат бағдары — екі камераның 1080p Lite форматында H.265 арқылы үздіксіз жазбасы үшін шамамен 40 күн, әр камераға орташа 2 Мбит/с. 1 Мбит/с кезінде — шамамен 80 күн, 4 Мбит/с кезінде — шамамен 20 күн. Есеп 2 ТБ HDD және қызметтік деректер мен ағын ауытқуына 10% қор бойынша жасалған. Нақты мерзім баптаулар мен көрініске байланысты; қозғалыс бойынша жазба сақтау мерзімін ұзартуы мүмкін. Циклдік жазба қосылғанда ескі жазбалар жаңаларымен ауыстырылады.',
+        landingFloorInternet: 'Тіркеуіш пәтерлердің біріне орнатылып, оның роутеріне қосылады. Интернет қашықтан қарауға қажет; ол өшсе, электр қуаты бар кезде жергілікті жазба жалғасады.',
+        landingFloorScope: 'Бағаға стандартты монтаж кіреді. Жабдықтың орны мен қосымша жұмыстарды алдын ала келісеміз.',
+        landingFourApartments: '4 пәтер болса —', landingPerApartment: 'әр пәтерден бір рет',
+        landingZero: 'Абоненттік төлем — 0 ₸ / ай', landingFloorDetails: 'Қабат жиынтығы туралы толығырақ →',
+        landingInstallTerms: '«Бастап» бағалары қуат пен желі қосылымы жақын дайын орынға арналған. Кабель ұзындығын, материалдар мен қосымша жұмыстарды сметада бекітеміз.',
+        landingAccessDetails: 'Барлық сипаттамалар мен шарттар →', landingProjectDetails: 'Фотосуреттер мен мәліметтер',
+        siteNavServices: 'Қызметтер', siteNavProjects: 'Жобалар', siteCompany: 'Компания',
+        siteFooterIntro: 'Астанада және Қазақстан бойынша қауіпсіздік жүйелері.',
+        skipContent: 'Мазмұнға өту', serviceDetails: 'Қызмет туралы',
+        homeEyebrow: 'SMARTTECH / АСТАНА ЖӘНЕ ҚАЗАҚСТАН', homeHeading: 'Нысаныңызға арналған қауіпсіздік жүйелері',
+        homeChooseService: 'Қызметті таңдау', homeTrust: 'Жабдықты таңдаудан іске қосуға дейін',
+        readyEyebrow: 'ДАЙЫН ШЕШІМДЕР', readyTitle: 'Міндетіңізден бастаңыз',
+        forResidents: 'ТҰРҒЫНДАР ҮШІН', forBusiness: 'БИЗНЕС ПЕН ОҚУ ОРЫНДАРЫ ҮШІН',
+        floorLinkTitle: 'Қабатқа арналған камералар · абоненттік төлемсіз',
+        floorLinkDesc: '2 HiLook камерасы, тіркеуіш, HDD, орнату және смартфоннан қарау.',
+        floorLinkCta: 'Қабатқа арналған жиынтықты көру', perFloor: 'бір қабатқа',
+        accessOfferTitle: 'Hikvision турникеттері және Face ID',
+        accessOfferDesc: 'Кіру мен шығуға арналған дайын жиынтықтар. Құрамы, мүмкіндіктері және орнату шарттары бір бетте.',
+        accessOfferCta: 'Жиынтықтарды салыстыру', projectsEyebrow: 'ОРЫНДАЛҒАН ЖҰМЫСТАР',
+        viewProject: 'Жобаны көру →', aboutMore: 'Тәсіліміз бен серіктестер туралы →',
+        upgradeNav: 'Жаңарту', faqNav: 'Сұрақтар мен жауаптар',
+        serviceScope: 'ШЕШІМ ҚҰРАМЫ', serviceScopeTitle: 'Нысаныңыз үшін не баптаймыз',
+        quoteTitle: 'Құны міндетіңізге байланысты',
+        quoteText: 'Есептеуге дейін нысан жоспарын, орнату нүктелерін және қолданыстағы жабдықты нақтылаймыз. Жұмыстар мен материалдар құрамын сметада келісеміз.',
+        cameraScopeTitle: 'Қажетті аймақтарды шолу',
+        cameraScopeText: 'Камера орындарын кіреберістерді, дәліздерді және маңызды аймақтарды ескере отырып анықтаймыз.',
+        cameraArchiveTitle: 'Жазба және мұрағат',
+        cameraArchiveText: 'Бейнені жазу мен сақтауға арналған жабдықты таңдап, мұрағатты қарауды баптаймыз.',
+        cameraAccessTitle: 'Қарау және баптау',
+        cameraAccessText: 'Камераларға кімге қолжетімділік қажет екенін келісіп, таңдалған жабдық пен қосылымға сай қарауды баптаймыз.',
+        alarmZonesTitle: 'Аймақтар мен датчиктер',
+        alarmZonesText: 'Алдымен қандай бөлмелер, кіреберістер және нысан бөліктері бақылауды қажет ететінін анықтаймыз.',
+        alarmEventsTitle: 'Дабыл сценарийлері', alarmSetupTitle: 'Қосу және тексеру',
+        alarmSetupText: 'Хабарландыру тәсілдерін келісіп, таңдалған сценарийлерді тексереміз және жүйені басқаруды түсіндіреміз.',
+        serviceDataTitle: 'Деректер мен есептер',
+        serviceDataText: 'Пайдаланушылар мен фотосуреттерді көшіру мүмкіндігін тексеріп, үйлесімді интеграциялар мен есептерді баптаймыз.',
+        connectedTitle: 'Камералар немесе қолжетімділікті бақылау қажет пе?',
+        connectedText: 'Байланысты қызметтерді қараңыз — нысаныңызда олардың бірлескен жұмысын келісеміз.',
+        projectsPageTitle: 'Орындалған жобалар', companyIntro: 'Нысанға барып, шешім таңдаймыз, орнатып, іске қосқаннан кейін жүйеге қызмет көрсетеміз.',
+        companyApproach: 'Біздің тәсіліміз', contactPrepareTitle: 'Есептеу үшін не қажет',
+        contactPrepareText: 'Қаланы, нысан түрін және міндетті көрсетіңіз. Бөлме жоспары, орнату орнының фотосуреттері немесе қолданыстағы жабдық моделі болса, WhatsApp арқылы жіберіңіз.'
+    },
+    en: {
+        landingCalculator: 'Calculate cameras, price and archive retention →',
+        landingServicesIntro: "Choose what your property needs. We select the equipment, install it and configure the system.",
+        landingSwipe: "Swipe to explore our services",
+        landingPrevService: "Previous service",
+        landingNextService: "Next service",
+        landingCctvScope: "For residential buildings, offices, shops and other properties.",
+        landingAlarmScope: "For premises that need entrance and security zone monitoring.",
+        landingAccessScope: "For universities, dormitories, sports facilities and businesses.",
+        landingIntegrationScope: "For properties with equipment already in place.",
+        landingCameraExample: "HiLook THC-T150-P 2.8 mm, 5 MP sensor. This package records in 1080p Lite.",
+        landingPhotoSource: "Manufacturer photo ↗",
+        landingFloorShort: 'Floor CCTV', landingAccessShort: 'Turnstile + 2 Face ID',
+        landingQuote: 'Get a quote on WhatsApp', landingPrices: 'Packages & prices',
+        landingPricesIntro: 'Choose a package and discuss installation directly on WhatsApp.',
+        landingServiceQuote: 'Get an installation quote', landingFloorTerms: 'Equipment and connection details',
+        landingFloorEquipment: '2 HiLook THC-T150-P 2.8 mm cameras with 5 MP sensors, DVR-204G-M1/T recorder, Hikvision DS20HKVS-VX1 2 TB HDD, power supply, cable and installation materials. Cameras run in 1080p mode; the recorder records in 1080p Lite. Installation, recording, archive and app setup are included.',
+        landingFloorArchive: 'Archive estimate: about 40 days of continuous recording from two cameras in 1080p Lite with H.265 at an average of 2 Mbps per camera. At 1 Mbps: about 80 days; at 4 Mbps: about 20 days. Based on a 2 TB HDD with a 10% allowance for overhead and bitrate variation. Actual retention depends on settings and the scene; motion recording may extend it. With loop recording enabled, new recordings replace the oldest footage.',
+        landingFloorInternet: 'The recorder is installed in one apartment and connected to its router. Internet is needed for remote viewing; local recording continues without it as long as power is available.',
+        landingFloorScope: 'The price includes standard installation. Equipment placement and additional work are agreed in advance.',
+        landingFourApartments: 'With 4 apartments —', landingPerApartment: 'per apartment, paid once',
+        landingZero: 'Subscription fee — 0 ₸ / month', landingFloorDetails: 'More about the floor package →',
+        landingInstallTerms: 'Starting prices assume a prepared location with power and network connections nearby. Cable lengths, materials and additional work are itemised in the quote.',
+        landingAccessDetails: 'Full specifications and terms →', landingProjectDetails: 'Photos and project details',
+        siteNavServices: 'Services', siteNavProjects: 'Projects', siteCompany: 'Company',
+        siteFooterIntro: 'Security systems in Astana and across Kazakhstan.',
+        skipContent: 'Skip to content', serviceDetails: 'Explore this service',
+        homeEyebrow: 'SMARTTECH / ASTANA & KAZAKHSTAN', homeHeading: 'Security systems for your property',
+        homeChooseService: 'Choose a service', homeTrust: 'From equipment selection to launch',
+        readyEyebrow: 'READY SOLUTIONS', readyTitle: 'Start with what you need',
+        forResidents: 'FOR RESIDENTS', forBusiness: 'FOR BUSINESSES & EDUCATION',
+        floorLinkTitle: 'Floor CCTV · no subscription',
+        floorLinkDesc: '2 HiLook cameras, recorder, HDD, installation and smartphone viewing.',
+        floorLinkCta: 'View the floor CCTV package', perFloor: 'per floor',
+        accessOfferTitle: 'Hikvision turnstiles and Face ID',
+        accessOfferDesc: 'Ready packages for entry and exit. Equipment, features and installation terms on one page.',
+        accessOfferCta: 'Compare packages', projectsEyebrow: 'COMPLETED WORK',
+        viewProject: 'View project →', aboutMore: 'Our approach and partners →',
+        upgradeNav: 'Upgrades', faqNav: 'Questions and answers',
+        serviceScope: 'SOLUTION SCOPE', serviceScopeTitle: 'What we configure for your property',
+        quoteTitle: 'Pricing for your requirements',
+        quoteText: 'Before quoting, we review your floor plan, installation points and existing equipment. Work and materials are agreed in the estimate.',
+        cameraScopeTitle: 'Coverage where it matters',
+        cameraScopeText: 'We choose camera locations based on entrances, corridors and critical areas of the property.',
+        cameraArchiveTitle: 'Recording and archive',
+        cameraArchiveText: 'We select equipment to record and store video, and configure archive playback.',
+        cameraAccessTitle: 'Viewing and setup',
+        cameraAccessText: 'We agree who needs camera access and configure viewing for the selected equipment and connection.',
+        alarmZonesTitle: 'Zones and sensors',
+        alarmZonesText: 'First we identify which rooms, entrances and areas need monitoring.',
+        alarmEventsTitle: 'Alarm scenarios', alarmSetupTitle: 'Connection and testing',
+        alarmSetupText: 'We agree on notification methods, test the selected scenarios and explain how to operate the system.',
+        serviceDataTitle: 'Data and reports',
+        serviceDataText: 'We assess user and photo migration options, then configure compatible integrations and reports.',
+        connectedTitle: 'Need cameras or access control?',
+        connectedText: 'Explore related services — we will agree how they work together at your property.',
+        projectsPageTitle: 'Completed projects', companyIntro: 'We visit your property, select a solution, install it and provide support after launch.',
+        companyApproach: 'Our approach', contactPrepareTitle: 'What helps us prepare a quote',
+        contactPrepareText: 'Tell us the city, property type and requirements. If you have a floor plan, installation photos or the model of your existing equipment, send them on WhatsApp.'
+    }
+};
+
+
+
+Object.assign(window.smarttechTranslations.kz, {"uxCalculators": "Калькуляторлар", "uxStart": "Құнын онлайн есептеу", "uxOpenCalc": "Калькуляторды ашу", "uxChat": "WhatsApp арқылы сұрақ қою", "uxIntro": "Міндетті таңдаңыз. Параметрлерді енгізіп, сайтта бағдарлық бағаны көріңіз — телефон нөмірі мен тіркелу қажет емес.", "uxFlow": "1. Параметрлерді таңдаңыз → 2. Құнын көріңіз → 3. Сметаны WhatsApp арқылы талқылаңыз", "uxCameras": "Қабатқа камералар", "uxCamerasDesc": "1–4 камера, диск және сақтау мерзімі. Жалпы құны мен әр пәтер үлесін біліңіз.", "uxAccess": "Турникеттер және Face ID", "uxAccessDesc": "Турникеттер мен терминалдар санын таңдаңыз. Жұмыс пен материалдар бөлек көрсетіледі.", "uxResidential": "Тұрғын үй домофоны мен кіру жүйесі", "uxResidentialDesc": "Үш жиынтық: қолданыстағы есік, домофон немесе мемлекеттік нөмір арқылы кіру. Бір кіреберіс, 20 пәтерге дейін.", "uxServiceDetails": "Қызмет туралы →", "uxCalcHelp": "Параметрлерді өзгертіңіз — баға бірден жаңарады. Төмендегі хабарламаны тексеріп, WhatsApp ашыңыз. Соңғы смета нысанды тексергеннен кейін келісіледі.", "uxMessage": "WhatsApp хабарламасы", "uxMessageHelp": "Есеп хабарламаға қосылды. Қала мен нысанды көрсетуге болады. WhatsApp ішінде «Жіберу» түймесін басыңыз; ештеңе автоматты жіберілмейді.", "uxCity": "Қала және нысан (міндетті емес)", "uxBrief": "Не жазу керек: қала, нысан түрі және міндет. Мысалы: «Астана, тұрғын үй, 20 пәтерлі бір кіреберіс. Face ID домофоны қажет». Есіктің фотосы немесе жоспар сметаны нақтылауға көмектеседі.", "landingPricesIntro": "Дайын шешімдерді салыстырыңыз. Құрамы мен шарттары карточкаларда, жеке есеп калькуляторларда.", "calcQuote": "Осы есеппен WhatsApp ашу"});
+
+Object.assign(window.smarttechTranslations.en, {"uxCalculators": "Calculators", "uxStart": "Estimate the cost online", "uxOpenCalc": "Open calculator", "uxChat": "Ask a question on WhatsApp", "uxIntro": "Choose your project and adjust the options to see an estimate here. No phone number or registration needed.", "uxFlow": "1. Choose options → 2. See the estimate → 3. Discuss the quote on WhatsApp", "uxCameras": "Floor CCTV", "uxCamerasDesc": "1–4 cameras, storage and retention. See the total and each apartment’s share.", "uxAccess": "Turnstiles and Face ID", "uxAccessDesc": "Choose turnstiles and terminals. Labour and materials are itemised.", "uxResidential": "Residential intercom and access", "uxResidentialDesc": "Three packages for an existing door, intercom or number plate entry. One entrance, up to 20 apartments.", "uxServiceDetails": "Explore this service →", "uxCalcHelp": "Adjust the options to update the price. Check the message below, then open WhatsApp. The final quote follows a site assessment.", "uxMessage": "Your WhatsApp message", "uxMessageHelp": "Your estimate is already included. You can add the city and property. Press Send in WhatsApp to deliver it; nothing is sent automatically.", "uxCity": "City and property (optional)", "uxBrief": "Tell us the city, property type and goal. For example: “Astana, one residential entrance with 20 apartments. We need a Face ID intercom.” A door photo or floor plan helps us refine the quote.", "landingPricesIntro": "Compare ready-made solutions. See scope and conditions in the cards, then customise your estimate in a calculator.", "calcQuote": "Open WhatsApp with this estimate"});
+
+window.smarttechTranslations.kz.autoBrackets = "Терминалдарды турникетке орнату бекіткіштері автоматты түрде есептеледі. Турникеттер таңдалмаса, бекітуді орнату орнына қарай келісеміз.";
+
+window.smarttechTranslations.en.autoBrackets = "Mounts for terminals on turnstiles are included automatically. If no turnstiles are selected, mounting is agreed for the installation location.";
+
+Object.assign(window.smarttechTranslations.kz, {"taskHeading": "Нысаныңызға не қажет?", "taskIntro": "Бағытты таңдаңыз: камералар, домофондар мен турникеттер құнын бірден есептеуге болады. Дабыл жүйесі мен интеграция шешімін бірге таңдаймыз.", "taskCalculate": "Құнын есептеу", "taskCameraCalc": "Қабат камераларын есептеу", "taskDiscuss": "Міндетті WhatsApp арқылы талқылау", "uxServiceDetails": "Қызмет туралы →", "taskCamera": "Камералар", "taskCameraDesc": "Үй мен бизнеске арналған бейнебақылау. Калькулятор: бір қабатқа 1–4 камера, диск және сақтау мерзімі.", "taskIntercom": "Домофондар", "taskIntercomDesc": "Тұрғын үйге арналған домофон және Face ID. Жиынтық пен пәтер санын таңдаңыз — бір кіреберісте 20-ға дейін.", "taskTurnstile": "Турникеттер", "taskTurnstileDesc": "Кіруді бақылауға арналған турникеттер мен Face ID. Жабдық санын көрсетіңіз — орнату мен баптау есепке кіреді.", "taskExtra": "Қосымша қызметтер", "taskAlarm": "Күзет дабылы", "taskAlarmDesc": "Датчиктер, күзет аймақтары мен хабарландырулар. Нысанды талқылап, жеке смета жасаймыз.", "taskIntegration": "Интеграция және сервис", "taskIntegrationDesc": "Жүйелерді біріктіріп, жұмыс істейтін жабдықты сақтаймыз және үйлесімді сценарийлерді баптаймыз. Алдымен инфрақұрылымды тексереміз.", "taskNav": "Қызметтер мен есеп"});
+
+Object.assign(window.smarttechTranslations.en, {"taskHeading": "What does your property need?", "taskIntro": "Choose a service: estimate cameras, intercoms and turnstiles online. For alarms and integration, we will help define the right solution.", "taskCalculate": "Estimate the cost", "taskCameraCalc": "Estimate floor CCTV", "taskDiscuss": "Discuss on WhatsApp", "uxServiceDetails": "Explore this service →", "taskCamera": "Cameras", "taskCameraDesc": "CCTV for homes and businesses. The calculator covers a floor package: 1–4 cameras, storage and retention.", "taskIntercom": "Intercoms", "taskIntercomDesc": "Intercom and Face ID for residential buildings. Choose a package and up to 20 apartments in one entrance.", "taskTurnstile": "Turnstiles", "taskTurnstileDesc": "Turnstiles and Face ID for access control. Choose equipment quantities; installation and setup are included in the estimate.", "taskExtra": "Additional services", "taskAlarm": "Security alarms", "taskAlarmDesc": "Sensors, protected zones and notifications. Tell us about your property for an individual quote.", "taskIntegration": "Integration and service", "taskIntegrationDesc": "Connect systems, retain working equipment and configure compatible workflows. We assess your infrastructure first.", "taskNav": "Services & estimates"});
+
+Object.assign(window.smarttechTranslations.kz, {"simplePrices": "Орнатумен бірге баға мысалдары. Толық құрамы, шарттары және жеке есеп шешім бетінде.", "simpleScope": "Құрамы және есеп →", "simpleFloor": "Қабатқа камералар", "simpleFloorDesc": "2 камера, тіркеуіш және 2 ТБ диск. 1080p Lite жазбасы, міндетті абоненттік төлемсіз.", "simpleDoor": "Қолданыстағы есікке Face ID", "simpleDoorDesc": "Терминал, қорек және баптау. Жұмыс істейтін құлып пен үйлесімді жүйе үшін; температура шарттарын тексереміз.", "simpleAccess": "Турникет + Face ID", "simpleAccessDesc": "Бір өту жолы, кіргенде және шыққанда тану. Бекіткіштер, орнату және баптау есепке алынған.", "simpleTrust": "Жабдық, орнату, баптау және материалдар бөлек көрсетілген. Жұмыс басталғанға дейін құрам мен соңғы сметаны келісеміз. Кепілдік пен кейінгі қызмет шарттарын шартты келісу кезінде нақтылаңыз.", "simpleProject": "Жоба туралы →", "simpleLanes": "Қанша өту жолы қажет?", "simpleDirection": "Бет арқылы өту қайда қажет?", "simpleEntry": "Тек кіреберісте", "simpleBoth": "Кіреберісте және шыға берісте", "simpleLaneHelp": "Бір өту жолы — бір жаңа турникет. Әр таңдалған жаққа Face ID терминалы мен бекіткіш қосылады. Қауіпсіз шығу, қорек пен үйлесімділікті орнатуға дейін тексереміз. Қолданыстағы турникеттер бөлек бағаланады.", "simpleAdvanced": "Қосымша баптаулар", "simpleIntercom": "Кіреберіске домофон + Face ID"});
+
+Object.assign(window.smarttechTranslations.en, {"simplePrices": "Example installed prices. See each solution for the full scope, conditions and your own estimate.", "simpleScope": "Scope and estimate →", "simpleFloor": "Floor CCTV", "simpleFloorDesc": "2 cameras, recorder and 2 TB disk. 1080p Lite recording, no mandatory subscription.", "simpleDoor": "Face ID for an existing door", "simpleDoorDesc": "Terminal, power and setup. Requires a working lock and compatible system; temperature conditions need checking.", "simpleAccess": "Turnstile + Face ID", "simpleAccessDesc": "One lane, face recognition on entry and exit. Mounts, installation and setup included.", "simpleTrust": "Equipment, installation, setup and materials are itemised. Scope and the final quote are agreed before work starts. Confirm warranty and ongoing service terms when agreeing the contract.", "simpleProject": "View the project →", "simpleLanes": "How many lanes do you need?", "simpleDirection": "Where is face recognition needed?", "simpleEntry": "Entry only", "simpleBoth": "Entry and exit", "simpleLaneHelp": "One lane means one new turnstile. Each selected side adds a Face ID terminal and mount. Safe exit, power and compatibility are checked before installation. Existing turnstiles require a separate assessment.", "simpleAdvanced": "Advanced options", "simpleIntercom": "Intercom + Face ID for the entrance"});
+
+window.smarttechTranslations.kz.simpleFrom = "бастап:";
+window.smarttechTranslations.en.simpleFrom = "from";
+
+window.smarttechTranslations.kz.taskTurnstileDesc = "Кіруді бақылауға арналған турникеттер мен Face ID. Өту жолдарының санын және бір не екі жақтан тануды таңдаңыз. Орнату мен баптау есепке алынған.";
+window.smarttechTranslations.en.taskTurnstileDesc = "Turnstiles and Face ID for access control. Choose lanes and recognition on entry or both sides. Installation and setup included.";
+
+Object.assign(window.smarttechTranslations.kz, {"resIntro": "Face ID, домофон және мемлекеттік нөмір арқылы кіру — тұрғын үй кешеніне арналған үш шешім.", "resName2": "Домофон + Face ID + мемлекеттік нөмір арқылы кіру", "resPrice2": "Сұраныс бойынша", "resSet2": "2-жиынтықтағы домофон мен Face ID + кіреберіске ANPR камерасы, қорек, желі, бекіткіш және автоматикамен үйлестіру. Камера мемлекеттік нөмірді рұқсат етілген көліктер тізімімен салыстырады. Модель, жолақ саны және толық құрам нысанды тексерген соң таңдалады; баға әлі расталмаған.", "resGate": "3-жиынтық: қолданыстағы қауіпсіз шлагбаум не қақпа жетегі, тәуелсіз шығу және көлік үстіне жабылудан қорғаныс. Келісілген релелік шығыс 220 В моторға емес, OPEN басқару кірісіне қосылады. Тапсырысқа дейін нақты модель мен микробағдарламаның Қазақстан нөмірлерін, қажетті форматтарын қолдауын растап, күндіз және түнде оқуды тексереміз. Бұрыш, қашықтық, жылдамдық, жарық, қорек, трассалар және қысқы орындалу нысан бойынша анықталады. ANPR қауіпсіздік датчиктерін алмастырмайды.", "resAnprLicence": "ANPR үшін автономды жұмыс, лицензиялар, сервер не тіркеуіш және HikCentral интеграциясы бөлек расталады. Тегін лицензия не бұлт алдын ала уәде етілмейді. Толық жиынтық, орнату және материалдар бағасы — сұраныс бойынша."});
+
+Object.assign(window.smarttechTranslations.en, {"resIntro": "Face ID, intercom and number plate entry — three solutions for a residential complex.", "resName2": "Intercom + Face ID + number plate entry", "resPrice2": "On request", "resSet2": "Package 2 intercom and Face ID + an ANPR entry camera, power, network, mounting and integration with the gate controls. The camera checks plates against an authorised vehicle list. Model, lane count and full scope follow a site survey; the price is not yet confirmed.", "resGate": "Package 3 requires an existing safe barrier or gate drive, independent exit and protection against closing onto a vehicle. The approved relay output connects to the OPEN control input, never a 220 V motor. Before ordering, confirm Kazakhstan plate formats for the exact model and firmware and test daytime and nighttime reading. Angle, distance, speed, lighting, power, cabling and winter protection depend on the site. ANPR does not replace safety sensors.", "resAnprLicence": "ANPR standalone operation, licences, server or recorder needs and HikCentral integration require separate confirmation. Free licences or cloud services are not assumed. Full package, installation and materials are quoted individually."});
+
+{{PRICING_TRANSLATIONS}}

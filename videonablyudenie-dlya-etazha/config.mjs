@@ -1,11 +1,12 @@
 import { cameraPrice } from '../pricing/config.mjs';
+import supplier from '../pricing/intant.mjs';
 // Единственный источник стоимости. После изменения выполните npm run build.
-export const FLOOR_CCTV_PRICE = 230000;
+export const FLOOR_CCTV_PRICE = cameraPrice(2, 2).total;
 export const WHATSAPP_NUMBER = '77087262237';
 export const DEFAULT_APARTMENTS = 4;
 export const SUBSCRIPTION_MONTHLY_PRICE = 1500;
-// Публичные цены INTANT, проверено 20.10.2026.
-export const HDD_PRICES = { 0: 0, 2: 94338, 4: 129202 };
+// Публичные цены INTANT из общего проверенного снимка.
+export const HDD_PRICES = { 0: 0, 2: supplier.items.disk2.price, 4: supplier.items.disk4.price };
 
 export function packagePrice(cameras, diskTb) {
     if (!Number.isInteger(cameras) || cameras < 1 || cameras > 4) throw new RangeError('Количество камер: от 1 до 4');

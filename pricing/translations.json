@@ -15,14 +15,14 @@
     "en": "Face ID for an existing door"
   },
   "resPrice0": {
-    "ru": "от 275 000 ₸",
-    "kz": "275 000 ₸ бастап",
-    "en": "from 275 000 ₸"
+    "ru": "от {{DOOR_TOTAL}} ₸",
+    "kz": "{{DOOR_TOTAL}} ₸ бастап",
+    "en": "from {{DOOR_TOTAL}} ₸"
   },
   "resSet0": {
-    "ru": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
-    "kz": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸).",
-    "en": "DS-K1T341CM ×1 (166 654 ₸), DS-KAW50-1N ×1 (17 982 ₸), DS-KAB34X-S1 ×1 (4 746 ₸)."
+    "ru": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸).",
+    "kz": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸).",
+    "en": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸)."
   },
   "priceequipment": {
     "ru": "Оборудование",
@@ -50,14 +50,14 @@
     "en": "Face ID + IP intercom, 20 apartments"
   },
   "resPrice1": {
-    "ru": "от 2 245 000 ₸",
-    "kz": "2 245 000 ₸ бастап",
-    "en": "from 2 245 000 ₸"
+    "ru": "от {{INTERCOM_TOTAL}} ₸",
+    "kz": "{{INTERCOM_TOTAL}} ₸ бастап",
+    "en": "from {{INTERCOM_TOTAL}} ₸"
   },
   "resSet1": {
-    "ru": "Пакет 1 + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (157 383 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/шт.).",
-    "kz": "1-жиынтық + DS-KD8003-IME1 (76 724 ₸), DS-KD-KP (52 508 ₸), DS-KD-ACW3 (53 867 ₸), DS-KD-BK (12 148 ₸), DS-3E0526P-E/M(B) (157 383 ₸), 20 × DS-KH6110-WE1 Black (57 335 ₸/дана).",
-    "en": "Package 1 + DS-KD8003-IME1 (76,724 ₸), DS-KD-KP (52,508 ₸), DS-KD-ACW3 (53,867 ₸), DS-KD-BK (12,148 ₸), DS-3E0526P-E/M(B) (157,383 ₸), 20 × DS-KH6110-WE1 Black (57,335 ₸ each)."
+    "ru": "Пакет 1 + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/шт.).",
+    "kz": "1-жиынтық + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/дана).",
+    "en": "Package 1 + DS-KD8003-IME1 ({{EQUIP_PANEL_EN}} ₸), DS-KD-KP ({{EQUIP_KEYPAD_EN}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME_EN}} ₸), DS-KD-BK ({{EQUIP_BLANK_EN}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH_EN}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR_EN}} ₸ each)."
   },
   "resName2": {
     "ru": "Домофон + Face ID + въезд по госномеру",
@@ -95,14 +95,14 @@
     "en": "Package 3 requires an existing safe barrier or gate drive, independent exit and protection against closing onto a vehicle. The approved relay output connects to the OPEN control input, never a 220 V motor. Before ordering, confirm Kazakhstan plate formats for the exact model and firmware and test daytime and nighttime reading. Angle, distance, speed, lighting, power, cabling and winter protection depend on the site. ANPR does not replace safety sensors."
   },
   "resExtra": {
-    "ru": "Шлагбаум целиком и ворота-«ракушка» — по запросу. Корпус DS-TMG320-ML/B — 259 740 ₸, LL/B — 269 730 ₸, но это не цена комплекта: совместимая стрела DS-TMG001-3D, защита, фундамент и климатическое исполнение ещё требуют расчёта.",
-    "kz": "Толық шлагбаум және «ракушка» қақпасы — сұраныс бойынша. DS-TMG320-ML/B корпусы — 259 740 ₸, LL/B — 269 730 ₸. Бұл толық жиынтық бағасы емес: DS-TMG001-3D жебесі, қорғаныс, іргетас және климаттық шешім бөлек есептеледі.",
-    "en": "Complete barrier and shell-style gates: on request. DS-TMG320-ML/B body: 259,740 ₸; LL/B: 269,730 ₸. These are not complete system prices: compatible DS-TMG001-3D boom, safety devices, foundation and climate protection require a separate quote."
+    "ru": "Шлагбаум целиком и ворота-«ракушка» — по запросу. Корпус DS-TMG320-ML/B — {{EQUIP_BARRIERML}} ₸, LL/B — {{EQUIP_BARRIERLL}} ₸, но это не цена комплекта: совместимая стрела DS-TMG001-3D, защита, фундамент и климатическое исполнение ещё требуют расчёта.",
+    "kz": "Толық шлагбаум және «ракушка» қақпасы — сұраныс бойынша. DS-TMG320-ML/B корпусы — {{EQUIP_BARRIERML}} ₸, LL/B — {{EQUIP_BARRIERLL}} ₸. Бұл толық жиынтық бағасы емес: DS-TMG001-3D жебесі, қорғаныс, іргетас және климаттық шешім бөлек есептеледі.",
+    "en": "Complete barrier and shell-style gates: on request. DS-TMG320-ML/B body: {{EQUIP_BARRIERML_EN}} ₸; LL/B: {{EQUIP_BARRIERLL_EN}} ₸. These are not complete system prices: compatible DS-TMG001-3D boom, safety devices, foundation and climate protection require a separate quote."
   },
   "resCommon": {
-    "ru": "Локальная базовая работа без обязательной облачной подписки. Облачные вызовы, HikCentral, лицензии и интеграции — отдельно по запросу. Цены оборудования: розничный прайс INTANT от 20.10.2026; наличие не гарантировано. Работы и материалы — ориентиры SmartTech. Итог округляется вверх до 5 000 ₸. Дополнительные трассы, замки, приводы, строительные и климатические работы не входят. Окончательная смета после обследования.",
-    "kz": "Негізгі жергілікті жұмысқа міндетті бұлт жазылымы қажет емес. Бұлт қоңыраулары, HikCentral, лицензиялар мен интеграциялар бөлек есептеледі. Жабдық: INTANT 20.10.2026 бөлшек прайсы; қолжетімділікке кепілдік жоқ. Жұмыс пен материалдар — SmartTech бағдары. Қорытынды 5 000 ₸ қадаммен жоғары дөңгелектенеді. Қосымша кабель, құлып, жетек, құрылыс пен климаттық жұмыстар кірмейді. Соңғы смета тексеруден кейін.",
-    "en": "Basic local operation has no mandatory cloud subscription. Cloud calls, HikCentral, licences and integrations are quoted separately. Equipment: INTANT retail price list dated 20 October 2026; availability is not guaranteed. Labour and materials are SmartTech estimates. Totals round up to 5,000 ₸. Extra cabling, locks, drives, construction and climate work are excluded. Final quote follows a site survey."
+    "ru": "Локальная базовая работа без обязательной облачной подписки. Облачные вызовы, HikCentral, лицензии и интеграции — отдельно по запросу. Цены оборудования: розничный прайс INTANT от {{PRICE_DATE}}; наличие не гарантировано. Работы и материалы — ориентиры SmartTech. Итог округляется вверх до 5 000 ₸. Дополнительные трассы, замки, приводы, строительные и климатические работы не входят. Окончательная смета после обследования.",
+    "kz": "Негізгі жергілікті жұмысқа міндетті бұлт жазылымы қажет емес. Бұлт қоңыраулары, HikCentral, лицензиялар мен интеграциялар бөлек есептеледі. Жабдық: INTANT {{PRICE_DATE}} бөлшек прайсы; қолжетімділікке кепілдік жоқ. Жұмыс пен материалдар — SmartTech бағдары. Қорытынды 5 000 ₸ қадаммен жоғары дөңгелектенеді. Қосымша кабель, құлып, жетек, құрылыс пен климаттық жұмыстар кірмейді. Соңғы смета тексеруден кейін.",
+    "en": "Basic local operation has no mandatory cloud subscription. Cloud calls, HikCentral, licences and integrations are quoted separately. Equipment: INTANT retail price list dated {{PRICE_DATE_EN}}; availability is not guaranteed. Labour and materials are SmartTech estimates. Totals round up to 5,000 ₸. Extra cabling, locks, drives, construction and climate work are excluded. Final quote follows a site survey."
   },
   "calcTitle": {
     "ru": "Калькулятор стоимости",
@@ -145,9 +145,9 @@
     "en": "Residential scope, conditions and calculator"
   },
   "accessPricing": {
-    "ru": "INTANT, 20.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (при проверке 1 шт. в Астане); DS-K1T341CM — 166 654 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR и DS-K1T673DX — по запросу. DS-K1T670MX без QR — другая модель.",
-    "kz": "INTANT, 20.10.2026: DS-K3G411LX-R/Pg-Dm55 — 543 456 ₸ (тексеру кезінде Астанада 1 дана); DS-K1T341CM — 166 654 ₸; ZU2 — 25 055 ₸; ZU3 — 43 847 ₸. DS-K1T670MX-QR және DS-K1T673DX — сұраныс бойынша. QR жоқ DS-K1T670MX — басқа модель.",
-    "en": "INTANT, 20 October 2026: DS-K3G411LX-R/Pg-Dm55 — 543,456 ₸ (1 unit in Astana when checked); DS-K1T341CM — 166,654 ₸; ZU2 — 25,055 ₸; ZU3 — 43,847 ₸. DS-K1T670MX-QR and DS-K1T673DX: on request. DS-K1T670MX without QR is a different SKU."
+    "ru": "INTANT, {{PRICE_DATE}}: DS-K3G411LX-R/Pg-Dm55 — {{EQUIP_TURNSTILE}} ₸ (наличие уточняется перед заказом); DS-K1T341CM — {{EQUIP_TERMINAL341}} ₸; ZU2 — {{EQUIP_BRACKET2}} ₸; ZU3 — {{EQUIP_BRACKET3}} ₸. DS-K1T670MX-QR и DS-K1T673DX — по запросу. DS-K1T670MX без QR — другая модель.",
+    "kz": "INTANT, {{PRICE_DATE}}: DS-K3G411LX-R/Pg-Dm55 — {{EQUIP_TURNSTILE}} ₸ (қолжетімділік тапсырыс алдында нақтыланады); DS-K1T341CM — {{EQUIP_TERMINAL341}} ₸; ZU2 — {{EQUIP_BRACKET2}} ₸; ZU3 — {{EQUIP_BRACKET3}} ₸. DS-K1T670MX-QR және DS-K1T673DX — сұраныс бойынша. QR жоқ DS-K1T670MX — басқа модель.",
+    "en": "INTANT, {{PRICE_DATE_EN}}: DS-K3G411LX-R/Pg-Dm55 — {{EQUIP_TURNSTILE_EN}} ₸ (availability confirmed before ordering); DS-K1T341CM — {{EQUIP_TERMINAL341_EN}} ₸; ZU2 — {{EQUIP_BRACKET2_EN}} ₸; ZU3 — {{EQUIP_BRACKET3_EN}} ₸. DS-K1T670MX-QR and DS-K1T673DX: on request. DS-K1T670MX without QR is a different SKU."
   },
   "accessLabour": {
     "ru": "Монтаж: 80 000 ₸/турникет + 40 000 ₸/терминал. Расходники: 20 000 ₸/турникет + 5 000 ₸/терминал. Настройка: 40 000 ₸ за первый турникет или только терминалы; +10 000 ₸ за каждый дополнительный турникет. Кронштейны считаются отдельно. Наличие, совместимость, питание, безопасный выход и температурный режим проверяются до заказа.",
@@ -183,5 +183,15 @@
     "ru": "Для ANPR отдельно подтверждаем автономную работу, лицензии, сервер или регистратор и интеграцию с HikCentral. Бесплатную лицензию или облако заранее не обещаем. Полная цена пакета, монтаж и расходники — по запросу.",
     "kz": "ANPR үшін автономды жұмыс, лицензиялар, сервер не тіркеуіш және HikCentral интеграциясы бөлек расталады. Тегін лицензия не бұлт алдын ала уәде етілмейді. Толық жиынтық, орнату және материалдар бағасы — сұраныс бойынша.",
     "en": "ANPR standalone operation, licences, server or recorder needs and HikCentral integration require separate confirmation. Free licences or cloud services are not assumed. Full package, installation and materials are quoted individually."
+  },
+  "packageStart3000Price": {
+    "ru": "от {{ACCESS_TOTAL}} ₸",
+    "kz": "{{ACCESS_TOTAL}} ₸ бастап",
+    "en": "from {{ACCESS_TOTAL_EN}} ₸"
+  },
+  "heroOfferPrice": {
+    "ru": "от {{ACCESS_TOTAL}} ₸",
+    "kz": "{{ACCESS_TOTAL}} ₸ бастап",
+    "en": "from {{ACCESS_TOTAL_EN}} ₸"
   }
 }

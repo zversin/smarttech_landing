@@ -3,10 +3,11 @@ import { execFileSync } from 'node:child_process';
 import assert from 'node:assert/strict';
 import { fileURLToPath } from 'node:url';
 import { pages, SITE_ORIGIN, legacyAnchors } from '../site.config.mjs';
+import { cameraPrice } from '../pricing/config.mjs';
 import { FLOOR_CCTV_PRICE, formatTenge, pricePerApartment, packagePrice, archiveDays } from '../videonablyudenie-dlya-etazha/config.mjs';
 
 const root = new URL('../', import.meta.url);
-for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
+for (const file of ['site.config.mjs', 'site-i18n.js', 'script.js', 'services-slider.js', 'navigation.js', 'scripts/build.mjs', 'scripts/lint.mjs', 'pricing/intant.mjs', 'pricing/config.mjs', 'pricing/calculator.mjs', 'pricing/render.mjs', 'videonablyudenie-dlya-etazha/config.mjs', 'videonablyudenie-dlya-etazha/photos.mjs', 'videonablyudenie-dlya-etazha/script.mjs']) {
     execFileSync(process.execPath, ['--check', fileURLToPath(new URL(file, root))], { stdio: 'inherit' });
 }
 execFileSync(process.execPath, [fileURLToPath(new URL('scripts/build.mjs', root)), '--check'], { stdio: 'inherit' });
@@ -52,9 +53,9 @@ assert(documents.get('/').html.includes(formatTenge(FLOOR_CCTV_PRICE)), 'Цен�
 for (const count of [2, 3, 4, 5, 6, 7, 8]) assert.equal(pricePerApartment(count), FLOOR_CCTV_PRICE / count);
 for (const count of [0, 1, 9, 4.5, NaN]) assert.throws(() => pricePerApartment(count), RangeError);
 assert.equal(packagePrice(2, 2), FLOOR_CCTV_PRICE);
-assert.equal(packagePrice(4, 4), 340000);
-assert.equal(packagePrice(1, 2), 205000);
-assert.equal(packagePrice(2, 0), 135000);
+assert.equal(packagePrice(4, 4), cameraPrice(4, 4).total);
+assert.equal(packagePrice(1, 2), cameraPrice(1, 2).total);
+assert.equal(packagePrice(2, 0), cameraPrice(2, 0).total);
 assert.equal(archiveDays(2, 0, 2), 0);
 assert(Math.abs(archiveDays(2, 2, 2) - 41.6666667) < 0.0001);
 assert.equal(archiveDays(4, 4, 2), archiveDays(2, 2, 2));

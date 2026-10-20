@@ -1,6 +1,7 @@
 import { readFile, writeFile, access, mkdir } from 'node:fs/promises';
 import { pages, SITE_ORIGIN, legacyAnchors } from '../site.config.mjs';
 import { residentialPrice } from '../pricing/config.mjs';
+import { priceValues } from '../pricing/render.mjs';
 import { photos } from '../videonablyudenie-dlya-etazha/photos.mjs';
 import { FLOOR_CCTV_PRICE, DEFAULT_APARTMENTS, SUBSCRIPTION_MONTHLY_PRICE, WHATSAPP_NUMBER, formatTenge, pricePerApartment } from '../videonablyudenie-dlya-etazha/config.mjs';
 
@@ -20,7 +21,7 @@ const header = (group, languages = true) => {
     return html;
 };
 const sections = {};
-for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator']) sections[id] = await read(`templates/sections/${id}.html`);
+for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator']) sections[id] = render(await read(`templates/sections/${id}.html`), priceValues);
 // Короткие карточки на главной берём из того же источника, что и полный каталог.
 const homePackages = [...sections.packages.matchAll(/<article class="package-card[\s\S]*?<\/article>/g)]
     .map(([card]) => card
@@ -30,6 +31,7 @@ const homePackages = [...sections.packages.matchAll(/<article class="package-car
         .replace(/<h3\b/g, '<h4').replaceAll('</h3>', '</h4>'))
     .join('\n');
 const values = {
+    ...priceValues,
     RESIDENTIAL_START_PRICE: formatTenge(residentialPrice(1).total),
     ACCESS_START_PRICE: sections.packages.match(/data-i18n="packageStart3000Price">([^<]+)</)[1],
     PRICE: formatTenge(FLOOR_CCTV_PRICE), SHARE: formatTenge(pricePerApartment(DEFAULT_APARTMENTS)),
@@ -66,6 +68,9 @@ const scope = {
 };
 const related = (titleKey, title, textKey, text, href, linkKey, link) => `<section class="site-section site-muted"><div class="container"><div class="site-related"><div><h2 data-i18n="${titleKey}">${title}</h2><p data-i18n="${textKey}">${text}</p></div><a class="btn btn-primary" href="${href}" data-i18n="${linkKey}">${link}</a></div></div></section>`;
 const outputs = new Map();
+const priceTranslations = JSON.parse(render(await read('pricing/translations.json'), priceValues));
+const pricingJs = ['kz', 'en'].map(lang => `Object.assign(window.smarttechTranslations.${lang}, ${json(Object.fromEntries(Object.entries(priceTranslations).map(([key, value]) => [key, value[lang]])))});`).join('\n');
+outputs.set('site-i18n.js', render(await read('templates/site-i18n.js'), { ...priceValues, PRICING_TRANSLATIONS: pricingJs }));
 const shell = await read('templates/page.html');
 for (const page of pages) {
     let body = '';
