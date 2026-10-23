@@ -1,8 +1,8 @@
 export default {
-  "checkedAt": "2026-10-22T14:19:13.206306+05:00",
-  "priceListDate": "2026-10-22",
+  "checkedAt": "2026-10-23T14:14:54.682870+05:00",
+  "priceListDate": "2026-10-23",
   "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
-  "sourceSha256": "700473c866fcecce8a0415177b955867698219a53a84f6185a2e88b2eaf11ae5",
+  "sourceSha256": "1e45e653dc38df1098cd6ec4483a997c619cfd3ac146c028b4338c147278e821",
   "items": {
     "camera": {
       "model": "THC-T150-P (2.8 мм)",
