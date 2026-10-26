@@ -1026,3 +1026,40 @@ if (modal && modalImg && modalCaption && closeBtn && prevBtn && nextBtn) {
         }
     });
 }
+
+// Work gallery: manual navigation, swipe and keyboard; no moving content timer.
+document.querySelectorAll('[data-work-gallery]').forEach(gallery => {
+    const track = gallery.querySelector('.work-track');
+    const slides = [...track.querySelectorAll('img')];
+    const originalAlts = slides.map(image => image.alt);
+    const previous = gallery.querySelector('[data-work-prev]');
+    const next = gallery.querySelector('[data-work-next]');
+    const count = gallery.querySelector('[data-work-count]');
+    gallery.querySelector('.work-controls').hidden = false;
+    const index = () => Math.max(0, Math.min(slides.length - 1, Math.round(track.scrollLeft / (track.clientWidth || 1))));
+    const update = () => {
+        const current = index();
+        count.textContent = `${current + 1} / ${slides.length}`;
+        previous.disabled = current === 0;
+        next.disabled = current === slides.length - 1;
+    };
+    const move = delta => track.scrollTo({ left: Math.max(0, Math.min(slides.length - 1, index() + delta)) * track.clientWidth,
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
+    track.addEventListener('keydown', event => {
+        if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+            event.preventDefault(); move(event.key === 'ArrowLeft' ? -1 : 1);
+        }
+    });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    const translate = () => {
+        const labels = { ru: ['Предыдущее фото', 'Следующее фото', 'Фотографии работ', 'КазУТБ — фото'], kk: ['Алдыңғы фото', 'Келесі фото', 'Жұмыс фотосуреттері', 'ҚазТБУ — фото'], en: ['Previous photo', 'Next photo', 'Project photos', 'KazUTB — photo'] };
+        const words = labels[document.documentElement.lang] || labels.ru;
+        previous.setAttribute('aria-label', words[0]); next.setAttribute('aria-label', words[1]); track.setAttribute('aria-label', words[2]);
+        slides.forEach((image, i) => image.alt = document.documentElement.lang === 'ru' ? originalAlts[i] : `${words[3]} ${i + 1}`);
+    };
+    document.addEventListener('smarttech-language', translate);
+    translate(); update();
+});

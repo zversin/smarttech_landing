@@ -273,3 +273,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible { 
 .ux-price-trust { margin-top:24px; line-height:1.65; color:var(--text-muted); }
 
 .site-access .floating-wa, .site-residential .floating-wa { display:none; }
+
+/* Real project photos: native touch scrolling also works without JavaScript. */
+.work-gallery { min-width: 0; width: 100%; margin: 0; }
+.work-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; border-radius: 14px; scrollbar-width: thin; }
+.work-track img { display: block; flex: 0 0 100%; width: 100%; min-width: 0; height: 430px; object-fit: cover; scroll-snap-align: start; }
+.work-gallery figcaption { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; color: #b6bdc1; font-size: 13px; }
+.work-controls { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.work-controls[hidden] { display: none; }
+.work-controls button { min-width: 44px; min-height: 44px; border: 1px solid #c9a568; border-radius: 50%; background: transparent; color: #c9a568; cursor: pointer; font-size: 22px; }
+.work-controls button:disabled { opacity: .35; cursor: default; }
+.work-controls button:focus-visible, .work-track:focus-visible { outline: 2px solid #c9a568; outline-offset: 3px; }
+.contact-actions .btn { display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.contact-actions .btn small { font-size: 13px; font-weight: 400; }
+@media (max-width: 767px) {
+    .work-track img { height: 290px; }
+    .work-gallery figcaption { align-items: flex-start; flex-direction: column; }
+}

@@ -21,8 +21,9 @@ const header = (group, languages = true) => {
     if (!languages) html = html.replace(/<div class="lang-switcher"[\s\S]*?<\/div>/, '');
     return html;
 };
+const workGallery = await read('templates/partials/work-gallery.html');
 const sections = {};
-for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator']) sections[id] = render(await read(`templates/sections/${id}.html`), priceValues);
+for (const id of ['packages', 'modernization', 'projects', 'process', 'about', 'partners', 'faq', 'contact', 'services', 'residential', 'residential-preview', 'access-calculator']) sections[id] = render(await read(`templates/sections/${id}.html`), { ...priceValues, WORK_GALLERY: workGallery });
 // Короткие карточки на главной берём из того же источника, что и полный каталог.
 const homePackages = [...sections.packages.matchAll(/<article class="package-card[\s\S]*?<\/article>/g)]
     .map(([card]) => card
@@ -33,6 +34,7 @@ const homePackages = [...sections.packages.matchAll(/<article class="package-car
     .join('\n');
 const values = {
     ...priceValues,
+    WORK_GALLERY: workGallery,
     ANALYTICS: metrikaMarkup(),
     RESIDENTIAL_START_PRICE: formatTenge(residentialPrice(1).total),
     ACCESS_START_PRICE: sections.packages.match(/data-i18n="packageStart3000Price">([^<]+)</)[1],
