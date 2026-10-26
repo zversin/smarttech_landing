@@ -1,6 +1,7 @@
 // Карта сайта. Контент — templates/, общая разметка — templates/partials/.
 export const SITE_ORIGIN = 'https://smarttech.asia';
 export const pages = [
+    { id: 'links', path: '/links/', title: ['SmartTech — контакты и расчёт стоимости'], description: ['Камеры, домофоны и контроль доступа в Астане. Написать в WhatsApp, рассчитать комплект и посмотреть наши работы.'] },
     {id:'residential',path:'/dlya-zhilyh-kompleksov/',group:'services',heading:'Для жилых комплексов',headingKey:'resTitle',intro:'Face ID, домофония и въезд по госномеру — три решения для жилого комплекса.',introKey:'resIntro',title:['СКУД и домофония для ЖК — пакеты и калькулятор | SmartTech','Тұрғын үйге арналған СКУД және домофон | SmartTech','Residential access control and intercom packages | SmartTech'],description:['Три пакета для жилых комплексов: Face ID от 270 000 ₸, домофония и въезд по госномеру. Состав, ограничения и расчёт стоимости.','Тұрғын үй кешендеріне үш жиынтық: Face ID, домофон және мемлекеттік нөмір арқылы кіру. Бағалар мен шарттар.','Three residential packages: Face ID, intercom and number plate entry. Itemised estimates, conditions and calculator.']},
     { id: 'home', path: '/', group: 'home', heading: 'Системы безопасности для вашего объекта', headingKey: 'homeHeading',
       title: ['Системы безопасности в Астане — видеонаблюдение, СКУД, сигнализация | SmartTech', 'Астанадағы қауіпсіздік жүйелері | SmartTech', 'Security systems in Astana | SmartTech'],

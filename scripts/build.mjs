@@ -77,6 +77,10 @@ const pricingJs = ['kz', 'en'].map(lang => `Object.assign(window.smarttechTransl
 outputs.set('site-i18n.js', render(await read('templates/site-i18n.js'), { ...priceValues, PRICING_TRANSLATIONS: pricingJs }));
 const shell = await read('templates/page.html');
 for (const page of pages) {
+    if (page.id === 'links') {
+        outputs.set('links/index.html', render(await read('templates/pages/links.html'), values));
+        continue;
+    }
     let body = '';
     if (page.id === 'home') body = render(await read('templates/pages/home.html'), values);
     if (page.id === 'residential') body = pageHero(page) + sections.residential + sections.contact;
