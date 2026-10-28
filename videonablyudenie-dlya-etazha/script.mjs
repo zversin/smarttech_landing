@@ -1,5 +1,5 @@
 import { cameraPrice } from '../pricing/config.mjs';
-import { FLOOR_CCTV_PRICE, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=6';
+import { FLOOR_CCTV_PRICE, HDD_PRICES, WHATSAPP_NUMBER, DEFAULT_APARTMENTS, formatTenge, pricePerApartment, packagePrice, archiveDays, formatDays } from './config.mjs?v=6';
 
 // Используем только уже подключённую аналитику. Системы и счётчики не создаём.
 function track(name, properties = {}) {
@@ -38,6 +38,9 @@ function updateCalculation() {
     document.querySelector('#package-price').textContent = formatTenge(total);
     const breakdown = cameraPrice(cameras, diskTb);
     document.querySelectorAll('[data-camera-cost]').forEach(el => { el.textContent = formatTenge(breakdown[el.dataset.cameraCost]); });
+    document.querySelector('#disk-price-note').textContent = diskTb === 0
+        ? 'Диск не включён. Локальная запись и архив недоступны.'
+        : `HDD ${diskTb} ТБ — ${formatTenge(HDD_PRICES[diskTb])}, уже включён в оборудование и итоговую стоимость.`;
     bitrateControl.disabled = diskTb === 0;
     document.querySelector('#archive-days').textContent = diskTb === 0 ? 'Без записи' : `≈ ${formatDays(archiveDays(cameras, diskTb, bitrateMbps))}`;
     output.textContent = formatTenge(total / count);
