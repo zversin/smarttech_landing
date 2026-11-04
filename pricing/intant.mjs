@@ -1,8 +1,8 @@
 export default {
-  "checkedAt": "2026-10-28T15:28:33.737541+05:00",
-  "priceListDate": "2026-10-28",
+  "checkedAt": "2026-11-04T12:04:45.537212+05:00",
+  "priceListDate": "2026-11-04",
   "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
-  "sourceSha256": "59a235bed9c57ea1e03c552defbff178f732329ade2d9097f7389ed1eb21f27e",
+  "sourceSha256": "4f42bf008ffc6c68fbdcc4b7fdd7c1aa4e2d94bd0c40c47524553b4ba5e73923",
   "items": {
     "camera": {
       "model": "THC-T150-P (2.8 мм)",
@@ -27,17 +27,17 @@ export default {
     "terminal341": {
       "model": "DS-K1T341CM",
       "supplierSku": "INT0000002883",
-      "price": 166654
+      "price": 156238
     },
     "power": {
       "model": "DS-KAW50-1N",
       "supplierSku": "DC00000005762",
-      "price": 17982
+      "price": 16855
     },
     "raincover": {
       "model": "DS-KAB34X-S1",
       "supplierSku": "INT0000003770",
-      "price": 4746
+      "price": 4449
     },
     "panel": {
       "model": "DS-KD8003-IME1",
@@ -67,17 +67,17 @@ export default {
     "monitor": {
       "model": "DS-KH6110-WE1 (Black)",
       "supplierSku": "INT0000003591",
-      "price": 57335
+      "price": 59448
     },
     "bracket2": {
       "model": "DS-KAB6-ZU2",
       "supplierSku": "INT0000007631",
-      "price": 25055
+      "price": 23489
     },
     "bracket3": {
       "model": "DS-KAB6-ZU3",
       "supplierSku": "INT0000010785",
-      "price": 43847
+      "price": 41106
     },
     "turnstile": {
       "model": "DS-K3G411LX-R/Pg-Dm55",
@@ -91,7 +91,8 @@ export default {
     },
     "barrierLL": {
       "model": "DS-TMG320-LL/B",
-      "supplierSku": "INT0000010881",
+      "supplierSkuReference": "INT0000010881",
+      "source": "https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/avtomatika-dlya-vorot-i-proezda/shlagbaumy/hikvision-ds-tmg320-ll-b-barrier-body-shlagbaum-avtomaticheskiy-tumba/",
       "price": 269730
     }
   }

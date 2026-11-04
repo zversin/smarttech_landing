@@ -65,9 +65,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TARGET_COMMIT: ${{ steps.commit.outputs.commit }}
         run: python3 scripts/publish-pages.py --repository "$GITHUB_REPOSITORY" --commit "$TARGET_COMMIT"
-      - name: Verify smarttech.asia
-        if: steps.commit.outputs.changed == 'true'
-        run: python3 scripts/verify-site.py --base https://smarttech.asia --timeout 180
+      # smarttech.asia now serves Sites. Its linked 09:45 source-delivery task
+      # publishes and verifies this commit after this supplier update completes.
+      # Do not compare the not-yet-synchronized Site with the new snapshot here.
       - name: Save check summary
         if: always()
         run: |

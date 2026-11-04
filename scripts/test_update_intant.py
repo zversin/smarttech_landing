@@ -48,7 +48,7 @@ class SupplierChecks(unittest.TestCase):
         prices, price_date = updater.workbook_prices(workbook(self.state['items']), self.state['items'], self.today)
         self.assertEqual(price_date, self.today)
         self.assertEqual(prices['terminal341'], self.state['items']['terminal341']['price'])
-        self.assertEqual(len(prices), 17)
+        self.assertEqual(set(prices), {key for key, item in self.state['items'].items() if 'supplierSku' in item})
 
     def test_missing_and_duplicate_skus_are_rejected(self):
         for transform in [lambda rows: rows[:-1], lambda rows: rows + [rows[-1]]]:
@@ -102,12 +102,31 @@ class SupplierChecks(unittest.TestCase):
             path = Path(directory) / 'intant.mjs'
             original = 'export default ' + json.dumps(self.state, ensure_ascii=False) + ';\n'
             path.write_text(original)
-            html = f'<h1>DS-K3G411LX-R/Pg-Dm55</h1>{self.state["items"]["turnstile"]["price"]:,} KZT'.replace(',', ' ').encode()
-            changes, count, _ = updater.refresh(path, workbook=workbook(self.state['items']), fetch=lambda _: html,
+            def fetch_product(url):
+                item = next(item for item in self.state['items'].values() if item.get('source') == url)
+                return f'<h1>{item["model"]}</h1>{item["price"]:,} KZT'.replace(',', ' ').encode()
+            changes, count, _ = updater.refresh(path, workbook=workbook(self.state['items']), fetch=fetch_product,
                                                 now=datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Qyzylorda')))
             self.assertEqual(changes, [])
             self.assertEqual(count, 18)
             self.assertEqual(path.read_text(), original)
+
+    def test_second_product_wrong_model_keeps_entire_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'intant.mjs'
+            original = 'export default ' + json.dumps(self.state, ensure_ascii=False) + ';\n'
+            path.write_text(original, encoding='utf-8')
+            calls = []
+            def fetch_product(url):
+                calls.append(url)
+                item = next(item for item in self.state['items'].values() if item.get('source') == url)
+                model = 'DS-TMG320-LR/B' if len(calls) == 2 else item['model']
+                return f'<h1>{model}</h1>269 730 KZT'.encode()
+            with self.assertRaises(ValueError):
+                updater.refresh(path, force=True, workbook=workbook(self.state['items']), fetch=fetch_product,
+                                now=datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Qyzylorda')))
+            self.assertEqual(len(calls), 2)
+            self.assertEqual(path.read_text(encoding='utf-8'), original)
 
 
 if __name__ == '__main__':

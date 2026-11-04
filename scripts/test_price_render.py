@@ -26,7 +26,7 @@ class FuturePriceRefresh(unittest.TestCase):
                     item['price'] = item['price'] + index * 10001 if scenario == 'increase' else 100
                 state['priceListDate'] = '2026-10-21'
                 snapshot.write_text('export default ' + json.dumps(state, ensure_ascii=False, indent=2) + ';\n')
-                for command in [['npm', 'test'], ['npm', 'run', 'build'], ['npm', 'run', 'lint']]:
+                for command in [['node', '--test', 'pricing/config.test.mjs', 'scripts/analytics.test.mjs'], ['node', 'scripts/build.mjs'], ['node', 'scripts/lint.mjs']]:
                     result = subprocess.run(command, cwd=checkout, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
                     self.assertEqual(result.returncode, 0, result.stdout)
                 prices = {key: item['price'] for key, item in state['items'].items()}
