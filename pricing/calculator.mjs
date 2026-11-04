@@ -1,4 +1,5 @@
 import { residentialPrice, accessScenario, PRICE_DATE } from './config.mjs';
+import { modularPriceNeedsRecheck, residentialStatus } from './residential-status.mjs';
 let language = document.documentElement.lang === 'kk' ? 'kz' : document.documentElement.lang;
 const copy = {
  ru: {request:'По запросу',from:'от ',invalid:'Проверьте количество: ЖК — 1–20 квартир; турникеты — 1–5 проходов.',greeting:'Здравствуйте! Прошу проверить совместимость и рассчитать: ',estimate:'Ориентир',empty:'Выберите оборудование'},
@@ -31,8 +32,11 @@ function update(form) {
  }
  form.querySelectorAll('[data-cost]').forEach(el=>el.textContent=result?money(result[el.dataset.cost]):c.request);
  output.textContent=result?(result.total?c.from+money(result.total):c.empty):c.request;
+ const statusCopy = residentialStatus[language] || residentialStatus.ru;
+ const status = residential ? (n('tier')===4 ? statusCopy.single : n('tier')===2 ? statusCopy.modular + (modularPriceNeedsRecheck ? ' '+statusCopy.recheck : '') : '') : '';
+ if (residential) form.querySelector('[data-residential-status]').textContent = status;
  const site = form.elements.site.value.trim();
- const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+(result?`. INTANT ${PRICE_DATE}.`:'.')+(site?'\n'+site:'');
+ const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+(result?`. INTANT ${PRICE_DATE}.`:'.')+(status?'\n'+status:'')+(site?'\n'+site:'');
  form.querySelector('[data-message-preview]').textContent=message;
  if(result && result.total===0){quote.removeAttribute('href');quote.setAttribute('aria-disabled','true');return;}
  quote.removeAttribute('aria-disabled');

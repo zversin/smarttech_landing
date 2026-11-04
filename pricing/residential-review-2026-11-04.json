@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-11-04T16:25:00Z",
+  "decision": "Single-terminal intercom on request; modular layout is a separately itemised dated estimate, not a tested compatibility guarantee.",
+  "sources": [
+    {
+      "url": "https://enpinfo.hikvision.com/hkwsen/unzip/20231116152157_30379_doc/GUID-14674614-AC7F-4E68-8E72-898CCB1AE2E6.html",
+      "finding": "Call Room dials a room number; no confirmation of the exact 20-monitor topology."
+    },
+    {
+      "url": "https://www.hikvision.com/cis/products/Access-Control-Products/terminals/face-recognition-terminal/ds-k1t341cm/",
+      "finding": "Minimum working temperature -30 C."
+    },
+    {
+      "url": "https://www.hikvision.com/en/products/Video-Intercom-Products/IP-Series/Value-Series/ds-kh6110-we1/",
+      "finding": "IP indoor station with standard PoE; product capabilities alone do not establish exact terminal pairing."
+    },
+    {
+      "url": "https://www.hikvision.com/us-en/products/video-intercom-products/ip-series/pro-series/ds-kd8003-ime1/",
+      "finding": "Manufacturer currently presents B revision modular multi-apartment door station. Do not silently substitute revision B for quoted DS-KD8003-IME1."
+    }
+  ],
+  "supplierRecheck": {
+    "command": "python3 scripts/update-intant.py --force",
+    "outcome": "failed closed; snapshot unchanged",
+    "reason": "Exact supplier SKUs missing: switch",
+    "supplierSku": "INT0000008515",
+    "model": "DS-3E0526P-E/M(B)",
+    "retainedPriceKzt": 157383
+  },
+  "requiredBeforeSingleTerminalQuote": [
+    "Exact hardware revisions and compatible firmware",
+    "Calls to different apartment numbers",
+    "Video and two-way audio",
+    "Door release",
+    "Confirmed capacity for all requested monitors",
+    "Power, network, winter location and existing safe exit"
+  ],
+  "modular20ApartmentEstimate": {
+    "equipment": 1719132,
+    "install": 380000,
+    "setup": 60000,
+    "materials": 115000,
+    "unrounded": 2274132,
+    "rounded": 2275000
+  }
+}

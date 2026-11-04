@@ -17,7 +17,7 @@
         source: new Set(['floating', 'footer', 'calculator', 'form', 'cta']),
         model: new Set(['341', '670QR', '673DX'])
     };
-    const ranges = { lanes: [1, 5], directions: [1, 2], tier: [1, 3], apartments: [1, 20], cameras: [1, 4], diskTb: [0, 4], bitrateMbps: [1, 4] };
+    const ranges = { lanes: [1, 5], directions: [1, 2], tier: [1, 4], apartments: [1, 20], cameras: [1, 4], diskTb: [0, 4], bitrateMbps: [1, 4] };
 
     window.ym = window.ym || function () { (window.ym.a = window.ym.a || []).push(arguments); };
     window.ym.l = window.ym.l || Date.now();

@@ -5,9 +5,9 @@
     "en": "For residential complexes"
   },
   "resIntro": {
-    "ru": "Face ID, домофония и въезд по госномеру — три решения для жилого комплекса.",
-    "kz": "Face ID, домофон және мемлекеттік нөмір арқылы кіру — тұрғын үй кешеніне арналған үш шешім.",
-    "en": "Face ID, intercom and number plate entry — three solutions for a residential complex."
+    "ru": "Домофония для ЖК в Астане и Усть-Каменогорске: сначала проверяем вариант с одним Face ID терминалом. Состав и стоимость согласуем под ваш подъезд.",
+    "kz": "Астана мен Өскемендегі тұрғын үйге домофон: алдымен бір Face ID терминалы бар нұсқаны тексереміз. Құрам мен баға кіреберіске сай келісіледі.",
+    "en": "Residential intercoms in Astana and Ust-Kamenogorsk: we first assess a single Face ID terminal. Scope and price are agreed for your entrance."
   },
   "resName0": {
     "ru": "Face ID на действующую дверь",
@@ -45,19 +45,19 @@
     "en": "Materials"
   },
   "resName1": {
-    "ru": "Face ID + IP-домофон, 20 квартир",
-    "kz": "Face ID + IP-домофон, 20 пәтер",
-    "en": "Face ID + IP intercom, 20 apartments"
+    "ru": "Отдельная панель + Face ID, 20 квартир",
+    "kz": "Бөлек панель + Face ID, 20 пәтер",
+    "en": "Separate panel + Face ID, 20 apartments"
   },
   "resPrice1": {
-    "ru": "от {{INTERCOM_TOTAL}} ₸",
-    "kz": "{{INTERCOM_TOTAL}} ₸ бастап",
-    "en": "from {{INTERCOM_TOTAL}} ₸"
+    "ru": "Оценка от {{INTERCOM_TOTAL}} ₸",
+    "kz": "Бағдар: {{INTERCOM_TOTAL}} ₸ бастап",
+    "en": "Estimate from {{INTERCOM_TOTAL_EN}} ₸"
   },
   "resSet1": {
-    "ru": "Пакет 1 + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/шт.).",
-    "kz": "1-жиынтық + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/дана).",
-    "en": "Package 1 + DS-KD8003-IME1 ({{EQUIP_PANEL_EN}} ₸), DS-KD-KP ({{EQUIP_KEYPAD_EN}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME_EN}} ₸), DS-KD-BK ({{EQUIP_BLANK_EN}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH_EN}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR_EN}} ₸ each)."
+    "ru": "Face ID на действующую дверь + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/шт.).",
+    "kz": "Қолданыстағы есікке Face ID + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/дана).",
+    "en": "Existing-door Face ID + DS-KD8003-IME1 ({{EQUIP_PANEL_EN}} ₸), DS-KD-KP ({{EQUIP_KEYPAD_EN}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME_EN}} ₸), DS-KD-BK ({{EQUIP_BLANK_EN}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH_EN}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR_EN}} ₸ each)."
   },
   "resName2": {
     "ru": "Домофон + Face ID + въезд по госномеру",
@@ -70,14 +70,14 @@
     "en": "On request"
   },
   "resSet2": {
-    "ru": "Домофония и Face ID из пакета 2 + ANPR-камера для въезда, питание, сеть, крепление и согласование с автоматикой. Камера сверяет госномер со списком разрешённых автомобилей. Модель, количество полос и полный состав подбираем после обследования; цена пока не подтверждена.",
-    "kz": "2-жиынтықтағы домофон мен Face ID + кіреберіске ANPR камерасы, қорек, желі, бекіткіш және автоматикамен үйлестіру. Камера мемлекеттік нөмірді рұқсат етілген көліктер тізімімен салыстырады. Модель, жолақ саны және толық құрам нысанды тексерген соң таңдалады; баға әлі расталмаған.",
-    "en": "Package 2 intercom and Face ID + an ANPR entry camera, power, network, mounting and integration with the gate controls. The camera checks plates against an authorised vehicle list. Model, lane count and full scope follow a site survey; the price is not yet confirmed."
+    "ru": "Домофония и Face ID модульной схемы + ANPR-камера для въезда, питание, сеть, крепление и согласование с автоматикой. Камера сверяет госномер со списком разрешённых автомобилей. Модель, количество полос и полный состав подбираем после обследования; цена пока не подтверждена.",
+    "kz": "Модульдік сұлбадағы домофон мен Face ID + кіреберіске ANPR камерасы, қорек, желі, бекіткіш және автоматикамен үйлестіру. Камера мемлекеттік нөмірді рұқсат етілген көліктер тізімімен салыстырады. Модель, жолақ саны және толық құрам нысанды тексерген соң таңдалады; баға әлі расталмаған.",
+    "en": "Modular intercom and Face ID + an ANPR entry camera, power, network, mounting and integration with the gate controls. The camera checks plates against an authorised vehicle list. Model, lane count and full scope follow a site survey; the price is not yet confirmed."
   },
   "resDoor": {
-    "ru": "Для всех пакетов: рабочие замок, доводчик, безопасный выход и подходящие трассы уже существуют. Для пакета 1 сохраняется рабочий домофон. Проверяем сухой контакт OPEN; совместимость с любой домофонной шиной не обещаем.",
-    "kz": "Барлық жиынтық үшін жұмыс істейтін құлып, есік жапқыш, қауіпсіз шығу және жарамды кабель жолдары болуы тиіс. 1-жиынтықта қолданыстағы домофон сақталады. OPEN құрғақ контактісін тексереміз; кез келген домофон шинасымен үйлесімділікке кепілдік жоқ.",
-    "en": "All packages require an existing working lock, door closer, safe exit and suitable cable routes. Package 1 retains the working intercom. We check the OPEN dry contact; compatibility with every intercom bus is not promised."
+    "ru": "Для всех пакетов: рабочие замок, доводчик, безопасный выход и подходящие трассы уже существуют. Для добавления Face ID на действующую дверь сохраняется рабочий домофон. Проверяем сухой контакт OPEN; совместимость с любой домофонной шиной не обещаем.",
+    "kz": "Барлық жиынтық үшін жұмыс істейтін құлып, есік жапқыш, қауіпсіз шығу және жарамды кабель жолдары болуы тиіс. Face ID қосылғанда қолданыстағы домофон сақталады. OPEN құрғақ контактісін тексереміз; кез келген домофон шинасымен үйлесімділікке кепілдік жоқ.",
+    "en": "All packages require an existing working lock, door closer, safe exit and suitable cable routes. Existing-door Face ID retains the working intercom. We check the OPEN dry contact; compatibility with every intercom bus is not promised."
   },
   "resCold": {
     "ru": "DS-K1T341CM: нижняя рабочая температура −30 °C. Нужен тёплый тамбур, доступный до запертой двери, либо отдельный климатический проект. Козырёк не обогревает терминал.",
@@ -85,14 +85,14 @@
     "en": "DS-K1T341CM minimum operating temperature is −30 °C. Provide a warm vestibule accessible before the locked door, or a separate climate design. The rain shield does not heat the terminal."
   },
   "resNetwork": {
-    "ru": "Пакеты 2–3: один подъезд, до 20 квартир, существующие подходящие трассы. Мониторы и панель — стандартный PoE; Face ID — отдельное DC-питание. Коммутатор: 24 порта, бюджет 225 Вт. Длины линий, питание и топологию проверяем. Более 20 квартир или дополнительные двери — отдельный проект.",
-    "kz": "2–3-жиынтық: бір кіреберіс, 20 пәтерге дейін, жарамды кабель жолдары. Мониторлар мен панель — стандартты PoE; Face ID — бөлек DC қорек. Коммутатор: 24 порт, 225 Вт. Желілердің ұзындығын, қоректі және топологияны тексереміз. 20-дан көп пәтер немесе қосымша есіктер — бөлек жоба.",
-    "en": "Packages 2–3: one entrance, up to 20 apartments, suitable existing cabling. Monitors and panel use standard PoE; Face ID uses separate DC power. Switch: 24 ports, 225 W budget. Cable lengths, power and topology require checks. More than 20 apartments or extra doors require a separate design."
+    "ru": "Модульная схема: один подъезд, до 20 квартир, существующие подходящие трассы. Мониторы и панель — стандартный PoE; Face ID — отдельное DC-питание. Коммутатор: 24 порта, бюджет 225 Вт. Длины линий, питание и топологию проверяем. Более 20 квартир или дополнительные двери — отдельный проект.",
+    "kz": "Модульдік сұлба: бір кіреберіс, 20 пәтерге дейін, жарамды кабель жолдары. Мониторлар мен панель — стандартты PoE; Face ID — бөлек DC қорек. Коммутатор: 24 порт, 225 Вт. Желілердің ұзындығын, қоректі және топологияны тексереміз. 20-дан көп пәтер немесе қосымша есіктер — бөлек жоба.",
+    "en": "Modular layout: one entrance, up to 20 apartments, suitable existing cabling. Monitors and panel use standard PoE; Face ID uses separate DC power. Switch: 24 ports, 225 W budget. Cable lengths, power and topology require checks. More than 20 apartments or extra doors require a separate design."
   },
   "resGate": {
-    "ru": "Пакет 3: существующий безопасный привод шлагбаума или ворот, независимый выезд и защита от закрытия на автомобиль. Согласованный релейный выход подключаем к управляющему входу OPEN, не к мотору 220 В. До заказа подтверждаем номера Казахстана для точной модели и прошивки, включая нужные форматы, и проверяем чтение днём и ночью. Угол, дистанция, скорость, освещение, питание, трассы и зимнее исполнение определяются по объекту. ANPR не заменяет датчики безопасности.",
-    "kz": "3-жиынтық: қолданыстағы қауіпсіз шлагбаум не қақпа жетегі, тәуелсіз шығу және көлік үстіне жабылудан қорғаныс. Келісілген релелік шығыс 220 В моторға емес, OPEN басқару кірісіне қосылады. Тапсырысқа дейін нақты модель мен микробағдарламаның Қазақстан нөмірлерін, қажетті форматтарын қолдауын растап, күндіз және түнде оқуды тексереміз. Бұрыш, қашықтық, жылдамдық, жарық, қорек, трассалар және қысқы орындалу нысан бойынша анықталады. ANPR қауіпсіздік датчиктерін алмастырмайды.",
-    "en": "Package 3 requires an existing safe barrier or gate drive, independent exit and protection against closing onto a vehicle. The approved relay output connects to the OPEN control input, never a 220 V motor. Before ordering, confirm Kazakhstan plate formats for the exact model and firmware and test daytime and nighttime reading. Angle, distance, speed, lighting, power, cabling and winter protection depend on the site. ANPR does not replace safety sensors."
+    "ru": "Въезд по госномеру: существующий безопасный привод шлагбаума или ворот, независимый выезд и защита от закрытия на автомобиль. Согласованный релейный выход подключаем к управляющему входу OPEN, не к мотору 220 В. До заказа подтверждаем номера Казахстана для точной модели и прошивки, включая нужные форматы, и проверяем чтение днём и ночью. Угол, дистанция, скорость, освещение, питание, трассы и зимнее исполнение определяются по объекту. ANPR не заменяет датчики безопасности.",
+    "kz": "Мемлекеттік нөмір арқылы кіру: қолданыстағы қауіпсіз шлагбаум не қақпа жетегі, тәуелсіз шығу және көлік үстіне жабылудан қорғаныс. Келісілген релелік шығыс 220 В моторға емес, OPEN басқару кірісіне қосылады. Тапсырысқа дейін нақты модель мен микробағдарламаның Қазақстан нөмірлерін, қажетті форматтарын қолдауын растап, күндіз және түнде оқуды тексереміз. Бұрыш, қашықтық, жылдамдық, жарық, қорек, трассалар және қысқы орындалу нысан бойынша анықталады. ANPR қауіпсіздік датчиктерін алмастырмайды.",
+    "en": "Number plate entry requires an existing safe barrier or gate drive, independent exit and protection against closing onto a vehicle. The approved relay output connects to the OPEN control input, never a 220 V motor. Before ordering, confirm Kazakhstan plate formats for the exact model and firmware and test daytime and nighttime reading. Angle, distance, speed, lighting, power, cabling and winter protection depend on the site. ANPR does not replace safety sensors."
   },
   "resExtra": {
     "ru": "Шлагбаум целиком и ворота-«ракушка» — по запросу. Корпус DS-TMG320-ML/B — {{EQUIP_BARRIERML}} ₸, LL/B — {{EQUIP_BARRIERLL}} ₸, но это не цена комплекта: совместимая стрела DS-TMG001-3D, защита, фундамент и климатическое исполнение ещё требуют расчёта.",
@@ -125,14 +125,14 @@
     "en": "Package"
   },
   "calcApartments": {
-    "ru": "Квартиры (1–20; для пакетов 2–3)",
-    "kz": "Пәтерлер (1–20; 2–3 жиынтық үшін)",
-    "en": "Apartments (1–20; packages 2–3)"
+    "ru": "Квартиры (1–20; для домофонии)",
+    "kz": "Пәтерлер (1–20; домофон үшін)",
+    "en": "Apartments (1–20; intercom)"
   },
   "resPackages": {
-    "ru": "Три пакета для подъезда",
-    "kz": "Кіреберіске арналған үш жиынтық",
-    "en": "Three entrance packages"
+    "ru": "Домофония и доступ в подъезд",
+    "kz": "Кіреберістегі домофон және кіру",
+    "en": "Entrance intercom and access"
   },
   "resConditions": {
     "ru": "Что входит в расчёт и что нужно проверить",
@@ -193,5 +193,40 @@
     "ru": "от {{ACCESS_TOTAL}} ₸",
     "kz": "{{ACCESS_TOTAL}} ₸ бастап",
     "en": "from {{ACCESS_TOTAL_EN}} ₸"
+  },
+  "resSingleName": {
+    "ru": "Face ID и вызов квартиры — один терминал",
+    "kz": "Face ID және пәтерге қоңырау — бір терминал",
+    "en": "Face ID and apartment calls — one terminal"
+  },
+  "resSingleSet": {
+    "ru": "Рассматриваем DS-K1T341CM для распознавания лица и вызова квартиры без отдельной панели. В руководстве есть набор номера квартиры. Но работа именно с 20 мониторами DS-KH6110-WE1 ещё не подтверждена: до предложения проверим адресные вызовы, видео, двусторонний звук и открытие двери на согласованных прошивках.",
+    "kz": "Бетті тану және пәтерге қоңырау шалу үшін бөлек панельсіз DS-K1T341CM қарастырамыз. Нұсқаулықта пәтер нөмірін теру бар. Бірақ 20 DS-KH6110-WE1 мониторымен жұмыс әлі расталмаған: ұсынысқа дейін нақты микробағдарламаларда пәтерге қоңырау, бейне, екіжақты дыбыс және есікті ашуды тексереміз.",
+    "en": "We assess DS-K1T341CM for face recognition and apartment calls without a separate panel. Its manual describes room-number dialling. Operation with 20 DS-KH6110-WE1 monitors is not yet confirmed: addressed calls, video, two-way audio and door release must be checked with the agreed firmware before quoting."
+  },
+  "resSinglePrice": {
+    "ru": "После проверки совместимости — по запросу",
+    "kz": "Үйлесімділік тексерілген соң — сұраныс бойынша",
+    "en": "On request after compatibility checks"
+  },
+  "resSingleScope": {
+    "ru": "Предварительный состав: терминал, питание, крепление, квартирные мониторы и сеть. Отдельную панель автоматически не добавляем. Количество мониторов и итоговую цену подтвердим после проверки.",
+    "kz": "Алдын ала құрам: терминал, қорек, бекіткіш, пәтер мониторлары және желі. Бөлек панель автоматты түрде қосылмайды. Монитор саны мен соңғы баға тексеруден кейін расталады.",
+    "en": "Proposed scope: terminal, power, mounting, apartment monitors and network. A separate panel is not automatically included. Monitor count and final price follow verification."
+  },
+  "resModularOption": {
+    "ru": "Модульная панель + отдельный Face ID",
+    "kz": "Модульдік панель + бөлек Face ID",
+    "en": "Modular panel + separate Face ID"
+  },
+  "resModularNote": {
+    "ru": "Отдельный вариант: DS-KD8003-IME1 с клавиатурой принимает вызовы квартир, DS-K1T341CM отвечает за проход по лицу. Два устройства нужны только при выборе этой схемы. Точную ревизию панели, прошивки и совместимость мониторов подтверждаем до заказа.",
+    "kz": "Бөлек нұсқа: пернетақтасы бар DS-KD8003-IME1 пәтерге қоңырау шалады, DS-K1T341CM бет арқылы кіруді басқарады. Екі құрылғы осы сұлба таңдалғанда ғана қажет. Панель нұсқасы, микробағдарлама және монитор үйлесімділігі тапсырысқа дейін расталады.",
+    "en": "Separate option: DS-KD8003-IME1 with a keypad handles apartment calls; DS-K1T341CM handles face access. Two devices are needed only for this layout. Exact panel revision, firmware and monitor compatibility are confirmed before ordering."
+  },
+  "resSnapshotNote": {
+    "ru": "{{RES_SNAPSHOT_NOTE_RU}}",
+    "kz": "{{RES_SNAPSHOT_NOTE_KZ}}",
+    "en": "{{RES_SNAPSHOT_NOTE_EN}}"
   }
 }

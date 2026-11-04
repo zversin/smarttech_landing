@@ -6,8 +6,8 @@ export const roundPrice = n => Math.ceil(n / 5000) * 5000;
 const integer = (n, min, max) => { if (!Number.isInteger(n) || n < min || n > max) throw new RangeError('Quantity outside supported configuration'); };
 export const total = x => ({...x, total: roundPrice(x.equipment + x.install + x.setup + x.materials)});
 export function residentialPrice(tier, apartments = 20) {
- integer(tier, 1, 3); integer(apartments, 1, 20);
- if (tier === 3) return null; // ANPR full scope and price require confirmation.
+ integer(tier, 1, 4); integer(apartments, 1, 20);
+ if (tier === 3 || tier === 4) return null; // ANPR and single-terminal intercom require a confirmed scope.
  const x = {equipment:price('terminal341')+price('power')+price('raincover'), install:40000, setup:40000, materials:5000};
  if (tier >= 2) { x.equipment += price('panel')+price('keypad')+price('frame')+price('blank')+price('switch') + apartments * price('monitor'); x.install += 40000 + apartments * 15000; x.setup += 20000; x.materials += 10000 + apartments * 5000; }
  return total(x);

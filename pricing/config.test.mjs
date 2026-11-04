@@ -28,3 +28,6 @@ test('Buyer scenario rejects unsupported lanes and sides',()=>{for(const args of
 test('Buyer scenario keeps unpriced models on request',()=>{for(const model of ['670QR','673DX'])assert.equal(accessScenario(1,2,model).quote,null);});
 
 test("ANPR never inherits the former card package price",()=>{for(let n=1;n<=20;n++)assert.equal(residentialPrice(3,n),null);});
+
+test('Unverified single-terminal intercom stays on request for every apartment count',()=>{for(let n=1;n<=20;n++)assert.equal(residentialPrice(4,n),null);});
+test('Unknown residential tiers remain rejected',()=>{for(const n of [0,5,NaN,1.5])assert.throws(()=>residentialPrice(n),RangeError);});
