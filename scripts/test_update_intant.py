@@ -108,7 +108,7 @@ class SupplierChecks(unittest.TestCase):
             changes, count, _ = updater.refresh(path, workbook=workbook(self.state['items']), fetch=fetch_product,
                                                 now=datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Qyzylorda')))
             self.assertEqual(changes, [])
-            self.assertEqual(count, 18)
+            self.assertEqual(count, len(self.state['items']))
             self.assertEqual(path.read_text(), original)
 
     def test_second_product_wrong_model_keeps_entire_snapshot(self):

@@ -20,9 +20,9 @@
     "en": "from {{DOOR_TOTAL}} ₸"
   },
   "resSet0": {
-    "ru": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸).",
-    "kz": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸).",
-    "en": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸)."
+    "ru": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸). Без новых мониторов и настройки квартирных вызовов; действующий домофон сохраняется.",
+    "kz": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸). Жаңа мониторлар мен пәтер қоңырауын баптау кірмейді; қолданыстағы домофон сақталады.",
+    "en": "DS-K1T341CM ×1 ({{EQUIP_TERMINAL341}} ₸), DS-KAW50-1N ×1 ({{EQUIP_POWER}} ₸), DS-KAB34X-S1 ×1 ({{EQUIP_RAINCOVER}} ₸). No new monitors or apartment-call setup; the existing intercom is retained."
   },
   "priceequipment": {
     "ru": "Оборудование",
@@ -44,21 +44,6 @@
     "kz": "Материалдар",
     "en": "Materials"
   },
-  "resName1": {
-    "ru": "Отдельная панель + Face ID, 20 квартир",
-    "kz": "Бөлек панель + Face ID, 20 пәтер",
-    "en": "Separate panel + Face ID, 20 apartments"
-  },
-  "resPrice1": {
-    "ru": "Оценка от {{INTERCOM_TOTAL}} ₸",
-    "kz": "Бағдар: {{INTERCOM_TOTAL}} ₸ бастап",
-    "en": "Estimate from {{INTERCOM_TOTAL_EN}} ₸"
-  },
-  "resSet1": {
-    "ru": "Face ID на действующую дверь + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/шт.).",
-    "kz": "Қолданыстағы есікке Face ID + DS-KD8003-IME1 ({{EQUIP_PANEL}} ₸), DS-KD-KP ({{EQUIP_KEYPAD}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME}} ₸), DS-KD-BK ({{EQUIP_BLANK}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR}} ₸/дана).",
-    "en": "Existing-door Face ID + DS-KD8003-IME1 ({{EQUIP_PANEL_EN}} ₸), DS-KD-KP ({{EQUIP_KEYPAD_EN}} ₸), DS-KD-ACW3 ({{EQUIP_FRAME_EN}} ₸), DS-KD-BK ({{EQUIP_BLANK_EN}} ₸), DS-3E0526P-E/M(B) ({{EQUIP_SWITCH_EN}} ₸), 20 × DS-KH6110-WE1 Black ({{EQUIP_MONITOR_EN}} ₸ each)."
-  },
   "resName2": {
     "ru": "Домофон + Face ID + въезд по госномеру",
     "kz": "Домофон + Face ID + мемлекеттік нөмір арқылы кіру",
@@ -70,14 +55,14 @@
     "en": "On request"
   },
   "resSet2": {
-    "ru": "Домофония и Face ID модульной схемы + ANPR-камера для въезда, питание, сеть, крепление и согласование с автоматикой. Камера сверяет госномер со списком разрешённых автомобилей. Модель, количество полос и полный состав подбираем после обследования; цена пока не подтверждена.",
-    "kz": "Модульдік сұлбадағы домофон мен Face ID + кіреберіске ANPR камерасы, қорек, желі, бекіткіш және автоматикамен үйлестіру. Камера мемлекеттік нөмірді рұқсат етілген көліктер тізімімен салыстырады. Модель, жолақ саны және толық құрам нысанды тексерген соң таңдалады; баға әлі расталмаған.",
-    "en": "Modular intercom and Face ID + an ANPR entry camera, power, network, mounting and integration with the gate controls. The camera checks plates against an authorised vehicle list. Model, lane count and full scope follow a site survey; the price is not yet confirmed."
+    "ru": "Один Face ID терминал и квартирные мониторы + ANPR для въезда. Совместимость домофонии, модель камеры, привод, безопасность и полный состав проверяются по объекту. Стоимость по запросу.",
+    "kz": "Бір Face ID терминалы мен пәтер мониторлары + кіреберіске ANPR. Домофон үйлесімділігі, камера, жетек, қауіпсіздік пен толық құрам нысан бойынша тексеріледі. Баға сұраныс бойынша.",
+    "en": "One Face ID terminal and apartment monitors + ANPR for vehicle entry. Intercom compatibility, camera, drive, safety and full scope require site checks. Price on request."
   },
   "resDoor": {
-    "ru": "Для всех пакетов: рабочие замок, доводчик, безопасный выход и подходящие трассы уже существуют. Для добавления Face ID на действующую дверь сохраняется рабочий домофон. Проверяем сухой контакт OPEN; совместимость с любой домофонной шиной не обещаем.",
-    "kz": "Барлық жиынтық үшін жұмыс істейтін құлып, есік жапқыш, қауіпсіз шығу және жарамды кабель жолдары болуы тиіс. Face ID қосылғанда қолданыстағы домофон сақталады. OPEN құрғақ контактісін тексереміз; кез келген домофон шинасымен үйлесімділікке кепілдік жоқ.",
-    "en": "All packages require an existing working lock, door closer, safe exit and suitable cable routes. Existing-door Face ID retains the working intercom. We check the OPEN dry contact; compatibility with every intercom bus is not promised."
+    "ru": "Для стандартного расчёта уже нужны исправные замок с питанием, доводчик и безопасный выход. Терминал управляет замком через реле; отдельный контроллер по умолчанию не добавляем. Кнопка выхода нужна изнутри. Для электромагнитного замка отдельно проверяем аварийное снятие питания и связь с пожарной системой. Исправные компоненты сохраняем; недостающие подбираем по двери и считаем отдельно.",
+    "kz": "Стандартты есепке жұмыс істейтін қоректі құлып, есік жапқыш және қауіпсіз шығу қажет. Терминал құлыпты реле арқылы басқарады; бөлек контроллер әдепкіде қосылмайды. Ішкі шығу түймесі қажет. Электромагниттік құлып үшін апаттық қорек ажырату мен өрт жүйесіне қосылу бөлек тексеріледі. Жарамды бөлшектер сақталады, жетіспейтіні есікке сай бөлек есептеледі.",
+    "en": "Standard estimate requires a working powered lock, closer and safe exit. The terminal controls the lock through a relay; no extra controller is added by default. An inside exit button is required. For magnetic locks, emergency power release and fire-system integration are checked separately. Working components are retained; missing items are selected for the door and quoted separately."
   },
   "resCold": {
     "ru": "DS-K1T341CM: нижняя рабочая температура −30 °C. Нужен тёплый тамбур, доступный до запертой двери, либо отдельный климатический проект. Козырёк не обогревает терминал.",
@@ -85,9 +70,9 @@
     "en": "DS-K1T341CM minimum operating temperature is −30 °C. Provide a warm vestibule accessible before the locked door, or a separate climate design. The rain shield does not heat the terminal."
   },
   "resNetwork": {
-    "ru": "Модульная схема: один подъезд, до 20 квартир, существующие подходящие трассы. Мониторы и панель — стандартный PoE; Face ID — отдельное DC-питание. Коммутатор: 24 порта, бюджет 225 Вт. Длины линий, питание и топологию проверяем. Более 20 квартир или дополнительные двери — отдельный проект.",
-    "kz": "Модульдік сұлба: бір кіреберіс, 20 пәтерге дейін, жарамды кабель жолдары. Мониторлар мен панель — стандартты PoE; Face ID — бөлек DC қорек. Коммутатор: 24 порт, 225 Вт. Желілердің ұзындығын, қоректі және топологияны тексереміз. 20-дан көп пәтер немесе қосымша есіктер — бөлек жоба.",
-    "en": "Modular layout: one entrance, up to 20 apartments, suitable existing cabling. Monitors and panel use standard PoE; Face ID uses separate DC power. Switch: 24 ports, 225 W budget. Cable lengths, power and topology require checks. More than 20 apartments or extra doors require a separate design."
+    "ru": "Мониторы питаются по стандартному PoE: 20 × до 4 Вт = до 80 Вт без потерь в линиях. В расчёте DS-3E0326P-E/M(C): 24 PoE-порта, бюджет 230 Вт. Терминал получает отдельные 12 В DC от DS-KAW50-1N (4,17 А); это не источник PoE для мониторов. Питание замка проверяется отдельно. Коммутатор и блок питания размещаются в подходящем сухом помещении. Длины кабелей, порты и запас питания проверяем по объекту.",
+    "kz": "Мониторлар стандартты PoE арқылы қоректенеді: 20 × 4 Вт дейін = желі шығынынсыз 80 Вт дейін. Есепте DS-3E0326P-E/M(C): 24 PoE порт, 230 Вт бюджет. Терминал DS-KAW50-1N (4,17 А) блогынан бөлек 12 В DC алады; бұл мониторларға PoE көзі емес. Құлып қорегі бөлек тексеріледі. Коммутатор мен қорек блогы жарамды құрғақ бөлмеде орнатылады. Кабель ұзындығы, порттар мен қорек қоры нысанда тексеріледі.",
+    "en": "Monitors use standard PoE: 20 × up to 4 W = up to 80 W before cable losses. Budgeted DS-3E0326P-E/M(C): 24 PoE ports, 230 W budget. The terminal receives separate 12 V DC from DS-KAW50-1N (4.17 A); this does not provide PoE to monitors. Lock power is assessed separately. Switch and power supply need suitable dry indoor placement. Cable lengths, ports and power headroom are checked on site."
   },
   "resGate": {
     "ru": "Въезд по госномеру: существующий безопасный привод шлагбаума или ворот, независимый выезд и защита от закрытия на автомобиль. Согласованный релейный выход подключаем к управляющему входу OPEN, не к мотору 220 В. До заказа подтверждаем номера Казахстана для точной модели и прошивки, включая нужные форматы, и проверяем чтение днём и ночью. Угол, дистанция, скорость, освещение, питание, трассы и зимнее исполнение определяются по объекту. ANPR не заменяет датчики безопасности.",
@@ -205,28 +190,58 @@
     "en": "We assess DS-K1T341CM for face recognition and apartment calls without a separate panel. Its manual describes room-number dialling. Operation with 20 DS-KH6110-WE1 monitors is not yet confirmed: addressed calls, video, two-way audio and door release must be checked with the agreed firmware before quoting."
   },
   "resSinglePrice": {
-    "ru": "После проверки совместимости — по запросу",
-    "kz": "Үйлесімділік тексерілген соң — сұраныс бойынша",
-    "en": "On request after compatibility checks"
+    "ru": "Предварительный бюджет: {{INTERCOM_TOTAL}} ₸",
+    "kz": "Алдын ала бюджет: {{INTERCOM_TOTAL}} ₸",
+    "en": "Provisional budget: {{INTERCOM_TOTAL_EN}} ₸"
   },
   "resSingleScope": {
-    "ru": "Предварительный состав: терминал, питание, крепление, квартирные мониторы и сеть. Отдельную панель автоматически не добавляем. Количество мониторов и итоговую цену подтвердим после проверки.",
-    "kz": "Алдын ала құрам: терминал, қорек, бекіткіш, пәтер мониторлары және желі. Бөлек панель автоматты түрде қосылмайды. Монитор саны мен соңғы баға тексеруден кейін расталады.",
-    "en": "Proposed scope: terminal, power, mounting, apartment monitors and network. A separate panel is not automatically included. Monitor count and final price follow verification."
+    "ru": "20 квартир: DS-K1T341CM ×1 — {{EQUIP_TERMINAL341}} ₸; DS-KH6110-WE1 Black ×20 — {{EQUIP_MONITOR}} ₸/шт.; DS-KAW50-1N ×1 — {{EQUIP_POWER}} ₸; PoE-коммутатор DS-3E0326P-E/M(C) ×1 — {{EQUIP_SWITCH}} ₸. Бюджет предполагает исправные замок с питанием, доводчик и безопасный выход.",
+    "kz": "20 пәтер: DS-K1T341CM ×1 — {{EQUIP_TERMINAL341}} ₸; DS-KH6110-WE1 Black ×20 — {{EQUIP_MONITOR}} ₸/дана; DS-KAW50-1N ×1 — {{EQUIP_POWER}} ₸; DS-3E0326P-E/M(C) PoE коммутаторы ×1 — {{EQUIP_SWITCH}} ₸. Бюджет жұмыс істейтін қоректі құлыпты, есік жапқышты және қауіпсіз шығуды талап етеді.",
+    "en": "20 apartments: DS-K1T341CM ×1 — {{EQUIP_TERMINAL341_EN}} ₸; DS-KH6110-WE1 Black ×20 — {{EQUIP_MONITOR_EN}} ₸ each; DS-KAW50-1N ×1 — {{EQUIP_POWER_EN}} ₸; DS-3E0326P-E/M(C) PoE switch ×1 — {{EQUIP_SWITCH_EN}} ₸. Budget requires an existing working powered lock, closer and safe exit."
   },
-  "resModularOption": {
-    "ru": "Модульная панель + отдельный Face ID",
-    "kz": "Модульдік панель + бөлек Face ID",
-    "en": "Modular panel + separate Face ID"
+  "resShortScope": {
+    "ru": "Face ID, квартирные мониторы, сеть и питание. Бюджет на 20 квартир при исправной двери; совместимость проверяем до заказа.",
+    "kz": "Face ID, пәтер мониторлары, желі және қорек. Жарамды есік болғанда 20 пәтерге бюджет; үйлесімділік тапсырысқа дейін тексеріледі.",
+    "en": "Face ID, apartment monitors, network and power. Budget for 20 apartments with a working door; compatibility checked before ordering."
   },
-  "resModularNote": {
-    "ru": "Отдельный вариант: DS-KD8003-IME1 с клавиатурой принимает вызовы квартир, DS-K1T341CM отвечает за проход по лицу. Два устройства нужны только при выборе этой схемы. Точную ревизию панели, прошивки и совместимость мониторов подтверждаем до заказа.",
-    "kz": "Бөлек нұсқа: пернетақтасы бар DS-KD8003-IME1 пәтерге қоңырау шалады, DS-K1T341CM бет арқылы кіруді басқарады. Екі құрылғы осы сұлба таңдалғанда ғана қажет. Панель нұсқасы, микробағдарлама және монитор үйлесімділігі тапсырысқа дейін расталады.",
-    "en": "Separate option: DS-KD8003-IME1 with a keypad handles apartment calls; DS-K1T341CM handles face access. Two devices are needed only for this layout. Exact panel revision, firmware and monitor compatibility are confirmed before ordering."
+  "resReuse": {
+    "ru": "Что уже есть на объекте",
+    "kz": "Нысанда не бар",
+    "en": "Existing equipment"
   },
-  "resSnapshotNote": {
-    "ru": "{{RES_SNAPSHOT_NOTE_RU}}",
-    "kz": "{{RES_SNAPSHOT_NOTE_KZ}}",
-    "en": "{{RES_SNAPSHOT_NOTE_EN}}"
+  "resReusePower": {
+    "ru": "Совместимое питание терминала уже есть",
+    "kz": "Үйлесімді терминал қорегі бар",
+    "en": "Compatible terminal power supply already exists"
+  },
+  "resReuseSwitch": {
+    "ru": "Подходящая сеть PoE уже есть",
+    "kz": "Жарамды PoE желісі бар",
+    "en": "Suitable PoE network already exists"
+  },
+  "resCover": {
+    "ru": "Нужен козырёк DS-KAB34X-S1 (без обогрева)",
+    "kz": "DS-KAB34X-S1 күнқағары қажет (жылытусыз)",
+    "en": "Add DS-KAB34X-S1 rain shield (no heating)"
+  },
+  "resDoorState": {
+    "ru": "Замок, доводчик и безопасный выход",
+    "kz": "Құлып, есік жапқыш және қауіпсіз шығу",
+    "en": "Lock, closer and safe exit"
+  },
+  "resDoorReady": {
+    "ru": "Есть и исправны; совместимость проверим",
+    "kz": "Бар және жарамды; үйлесімділік тексеріледі",
+    "en": "Present and working; compatibility to be checked"
+  },
+  "resDoorMissing": {
+    "ru": "Нужно добавить или проверить — полный расчёт по запросу",
+    "kz": "Қосу немесе тексеру қажет — толық есеп сұраныс бойынша",
+    "en": "Need additions or assessment — full quote on request"
+  },
+  "resReuseNote": {
+    "ru": "Существующее питание и сеть исключаем только после проверки параметров. Работа по подключению и настройке сохраняется. Козырёк не добавлен по умолчанию. Новые замок, доводчик, кнопки, резервное питание и строительные работы в этот бюджет не входят.",
+    "kz": "Қолданыстағы қорек пен желі параметрлері тексерілгеннен кейін ғана есептен шығарылады. Қосу және баптау жұмысы сақталады. Күнқағар әдепкіде қосылмайды. Жаңа құлып, есік жапқыш, түймелер, резервтік қорек және құрылыс бұл бюджетке кірмейді.",
+    "en": "Existing power and network are removed from equipment costs only after checking their ratings. Connection and setup labour remains. A rain shield is not included by default. New locks, closers, buttons, backup power and construction are excluded from this budget."
   }
 }

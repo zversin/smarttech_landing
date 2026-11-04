@@ -1,6 +1,7 @@
 {
-  "checkedAt": "2026-11-04T16:25:00Z",
-  "decision": "Single-terminal intercom on request; modular layout is a separately itemised dated estimate, not a tested compatibility guarantee.",
+  "checkedAt": "2026-11-04T21:37:33.188439+05:00",
+  "decision": "Separate-panel layout removed at user request. One-terminal provisional budget only; exact compatibility and complete door scope require validation.",
+  "supersedes": "Previous modular alternative and Sites version 3 must not be published.",
   "sources": [
     {
       "url": "https://enpinfo.hikvision.com/hkwsen/unzip/20231116152157_30379_doc/GUID-14674614-AC7F-4E68-8E72-898CCB1AE2E6.html",
@@ -15,18 +16,19 @@
       "finding": "IP indoor station with standard PoE; product capabilities alone do not establish exact terminal pairing."
     },
     {
-      "url": "https://www.hikvision.com/us-en/products/video-intercom-products/ip-series/pro-series/ds-kd8003-ime1/",
-      "finding": "Manufacturer currently presents B revision modular multi-apartment door station. Do not silently substitute revision B for quoted DS-KD8003-IME1."
+      "url": "https://www.hikvision.com/en/products/transmission/Network-Switches/unmanaged-switch/ds-3e0326p-e-m-c-/",
+      "finding": "24 PoE ports, 230 W budget."
+    },
+    {
+      "url": "https://www.hikvision.com/en/products/Video-Intercom-Products/Video-Intercom-Accessories/Power-Supplies/ds-kaw50-1n/",
+      "finding": "12 V DC, 4.17 A, 50 W power supply; terminal power, not PoE distribution to monitors."
+    },
+    {
+      "url": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
+      "finding": "14 active supplier items fully verified; additional exact optional door examples independently validated against the same XLSX.",
+      "sha256": "21dc7065639daf9e4be8d22566a1a04046f13e36c34848912d1e9200225216ca"
     }
   ],
-  "supplierRecheck": {
-    "command": "python3 scripts/update-intant.py --force",
-    "outcome": "failed closed; snapshot unchanged",
-    "reason": "Exact supplier SKUs missing: switch",
-    "supplierSku": "INT0000008515",
-    "model": "DS-3E0526P-E/M(B)",
-    "retainedPriceKzt": 157383
-  },
   "requiredBeforeSingleTerminalQuote": [
     "Exact hardware revisions and compatible firmware",
     "Calls to different apartment numbers",
@@ -35,12 +37,52 @@
     "Confirmed capacity for all requested monitors",
     "Power, network, winter location and existing safe exit"
   ],
-  "modular20ApartmentEstimate": {
-    "equipment": 1719132,
-    "install": 380000,
+  "supplierChange": {
+    "removed": [
+      "DS-KD8003-IME1",
+      "DS-KD-KP",
+      "DS-KD-ACW3",
+      "DS-KD-BK"
+    ],
+    "switch": "Explicitly redesigned using DS-3E0326P-E/M(C), INT0000002682 at 122775 KZT. Old DS-3E0526P-E/M(B) was absent; no automatic SKU substitution logic added.",
+    "syncResult": "14 exact items verified, 12 XLSX rows plus 2 official cards. Fail-closed updater unchanged."
+  },
+  "singleTerminal20ApartmentBudget": {
+    "equipment": 1484828,
+    "install": 340000,
     "setup": 60000,
     "materials": 115000,
-    "unrounded": 2274132,
-    "rounded": 2275000
-  }
+    "unrounded": 1999828,
+    "rounded": 2000000,
+    "newLockCloserExitAndLockPowerIncluded": false,
+    "rainShieldIncluded": false,
+    "compatibilityVerified": false
+  },
+  "optionalDoorEquipmentExamples": [
+    {
+      "model": "DS-K7P05",
+      "supplierSku": "DC00000001777",
+      "priceKzt": 8991,
+      "use": "Exit button; only if existing button is absent or unsuitable."
+    },
+    {
+      "model": "DS-K7PEB (зеленая)",
+      "supplierSku": "DC00000003710",
+      "priceKzt": 7118,
+      "use": "Emergency release; application and fire interface must be assessed."
+    },
+    {
+      "model": "DS-K4H258S",
+      "supplierSku": "DC00000003732",
+      "priceKzt": 19041,
+      "use": "Magnetic lock example, not selected for an unseen door; brackets and separate power may be needed."
+    },
+    {
+      "model": "DS-K4DC104",
+      "supplierSku": "DC00000005165",
+      "priceKzt": 16905,
+      "use": "Closer example for 60–85 kg doors, not a universal selection."
+    }
+  ],
+  "doorScope": "Retain suitable working powered lock, closer, inside exit button and emergency release. Confirm lock current, voltage, contact ratings, mounting and safe exit. Do not treat relay contacts as a power supply; new lock power/backup/installation are quoted after survey."
 }

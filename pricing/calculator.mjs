@@ -1,25 +1,33 @@
-import { residentialPrice, accessScenario, PRICE_DATE } from './config.mjs';
-import { modularPriceNeedsRecheck, residentialStatus } from './residential-status.mjs';
+import { residentialPrice, residentialEstimate, accessScenario, PRICE_DATE } from './config.mjs';
+import { residentialStatus } from './residential-status.mjs';
 let language = document.documentElement.lang === 'kk' ? 'kz' : document.documentElement.lang;
 const copy = {
- ru: {request:'По запросу',from:'от ',invalid:'Проверьте количество: ЖК — 1–20 квартир; турникеты — 1–5 проходов.',greeting:'Здравствуйте! Прошу проверить совместимость и рассчитать: ',estimate:'Ориентир',empty:'Выберите оборудование'},
- kz: {request:'Сұраныс бойынша',from:'бастап: ',invalid:'Санын тексеріңіз: 1–20 пәтер; турникеттер — 1–5 өту жолы.',greeting:'Сәлеметсіз бе! Үйлесімділігін тексеріп, есептеп беріңіз: ',estimate:'Бағдар',empty:'Жабдықты таңдаңыз'},
- en: {request:'On request',from:'from ',invalid:'Check quantities: 1–20 apartments; turnstiles 1–5 lanes.',greeting:'Hello! Please check compatibility and quote: ',estimate:'Estimate',empty:'Select equipment'}
+ ru: {budget:'Предварительный бюджет: ',request:'По запросу',from:'от ',invalid:'Проверьте количество: ЖК — 1–20 квартир; турникеты — 1–5 проходов.',greeting:'Здравствуйте! Прошу проверить совместимость и рассчитать: ',estimate:'Ориентир',empty:'Выберите оборудование'},
+ kz: {budget:'Алдын ала бюджет: ',request:'Сұраныс бойынша',from:'бастап: ',invalid:'Санын тексеріңіз: 1–20 пәтер; турникеттер — 1–5 өту жолы.',greeting:'Сәлеметсіз бе! Үйлесімділігін тексеріп, есептеп беріңіз: ',estimate:'Бағдар',empty:'Жабдықты таңдаңыз'},
+ en: {budget:'Provisional budget: ',request:'On request',from:'from ',invalid:'Check quantities: 1–20 apartments; turnstiles 1–5 lanes.',greeting:'Hello! Please check compatibility and quote: ',estimate:'Estimate',empty:'Select equipment'}
 };
 const money = n => new Intl.NumberFormat(language==='kz'?'kk-KZ':language==='en'?'en-US':'ru-RU').format(n)+' ₸';
 function update(form) {
  const c = copy[language] || copy.ru;
  const n = name => Number(form.elements[name].value);
  const residential = form.dataset.calculator === 'residential';
- if (residential) form.elements.apartments.disabled = n('tier')===1;
+ if (residential) {
+  form.elements.apartments.disabled = n('tier')===1;
+  form.querySelector('[data-single-controls]').hidden = n('tier')!==4;
+ }
  const output = form.querySelector('[data-total]');
  const quote = form.querySelector('[data-quote]');
  let result, selection;
  try {
   if (!form.checkValidity()) throw new Error('invalid');
   if (residential) {
-   result = residentialPrice(n('tier'),n('tier')===1?20:n('apartments'));
+   result = n('tier')===4 ? (form.elements.doorState.value==='ready' ? residentialEstimate(n('apartments'),{reusePower:form.elements.reusePower.checked,reuseSwitch:form.elements.reuseSwitch.checked,cover:form.elements.cover.checked}) : null) : residentialPrice(n('tier'),n('tier')===1?20:n('apartments'));
    selection = form.elements.tier.selectedOptions[0].textContent + (n('tier')>1?' / '+n('apartments'): '');
+   if(n('tier')===4) {
+    selection += `; DS-K1T341CM ×1; DS-KH6110-WE1 ×${n('apartments')}; DS-KAW50-1N ×${form.elements.reusePower.checked?0:1}; DS-3E0326P-E/M(C) ×${form.elements.reuseSwitch.checked?0:1}; DS-KAB34X-S1 ×${form.elements.cover.checked?1:0}`;
+    selection += '\n'+form.elements.doorState.selectedOptions[0].textContent;
+    for(const name of ['reusePower','reuseSwitch'])if(form.elements[name].checked)selection+='\n'+form.elements[name].closest('label').textContent.trim();
+   }
   } else {
    const scenario = accessScenario(n('lanes'),n('directions'),form.elements.model.value);
    result = scenario.quote;
@@ -31,9 +39,9 @@ function update(form) {
   quote.removeAttribute('href'); quote.setAttribute('aria-disabled','true'); form.querySelector('[data-message-preview]').textContent=''; return;
  }
  form.querySelectorAll('[data-cost]').forEach(el=>el.textContent=result?money(result[el.dataset.cost]):c.request);
- output.textContent=result?(result.total?c.from+money(result.total):c.empty):c.request;
+ output.textContent=result?(result.total?(residential&&n('tier')===4?c.budget:c.from)+money(result.total):c.empty):c.request;
  const statusCopy = residentialStatus[language] || residentialStatus.ru;
- const status = residential ? (n('tier')===4 ? statusCopy.single : n('tier')===2 ? statusCopy.modular + (modularPriceNeedsRecheck ? ' '+statusCopy.recheck : '') : '') : '';
+ const status = residential ? (n('tier')===4 ? statusCopy.single + (form.elements.doorState.value==='missing'?' '+statusCopy.missing:'') : '') : '';
  if (residential) form.querySelector('[data-residential-status]').textContent = status;
  const site = form.elements.site.value.trim();
  const message = c.greeting+selection+'\n'+c.estimate+': '+(result?money(result.total):c.request)+(result?`. INTANT ${PRICE_DATE}.`:'.')+(status?'\n'+status:'')+(site?'\n'+site:'');

@@ -1,8 +1,8 @@
 export default {
-  "checkedAt": "2026-11-04T16:59:11.769929+05:00",
+  "checkedAt": "2026-11-04T21:37:33.188439+05:00",
   "priceListDate": "2026-11-04",
   "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
-  "sourceSha256": "1c343f82d0c826a50537a15084299fc8bbed18de668320df55810ff5398ef8df",
+  "sourceSha256": "21dc7065639daf9e4be8d22566a1a04046f13e36c34848912d1e9200225216ca",
   "items": {
     "camera": {
       "model": "THC-T150-P (2.8 мм)",
@@ -39,30 +39,10 @@ export default {
       "supplierSku": "INT0000003770",
       "price": 4449
     },
-    "panel": {
-      "model": "DS-KD8003-IME1",
-      "supplierSku": "DC00000004016",
-      "price": 76724
-    },
-    "keypad": {
-      "model": "DS-KD-KP",
-      "supplierSku": "DC00000004017",
-      "price": 52508
-    },
-    "frame": {
-      "model": "DS-KD-ACW3",
-      "supplierSku": "DC00000004021",
-      "price": 53867
-    },
-    "blank": {
-      "model": "DS-KD-BK",
-      "supplierSku": "DC00000004538",
-      "price": 12148
-    },
     "switch": {
-      "model": "DS-3E0526P-E/M(B)",
-      "supplierSku": "INT0000008515",
-      "price": 157383
+      "model": "DS-3E0326P-E/M(C)",
+      "supplierSku": "INT0000002682",
+      "price": 122775
     },
     "monitor": {
       "model": "DS-KH6110-WE1 (Black)",

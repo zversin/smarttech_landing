@@ -1,20 +1,5 @@
-import supplier from './intant.mjs';
-// A later complete supplier sync clears this dated audit warning automatically.
-export const modularPriceNeedsRecheck = Date.parse(supplier.checkedAt) <= Date.parse('2026-11-04T16:25:00Z');
 export const residentialStatus = {
- ru: {
-  single: 'Совместимость DS-K1T341CM с выбранными мониторами требует проверки: вызов квартиры, видео, звук и открытие двери. Итоговая цена по запросу.',
-  modular: 'Отдельная модульная панель для вызовов + Face ID для прохода. Оценка по последнему полному снимку INTANT; ревизии и прошивки проверяются до заказа.',
-  recheck: 'Повторная сверка 04.11.2026 не подтвердила DS-3E0526P-E/M(B) в XLSX. Цена коммутатора сохранена из последнего полного снимка; стоимость и наличие требуют уточнения.'
- },
- kz: {
-  single: 'DS-K1T341CM және таңдалған мониторлардың үйлесімділігін тексеру қажет: пәтерге қоңырау, бейне, дыбыс және есікті ашу. Соңғы баға сұраныс бойынша.',
-  modular: 'Қоңырауға бөлек модульдік панель + кіруге Face ID. INTANT соңғы толық деректері бойынша бағдар; нұсқалар мен микробағдарлама тапсырысқа дейін тексеріледі.',
-  recheck: '04.11.2026 қайта тексеруінде DS-3E0526P-E/M(B) XLSX ішінде расталмады. Коммутатор бағасы соңғы толық деректерден сақталды; баға мен қолжетімділік нақтыланады.'
- },
- en: {
-  single: 'DS-K1T341CM compatibility with the selected monitors requires checks: apartment calls, video, audio and door release. Final price on request.',
-  modular: 'Separate modular panel for calls + Face ID for access. Estimate from the last complete INTANT snapshot; revisions and firmware checked before ordering.',
-  recheck: 'The 4 November 2026 recheck could not confirm DS-3E0526P-E/M(B) in the XLSX. The switch price is retained from the last complete snapshot; price and availability require confirmation.'
- }
+ ru: {single: 'Предварительный бюджет для одного терминала и квартирных мониторов, не подтверждённый комплект. До заказа проверяем совместимость DS-K1T341CM с DS-KH6110-WE1, вызовы в разные квартиры, видео, двусторонний звук и открытие двери на выбранных прошивках. Поддержка всех 20 мониторов пока не подтверждена.', missing: 'Нужны замок, доводчик, кнопка выхода, аварийное разблокирование или питание замка: полный состав и работы рассчитываются после осмотра. Готовые исправные компоненты сохраняем.'},
+ kz: {single: 'Бір терминал мен пәтер мониторларының алдын ала бюджеті; расталған жиынтық емес. Тапсырысқа дейін DS-K1T341CM және DS-KH6110-WE1 үйлесімділігі, әр пәтерге қоңырау, бейне, екіжақты дыбыс және есікті ашу нақты микробағдарламаларда тексеріледі. Барлық 20 мониторды қолдау әлі расталмаған.', missing: 'Құлып, есік жапқыш, шығу түймесі, апаттық ашу немесе құлып қорегі қажет: толық құрам мен жұмыс нысанды тексергеннен кейін есептеледі. Жарамды компоненттер сақталады.'},
+ en: {single: 'Provisional budget for one terminal and apartment monitors, not a verified package. Before ordering, check DS-K1T341CM / DS-KH6110-WE1 compatibility, calls to different apartments, video, two-way audio and door release on the selected firmware. Support for all 20 monitors is not yet confirmed.', missing: 'A lock, closer, exit button, emergency release or lock power is needed: full scope and labour require a site survey. Suitable working components are retained.'}
 };

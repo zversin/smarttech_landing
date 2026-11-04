@@ -7,10 +7,16 @@ const integer = (n, min, max) => { if (!Number.isInteger(n) || n < min || n > ma
 export const total = x => ({...x, total: roundPrice(x.equipment + x.install + x.setup + x.materials)});
 export function residentialPrice(tier, apartments = 20) {
  integer(tier, 1, 4); integer(apartments, 1, 20);
- if (tier === 3 || tier === 4) return null; // ANPR and single-terminal intercom require a confirmed scope.
- const x = {equipment:price('terminal341')+price('power')+price('raincover'), install:40000, setup:40000, materials:5000};
- if (tier >= 2) { x.equipment += price('panel')+price('keypad')+price('frame')+price('blank')+price('switch') + apartments * price('monitor'); x.install += 40000 + apartments * 15000; x.setup += 20000; x.materials += 10000 + apartments * 5000; }
- return total(x);
+ // Tier 2 is retired. No panel-based quote or unverified intercom offer.
+ if (tier !== 1) return null;
+ return total({equipment:price('terminal341')+price('power')+price('raincover'), install:40000, setup:40000, materials:5000});
+}
+// Budget for the proposed single-terminal scope, not verified compatibility.
+// Existing lock, closer, powered lock circuit and safe exit are prerequisites.
+export function residentialEstimate(apartments = 20, {reusePower = false, reuseSwitch = false, cover = false} = {}) {
+ integer(apartments, 1, 20);
+ for (const value of [reusePower, reuseSwitch, cover]) if (typeof value !== 'boolean') throw new TypeError('Expected boolean scope option');
+ return total({equipment:price('terminal341') + apartments*price('monitor') + (reusePower?0:price('power')) + (reuseSwitch?0:price('switch')) + (cover?price('raincover'):0), install:40000+apartments*15000, setup:60000, materials:15000+apartments*5000});
 }
 export function accessPrice(turnstiles, terminals, brackets, model = '341', bracketModel = 'ZU2') {
  for (const n of [turnstiles, terminals, brackets]) integer(n,0,10);
