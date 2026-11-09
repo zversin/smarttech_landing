@@ -2,13 +2,12 @@ name: Daily INTANT prices
 
 on:
   schedule:
-    # 09:00 Asia/Qyzylorda (UTC+05:00).
+    # 09:00 Asia/Almaty (UTC+05:00). GitHub cron may start later.
     - cron: '0 4 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
 
 concurrency:
   group: daily-intant-prices
@@ -17,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     steps:
       - name: Pull current main
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -59,19 +58,12 @@ jobs:
             echo 'changed=true' >> "$GITHUB_OUTPUT"
             echo "commit=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           fi
-      - name: Request Pages build and wait for the committed version
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TARGET_COMMIT: ${{ steps.commit.outputs.commit }}
-        run: python3 scripts/publish-pages.py --repository "$GITHUB_REPOSITORY" --commit "$TARGET_COMMIT"
-      # smarttech.asia now serves Sites. Its linked 09:45 source-delivery task
-      # publishes and verifies this commit after this supplier update completes.
-      # Do not compare the not-yet-synchronized Site with the new snapshot here.
+      # smarttech.asia is served by Sites, not GitHub Pages.
+      # The linked delivery task retries later the same day and imports only pricing/intant.mjs.
       - name: Save check summary
         if: always()
         run: |
           if [ -f "$RUNNER_TEMP/intant-summary.md" ]; then
             cat "$RUNNER_TEMP/intant-summary.md" >> "$GITHUB_STEP_SUMMARY"
           fi
-          echo 'Порядок: подтянуть → проверить INTANT → округлить → обновить → проверить GitHub Pages.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Порядок: получить → проверить 14 точных SKU → округлить → обновить main → доставить прайс в Sites.' >> "$GITHUB_STEP_SUMMARY"
