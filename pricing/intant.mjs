@@ -1,8 +1,8 @@
 export default {
-  "checkedAt": "2026-11-09T17:43:07.230615+05:00",
-  "priceListDate": "2026-11-09",
+  "checkedAt": "2026-11-10T17:26:00.742459+05:00",
+  "priceListDate": "2026-11-10",
   "source": "https://bitrix.intant.kz/api/import/files/%D0%9F%D1%80%D0%B0%D0%B9%D1%81-%D0%BB%D0%B8%D1%81%D1%82%20INTANT.xlsx",
-  "sourceSha256": "9866f1dcf519d41c1ff731ca53c8078f98baec8d623d0fa69e8087f3a75c7876",
+  "sourceSha256": "db371118fae75fbd08d05babdff346e89a80a5b2b51fc709e58a06fa5a783f16",
   "items": {
     "camera": {
       "model": "THC-T150-P (2.8 мм)",
@@ -42,7 +42,7 @@ export default {
     "switch": {
       "model": "DS-3E0326P-E/M(C)",
       "supplierSku": "INT0000002682",
-      "price": 110497
+      "price": 103591
     },
     "monitor": {
       "model": "DS-KH6110-WE1 (Black)",
