@@ -1,9 +1,12 @@
 name: Daily INTANT prices
 
 on:
+  push:
+    paths:
+      - '.github/workflows/update-prices.yml'
   schedule:
-    # 09:00 Asia/Almaty (UTC+05:00). GitHub cron may start later.
-    - cron: '0 4 * * *'
+    # Three supplier checks before the 12:30, 16:30 and 19:30 delivery windows.
+    - cron: '0 4,8,13 * * *'
   workflow_dispatch:
 
 permissions:
