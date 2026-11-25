@@ -31,7 +31,18 @@ jobs:
       - name: Test supplier parser and failure handling
         run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
       - name: Verify all INTANT sources and refresh snapshot
-        run: python3 scripts/update-intant.py --force --summary "$RUNNER_TEMP/intant-summary.md"
+        run: |
+          for attempt in 1 2 3; do
+            if python3 scripts/update-intant.py --force --summary "$RUNNER_TEMP/intant-summary.md"; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              delay=$((attempt * 30))
+              echo "INTANT source unavailable; retrying in ${delay}s (attempt $((attempt + 1))/3)."
+              sleep "$delay"
+            fi
+          done
+          exit 1
       - name: Test prices, generate offers and validate site
         run: |
           npm test
