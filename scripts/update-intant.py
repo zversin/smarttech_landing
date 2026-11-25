@@ -26,6 +26,13 @@ SNAPSHOT = ROOT / 'pricing/intant.mjs'
 NS = {'m': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
 MONTHS = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
           'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
+REPLACEMENT_BRACKET = {
+    'model': 'DS-KAB6-ZU1',
+    'manufacturerSku': '305700814',
+    'source': ('https://intant.kz/catalog/sistemy-kontrolya-i-upravleniya-dostupom/'
+               'hikvision-ds-kab6-zu1-kroshteyn-turniketa-dlya-terminalov-dostupa/'),
+    'price': None,
+}
 
 
 def load_snapshot(path=SNAPSHOT):
@@ -163,15 +170,20 @@ class ProductText(HTMLParser):
                 self.headings.append(value.strip())
 
 
-def product_price(data, model):
+def product_price(data, model, manufacturer_sku=None):
     parser = ProductText()
     parser.feed(data.decode('utf-8'))
     heading = ' '.join(parser.headings)
-    if normalize(model) not in normalize(heading):
+    if not re.search(r'(?<![\w./-])' + re.escape(model) + r'(?![\w./-])', heading, re.I):
         raise ValueError(f'Product heading does not identify {model}')
     text = ' '.join(parser.text)
     # Bound extraction to the primary product, before related/recommended items.
     product = text[text.index(parser.headings[0]):]
+    if manufacturer_sku:
+        primary = re.split(r'Подарки|С этим товаром покупают|Самые продаваемые товары', product, maxsplit=1)[0]
+        listed_skus = re.findall(r'Артикул производителя\s*:?\s*(\d+)\b', primary, re.I)
+        if listed_skus != [manufacturer_sku]:
+            raise ValueError(f'Product card does not identify manufacturer SKU {manufacturer_sku} for {model}')
     product = re.split(r'Рейтинг:|Описание', product, maxsplit=1)[0]
     prices = re.findall(r'(?<![\w.,])(\d{1,3}(?:[\s\u00a0]\d{3})+|\d+)\s+KZT\b', product)[:2]
     if not prices or len({positive_price(x) for x in prices}) != 1:
@@ -181,16 +193,24 @@ def product_price(data, model):
 
 def refresh(snapshot_path=SNAPSHOT, *, force=False, workbook=None, fetch=download, now=None):
     state = load_snapshot(snapshot_path)
-    now = now or datetime.now(ZoneInfo('Asia/Qyzylorda'))
+    now = now or datetime.now(ZoneInfo('Asia/Almaty'))
+    previous_bracket = state['items']['bracket3']
+    replace_bracket = previous_bracket['model'] == 'DS-KAB6-ZU3'
+    if replace_bracket:
+        state['items']['bracket3'] = REPLACEMENT_BRACKET.copy()
     data = workbook if workbook is not None else fetch(state['source'])
     prices, price_date = workbook_prices(data, state['items'], now.date())
+    if price_date != now.date():
+        raise ValueError(f'Waiting for today’s INTANT workbook; supplier date is {price_date}')
     for key, item in state['items'].items():
         if 'supplierSku' not in item:
-            prices[key] = product_price(fetch(item['source']), item['model'])
+            prices[key] = product_price(fetch(item['source']), item['model'], item.get('manufacturerSku'))
     changes = []
     for key, price in prices.items():
         old = state['items'][key]['price']
-        if old != price:
+        if key == 'bracket3' and replace_bracket:
+            changes.append(f'{previous_bracket["model"]} → {REPLACEMENT_BRACKET["model"]}: {price:,} ₸')
+        elif old != price:
             changes.append(f'{state["items"][key]["model"]}: {old:,} → {price:,} ₸')
     if changes or force:
         state['checkedAt'] = now.isoformat()

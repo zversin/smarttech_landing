@@ -42,7 +42,38 @@ def workbook(items, *, date_text='20 октября 2026 г.', currency='Каз�
 class SupplierChecks(unittest.TestCase):
     def setUp(self):
         self.state = copy.deepcopy(updater.load_snapshot())
+        self.state['items']['bracket3'] = dict(updater.REPLACEMENT_BRACKET, price=21354)
         self.today = date(2026, 10, 20)
+
+    def test_bracket_replacement_requires_exact_card_and_fresh_complete_workbook(self):
+        state = copy.deepcopy(self.state)
+        state['items']['bracket3'] = {
+            'model': 'DS-KAB6-ZU3', 'supplierSku': 'INT0000010785', 'price': 41106,
+        }
+        original = 'export default ' + json.dumps(state) + ';\n'
+        card = '<h1>Hikvision DS-KAB6-ZU1 Кронштейн</h1><p>21 354 KZT</p><p>Описание</p><dt>Артикул производителя</dt><dd>305700814</dd>'
+        other_cards = {
+            item['source']: f'<h1>{item["model"]}</h1>{item["price"]} KZT'.encode()
+            for item in self.state['items'].values() if 'source' in item and 'manufacturerSku' not in item
+        }
+        data = workbook(self.state['items'])
+        now = datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Almaty'))
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'intant.mjs'
+            path.write_text(original, encoding='utf-8')
+            for invalid in [card.replace('ZU1', 'ZU10'), card.replace('305700814', '305701218'),
+                            card.replace('<dt>', '<h2>С этим товаром покупают</h2><dt>')]:
+                with self.subTest(card=invalid), self.assertRaises(ValueError):
+                    updater.refresh(path, workbook=data, now=now, fetch=lambda _: invalid.encode())
+                self.assertEqual(path.read_text(encoding='utf-8'), original)
+            old_data = workbook(self.state['items'], date_text='19 октября 2026 г.')
+            with self.assertRaisesRegex(ValueError, 'supplier date'):
+                updater.refresh(path, workbook=old_data, now=now, fetch=lambda _: self.fail('stale workbook'))
+            self.assertEqual(path.read_text(encoding='utf-8'), original)
+            cards = {**other_cards, updater.REPLACEMENT_BRACKET['source']: card.encode()}
+            _, count, price_date = updater.refresh(path, workbook=data, now=now, fetch=cards.__getitem__)
+            self.assertEqual((count, price_date), (14, self.today))
+            self.assertEqual(updater.load_snapshot(path)['items']['bracket3'], self.state['items']['bracket3'])
 
     def test_exact_skus_and_header_selected_retail_column(self):
         prices, price_date = updater.workbook_prices(workbook(self.state['items']), self.state['items'], self.today)
@@ -104,7 +135,10 @@ class SupplierChecks(unittest.TestCase):
             path.write_text(original)
             def fetch_product(url):
                 item = next(item for item in self.state['items'].values() if item.get('source') == url)
-                return f'<h1>{item["model"]}</h1>{item["price"]:,} KZT'.replace(',', ' ').encode()
+                card = f'<h1>{item["model"]}</h1>{item["price"]:,} KZT'.replace(',', ' ')
+                if 'manufacturerSku' in item:
+                    card += f'<p>Описание</p><p>Артикул производителя {item["manufacturerSku"]}</p>'
+                return card.encode()
             changes, count, _ = updater.refresh(path, workbook=workbook(self.state['items']), fetch=fetch_product,
                                                 now=datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Qyzylorda')))
             self.assertEqual(changes, [])
@@ -121,7 +155,7 @@ class SupplierChecks(unittest.TestCase):
                 calls.append(url)
                 item = next(item for item in self.state['items'].values() if item.get('source') == url)
                 model = 'DS-TMG320-LR/B' if len(calls) == 2 else item['model']
-                return f'<h1>{model}</h1>269 730 KZT'.encode()
+                return f'<h1>{model}</h1>269 730 KZT<p>Описание</p><p>Артикул производителя 305700814</p>'.encode()
             with self.assertRaises(ValueError):
                 updater.refresh(path, force=True, workbook=workbook(self.state['items']), fetch=fetch_product,
                                 now=datetime(2026, 10, 20, tzinfo=ZoneInfo('Asia/Qyzylorda')))
